@@ -1,0 +1,21 @@
+{
+  "name": "@udmf-client/configs__prettier",
+  "description": "Frontend Prettier Config",
+  "version": "3.2.1",
+	"license": "MIT",
+	"repository": {
+		"type": "https",
+		"url": "https://gitlab.ixr.tech/udmf/client.git"
+	},
+  "main": "",
+  "peerDependencies": {
+    "prettier": ">=2.2.1"
+  },
+  "scripts": {
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "2.2.1"
+  },
+	"husky": {}
+}

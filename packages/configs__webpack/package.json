@@ -1,0 +1,49 @@
+{
+	"name": "@fast-js/webpack-config",
+	"version": "0.0.6",
+	"author": "Alexander Rudenko<learnitnow@yandex.ru>",
+	"license": "MIT",
+	"repository": {
+		"type": "https",
+		"url": "https://gitlab.ixr.tech/udmf/client.git"
+	},
+	"main": "",
+	"types": "",
+	"scripts": {},
+	"peerDependencies": {},
+	"dependencies": {
+		"@gfx/zopfli": "file:../../node_modules/@gfx/zopfli",
+		"compression-webpack-plugin": "file:../../node_modules/compression-webpack-plugin",
+		"resolve": "file:../../node_modules/resolve",
+		"workbox-webpack-plugin": "file:../../node_modules/workbox-webpack-plugin"
+	},
+	"devDependencies": {
+		"autoprefixer": "file:../../node_modules/autoprefixer",
+		"babel-loader": "file:../../node_modules/babel-loader",
+		"clean-webpack-plugin": "file:../../node_modules/clean-webpack-plugin",
+		"copy-webpack-plugin": "file:../../node_modules/copy-webpack-plugin",
+		"css-loader": "file:../../node_modules/css-loader",
+		"eslint": "file:../../node_modules/eslint",
+		"eslint-webpack-plugin": "file:../../node_modules/eslint-webpack-plugin",
+		"file-loader": "file:../../node_modules/file-loader",
+		"html-loader": "file:../../node_modules/html-loader",
+		"html-webpack-plugin": "file:../../node_modules/html-webpack-plugin",
+		"image-minimizer-webpack-plugin": "file:../../node_modules/image-minimizer-webpack-plugin",
+		"markdown-loader": "file:../../node_modules/markdown-loader",
+		"mini-css-extract-plugin": "file:../../node_modules/mini-css-extract-plugin",
+		"postcss-flexbugs-fixes": "file:../../node_modules/postcss-flexbugs-fixes",
+		"postcss-loader": "file:../../node_modules/postcss-loader",
+		"react-dev-utils": "file:../../node_modules/react-dev-utils",
+		"sass-loader": "file:../../node_modules/sass-loader",
+		"source-map-loader": "file:../../node_modules/source-map-loader",
+		"string-replace-webpack-plugin": "file:../../node_modules/string-replace-webpack-plugin",
+		"style-loader": "file:../../node_modules/style-loader",
+		"terser-webpack-plugin": "file:../../node_modules/terser-webpack-plugin",
+		"ts-loader": "file:../../node_modules/ts-loader",
+		"typescript": "file:../../node_modules/typescript",
+		"webpack": "file:../../node_modules/webpack",
+		"webpack-dev-server": "file:../../node_modules/webpack-dev-server",
+		"webpack-notifier": "file:../../node_modules/webpack-notifier"
+	},
+	"husky": {}
+}

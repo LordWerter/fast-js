@@ -1,0 +1,32 @@
+{
+  "name": "@udmf-client/configs__eslint",
+  "description": "ESLint Config for projects on JS",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "https",
+    "url": "https://gitlab.ixr.tech/udmf/client.git"
+  },
+  "main": "index.js",
+  "scripts": {
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "1.0.0",
+    "@typescript-eslint/parser": "1.0.0",
+    "confusing-browser-globals": "1.0.0",
+    "eslint": "1.0.0",
+    "eslint-config-prettier": "1.0.0",
+    "eslint-plugin-import": "1.0.0",
+    "eslint-plugin-jest": "1.0.0",
+    "eslint-plugin-jsdoc": "1.0.0",
+    "eslint-plugin-prettier": "1.0.0",
+    "eslint-plugin-react": "1.0.0",
+    "eslint-plugin-react-hooks": "1.0.0",
+    "eslint-plugin-tsdoc": "1.0.0",
+    "prettier": "1.0.0",
+    "typescript": "1.0.0"
+  },
+  "husky": {}
+}

@@ -1,0 +1,18 @@
+{
+	"name": "@udmf-client/configs__stylelint",
+	"version": "0.0.6",
+	"author": "Alexander Rudenko<Aleksandr.Rudenko@ixr.tech>",
+	"license": "MIT",
+	"repository": {
+		"type": "https",
+		"url": "https://gitlab.ixr.tech/udmf/client.git"
+	},
+	"main": "",
+	"types": "",
+	"scripts": {
+	},
+	"peerDependencies": {},
+	"dependencies": {},
+	"devDependencies": {},
+	"husky": {}
+}

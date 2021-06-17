@@ -1,0 +1,13 @@
+{
+	"name": "@js-tools/commitlint",
+	"version": "0.0.1",
+	"author": "Alexander Rudenko<learnitnow@yandex.ru>",
+	"license": "MIT",
+	"repository": "https://https://github.com/LordWerter/js-tools/tree/main/packages/configs__commitlint",
+	"main": "index.js",
+	"scripts": {},
+	"peerDependencies": {},
+	"dependencies": {},
+	"devDependencies": {},
+	"husky": {}
+}

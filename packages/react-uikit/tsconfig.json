@@ -1,0 +1,27 @@
+{
+	"extends": "../configs__typescript/client/tsconfig.json",
+	"include": [
+		"./src/**/*.ts",
+		"./src/**/*.tsx",
+		".storybook/main.js",
+		"../ui__themes/**/*.ts",
+		"../utils/**/*.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"**/node_modules",
+		"build",
+		"scripts",
+		"config",
+		"*.js",
+		"coverage",
+		"dist"
+	],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"esModuleInterop": true,
+		"jsx": "preserve",
+		"skipLibCheck": true,
+		"strict": true
+	}
+}

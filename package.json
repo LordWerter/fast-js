@@ -1,0 +1,45 @@
+{
+    "private": true,
+    "name": "fast-js",
+    "version": "1.0.0",
+	"author": "Alexander Rudenko<learnitnow@yandex.ru>",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/LordWerter/fast-js.git"
+    },
+    "homepage": "",
+    "keywords": [
+        "websocket",
+        "uikit",
+        "react",
+        "js tools",
+        "linter configs",
+        "js logger",
+        "commitlint preset",
+        "eslint preset",
+        "jest preset",
+        "jshint preset",
+        "lighthouse preset",
+        "markdownlint preset",
+        "prettier preset",
+        "stylelint preset",
+        "typescript preset",
+        "webpack configs",
+        "react uikit",
+        "websocket api",
+        "react auth provider"
+
+    ],
+    "scripts": {},
+    "workspaces": {
+        "packages": [
+          "packages/*"
+        ],
+        "nohoist": [
+        ]
+    },
+    "bugs": {
+        "url": "https://github.com/LordWerter/fast-js/issues"
+    }
+}
