@@ -9,3 +9,4 @@ package-lock.json
 .cache
 .env
 .vscode
+yarn.lock
