@@ -1,32 +1,30 @@
 {
-  "name": "@udmf-client/configs__eslint",
+  "name": "@fast-js/eslint",
+  "author": "Alexander Rudenko<learnitnow@yandex.ru>",
+  "repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/configs__eslint",
   "description": "ESLint Config for projects on JS",
   "version": "1.0.0",
   "license": "MIT",
-  "repository": {
-    "type": "https",
-    "url": "https://gitlab.ixr.tech/udmf/client.git"
-  },
   "main": "index.js",
   "scripts": {
   },
   "dependencies": {
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "1.0.0",
-    "@typescript-eslint/parser": "1.0.0",
-    "confusing-browser-globals": "1.0.0",
-    "eslint": "1.0.0",
-    "eslint-config-prettier": "1.0.0",
-    "eslint-plugin-import": "1.0.0",
-    "eslint-plugin-jest": "1.0.0",
-    "eslint-plugin-jsdoc": "1.0.0",
-    "eslint-plugin-prettier": "1.0.0",
-    "eslint-plugin-react": "1.0.0",
-    "eslint-plugin-react-hooks": "1.0.0",
-    "eslint-plugin-tsdoc": "1.0.0",
-    "prettier": "1.0.0",
-    "typescript": "1.0.0"
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "confusing-browser-globals": "^1.0.10",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-jsdoc": "^35.4.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-tsdoc": "^0.2.14",
+    "prettier": "^2.3.1",
+    "typescript": "^4.3.4"
   },
   "husky": {}
 }

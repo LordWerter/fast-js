@@ -1,13 +1,10 @@
 {
-  "name": "@udmf-client/configs__jest",
+  "name": "@fast-js/jest",
+  "author": "Alexander Rudenko<learnitnow@yandex.ru>",
+  "repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/configs__jest",
   "version": "0.0.6",
-  "author": "Alexander Rudenko<Aleksandr.Rudenko@ixr.tech>",
   "license": "MIT",
-  "repository": {
-    "type": "https",
-    "url": "https://gitlab.ixr.tech/udmf/client.git"
-  },
-  "main": "./src/jest.config.client.ts",
+  "main": "./src/index.ts",
   "scripts": {
     "test": "jest",
     "lint": "eslint src",

@@ -1,9 +1,9 @@
 {
-	"name": "@fast-js/logbuilder",
-	"version": "0.0.1",
+	"name": "@fast-js/logger",
     "author": "Aleksander Rudenko<learnitnow@yandex.ru>",
-	"license": "MIT",
 	"repository": "https://github.com/LordWerter/fast-js/tree/main/packages/service__logbuilder",
+	"version": "0.0.1",
+	"license": "MIT",
 	"main": "./src/index.ts",
 	"types": "index.d.ts",
 	"scripts": {
@@ -15,7 +15,7 @@
 		"react": "17.0.2"
 	},
 	"devDependencies": {
-		"typescript": "^4.2.4"
+		"typescript": "^4.3.4"
 	},
 	"husky": {}
 }

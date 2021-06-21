@@ -1,12 +1,9 @@
 {
-	"name": "@udmf-client/configs__stylelint",
+	"name": "@fast-js/stylelint",
+	"author": "Alexander Rudenko<learnitnow@yandex.ru>",
+	"repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/configs__stylelint",
 	"version": "0.0.6",
-	"author": "Alexander Rudenko<Aleksandr.Rudenko@ixr.tech>",
 	"license": "MIT",
-	"repository": {
-		"type": "https",
-		"url": "https://gitlab.ixr.tech/udmf/client.git"
-	},
 	"main": "",
 	"types": "",
 	"scripts": {
