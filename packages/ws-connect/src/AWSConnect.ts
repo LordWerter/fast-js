@@ -39,6 +39,7 @@ export interface ILogger {
 export interface IOptions {
     debug?: IDebug;
     logs?: ILogger;
+    exitMsg?: null | unknown;
 }
 
 export type TSettings = {
