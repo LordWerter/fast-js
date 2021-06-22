@@ -1,3 +1,3 @@
 module.exports = {
-    ...require('./packages/configs__prettier'),
+    ...require('@fast-js/prettier'),
 };

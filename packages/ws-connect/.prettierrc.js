@@ -1,3 +1,5 @@
+const prettierPreset = require('@fast-js/prettier');
+
 module.exports = {
-    ...require('../configs__prettier'),
+    ...prettierPreset,
 };

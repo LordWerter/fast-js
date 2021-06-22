@@ -1,0 +1,25 @@
+{
+	"include": [
+		"./src/**/*.ts",
+	],
+	"exclude": [
+		"node_modules",
+		"**/node_modules",
+		"build",
+		"scripts",
+		"config",
+		"*.js",
+		"coverage",
+		"dist"
+	],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"strict": true
+	},
+	"typeRoots": [
+		"<rootDir>/../../types/src",
+		"<rootDir>/node_modules/@types"
+	]
+}
