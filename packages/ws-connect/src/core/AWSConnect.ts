@@ -33,22 +33,37 @@ export interface ILogData {
 export interface ILogger {
     enabled: boolean;
     mode?: TLoggerMode;
-    callback?: (data: ILogData) => any;
+    logFn?: (data: ILogData) => any;
 }
 
+export interface IExit {
+    enabled: boolean;
+    msg2Server: Object | null;
+};
+
 export interface IOptions {
+    reconnect?: IReconnect;
     debug?: IDebug;
     logs?: ILogger;
-    exitMsg?: null | unknown;
+    exit?: IExit;
 }
 
 export type TSettings = {
+    host: IHost;
+    reconnect: IReconnect;
+    debug: IDebug;
+    logs: ILogger;
+    exit: IExit;
+};
+
+export interface ISettings {
     host?: IHost;
-    reconnect?: IReconnect;
     options?: IOptions;
 };
 
-export type TCallback<T> = (data: unknown) => Promise<T>;
+export type TCallback<T> = (data: any) => Promise<T>;
+
+export type TCallbackName = 'wasOpened' | 'wasClosed' | 'wasSent' | 'wasReceived' | 'wasError';
 
 export type TEventCallbacks = {
     wasOpened?: TCallback<boolean>;
@@ -58,20 +73,30 @@ export type TEventCallbacks = {
     wasError?: TCallback<boolean>;
 };
 
+export type TClassMethodName = 'getBufferedAmount' | 'getReadyState' | 'send' | 'exit' | 'handleOnOpen' | 'handleOnClose' | 'handleOnMessage' | 'handleOnError' | 'try2Reconnect' | 'runEventCallback';
+
 export type IHandlerResult<T> = Promise<T>;
+
+export type TSendFn = (data: {
+    [key : string]: any
+}) => Promise<any | boolean>;
+
+export type TMethodFn = () => Promise<boolean>;
+
+export type TWSHandlerFn = (event: Event) => Promise<boolean>;
 
 export default abstract class WSAnnotation {
 
     public abstract settings : TSettings;
     public abstract eventCallbacks : TEventCallbacks;
 
-    constructor(settings: TSettings, eventCallbacks?: TEventCallbacks) {}
+    constructor(settings?: ISettings, eventCallbacks?: TEventCallbacks) {}
 
-    abstract getReadyState: () => number | false;
+    public abstract getReadyState: () => number | false;
 
-    abstract send: (data: {
-        [key : string]: any
-    }) => Promise<any>;
+    public abstract send: TSendFn;
 
-    public abstract exit: () => Promise<boolean>;
+    public abstract exit: TMethodFn;
+
+    public abstract runEventCallback: (handlerName: TCallbackName, eventObj: Event) => Promise<boolean | null>;
 }

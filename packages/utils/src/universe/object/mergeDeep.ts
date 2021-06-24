@@ -22,15 +22,16 @@ export interface IDeepMergeOptions {
  * @returns {Promise<unknown>}
  * @type {Function}
  */
-export function mergeDeep < T > (
+export function mergeDeep<T>(
     target: T,
     source: unknown,
     options: IDeepMergeOptions = {
         clone: true,
         queueLimit: 100,
     },
-): Promise < unknown > {
+): T {
     let inProgress = 1;
+    //@ts-ignore
     const __mergeDeep = (__target, __source, __options) => {
         if (inProgress >= __options.queueLimit) {
             return __mergeDeep(__target, __source, __options);
@@ -43,7 +44,7 @@ export function mergeDeep < T > (
         } : __target;
 
         if (isPlainObject(__target) && isPlainObject(__source)) {
-            Object.keys(__source).forEach((key) => {
+            Object.keys(__source).forEach((key: any) => {
                 // prototype pollution
                 if (key === '__proto__') {
                     return;

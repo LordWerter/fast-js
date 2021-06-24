@@ -1,15 +1,15 @@
-import array from './array';
-import date from './date';
-import hash from './hash';
-import number from './number';
-import object from './object';
-import string from './string';
+import Arr from './array';
+import Dates from './date';
+import Hash from './hash';
+import Num from './number';
+import Obj from './object';
+import Str from './string';
 
 export default {
-    ...array,
-    ...date,
-    ...number,
-    ...object,
-    ...hash,
-    ...string,
+    Arr,
+    Dates,
+    Num,
+    Obj,
+    Hash,
+    Str,
 };

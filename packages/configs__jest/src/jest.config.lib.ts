@@ -15,7 +15,7 @@ export const getPreset4Lib = ():Config.InitialOptions => {
 			"<rootDir>/config/",
 			"<rootDir>/coverage/",
 			"<rootDir>/node_modules/",
-			"<rootDir>/**/__mocks__/"
+			"<rootDir>/*/__mocks__/"
 		],
 		moduleFileExtensions: [
 			"ts",

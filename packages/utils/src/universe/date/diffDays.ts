@@ -3,6 +3,6 @@
  * @param firstDate
  * @param secondDate
  */
-const diffDays = (firstDate, secondDate) => Math.ceil(Math.abs(firstDate - secondDate) / (1000 * 60 * 60 * 24));
+const diffDays = (firstDate: number, secondDate: number) => Math.ceil(Math.abs(firstDate - secondDate) / (1000 * 60 * 60 * 24));
 
 export default diffDays;
