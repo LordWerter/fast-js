@@ -3,13 +3,13 @@
  */
 
 export interface IHost {
-    protocol : 'ws' | 'wss';
+    protocol : string;
     name : string;
     url: string;
 }
 
 export interface IReconnect {
-    enabled: false;
+    enabled: boolean;
     timeout?: number;
     increaseTimeout?: boolean;
 }
@@ -61,7 +61,7 @@ export interface ISettings {
     options?: IOptions;
 };
 
-export type TCallback<T> = (data: any) => Promise<T>;
+export type TCallback<T> = (data: any) => void | T | Promise<T>;
 
 export type TCallbackName = 'wasOpened' | 'wasClosed' | 'wasSent' | 'wasReceived' | 'wasError';
 

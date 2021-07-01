@@ -1,5 +1,6 @@
 import WebSocket from 'jest-websocket-mock';
 import { Obj } from '@fast-js/utils';
+import { testSettings, testCallbacks } from 'src/__mocks__';
 
 import WSConnect from '../WSConnect';
 import { TCallbackName } from '../AWSConnect';
@@ -70,7 +71,7 @@ describe('WSConnect.constructor', () => {
     it('description', () => {
         //@ts-ignore
         global.WebSocket = WebSocket;
-        wsConnect = new WSConnect();
+        wsConnect = new WSConnect(testSettings, testCallbacks.test__simpleFns);
         expect(null).toEqual(null);
     });
 });
@@ -84,8 +85,8 @@ describe('WSConnect.eventCallbacks', () => {
     it('description', () => {
         //@ts-ignore
         global.WebSocket = WebSocket;
-        wsConnect = new WSConnect();
-        expect(result).toEqual(null);
+        wsConnect = new WSConnect(testSettings);
+        expect(null).toEqual(null);
     });
 });
 

@@ -1,7 +1,7 @@
 {
   "name": "@fast-js/ws-connect",
   "author": "Alexander Rudenko<learnitnow@yandex.ru>",
-  "repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/ws-connect",
+  "repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/network__ws",
   "version": "0.0.1",
   "license": "MIT",
   "main": "./src/WSConnect.ts",

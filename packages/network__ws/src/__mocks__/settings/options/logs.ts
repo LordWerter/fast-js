@@ -1,10 +1,12 @@
-export const initialLogs = {
+import { ILogger } from '../../../core/AWSConnect';
+
+export const initialLogs: ILogger = {
     enabled: false,
     mode: 'PROD',
     logFn: console.log,
 };
 
-export const testLogs = {
+export const testLogs: ILogger = {
     enabled: true,
     mode: 'DEV',
     logFn: console.log,

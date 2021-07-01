@@ -4,10 +4,10 @@ import logs, { testLogs } from "./logs";
 import reconnect, { testReconnect } from "./reconnect";
 
 export const testOptions = {
-    debug: { ...testDebug },
-    exit: { ...testExit },
-    logs: { ...testLogs },
-    reconnect: { ...testReconnect },
+    debug: testDebug,
+    exit: testExit,
+    logs: testLogs,
+    reconnect: testReconnect,
 };
 
 export const initialOptions = {
