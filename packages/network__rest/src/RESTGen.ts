@@ -1,5 +1,5 @@
 
-import APIClientAnnotation, {
+import ARESTGen, {
   IRequestsConfig, 
   IInstanseMethod, 
   TInstanceMethod, 
@@ -8,7 +8,7 @@ import APIClientAnnotation, {
   IGenFunctions, 
   TAPIResult, 
   TGeneratedFunction,
-} from './IAPIClient';
+} from './ARESTGen';
 
 import axios from 'axios';
 import { AxiosResponse } from 'axios';
@@ -17,9 +17,9 @@ import { AxiosResponse } from 'axios';
  * @param tag html tag
  * @param content   inner content of created element
  */
-export default class ApiClient extends APIClientAnnotation {
+export default class RESTGen extends ARESTGen {
 
-  public static genFuncTemplate = (curParams: any, curInstanceMethod: TInstanceMethod) => {
+  public genFuncTemplate = (curParams: any, curInstanceMethod: TInstanceMethod) => {
       const {
         url,
         curConfigs,
@@ -39,50 +39,50 @@ export default class ApiClient extends APIClientAnnotation {
         });
   }
 
-  public static generatingFunctions: IGenFunctions = {
+  public generatingFunctions: IGenFunctions = {
       GET: (params: IGenMethodInput, instanceMethod: IInstanseMethod) => {
         return () => {
-          return ApiClient.genFuncTemplate(params, instanceMethod);
+          return RESTGen.genFuncTemplate(params, instanceMethod);
         }
       },
       HEAD: (params: IGenMethodInput, instanceMethod: IInstanseMethod) => {
         return () => {
-          return ApiClient.genFuncTemplate(params, instanceMethod);
+          return RESTGen.genFuncTemplate(params, instanceMethod);
         }
       },
       POST: (params: IGenMethodInput, instanceMethod: IInstanseMethod) => {
         return () => {
-          return ApiClient.genFuncTemplate(params, instanceMethod);
+          return RESTGen.genFuncTemplate(params, instanceMethod);
         }
       },
       PUT: (params: IGenMethodInput, instanceMethod: IInstanseMethod) => {
         return () => {
-          return ApiClient.genFuncTemplate(params, instanceMethod);
+          return RESTGen.genFuncTemplate(params, instanceMethod);
         }
       },
       DELETE: (params: IGenMethodInput, instanceMethod: IInstanseMethod) => {
         return () => {
-          return ApiClient.genFuncTemplate(params, instanceMethod);
+          return RESTGen.genFuncTemplate(params, instanceMethod);
         }
       },
       CONNECT: (params: IGenMethodInput, instanceMethod: IInstanseMethod) => {
         return () => {
-          return ApiClient.genFuncTemplate(params, instanceMethod);
+          return RESTGen.genFuncTemplate(params, instanceMethod);
         }
       },
       OPTIONS: (params: IGenMethodInput, instanceMethod: IInstanseMethod) => {
         return () => {
-          return ApiClient.genFuncTemplate(params, instanceMethod);
+          return RESTGen.genFuncTemplate(params, instanceMethod);
         }
       },
       TRACE: (params: IGenMethodInput, instanceMethod: IInstanseMethod) => {
         return () => {
-          return ApiClient.genFuncTemplate(params, instanceMethod);
+          return RESTGen.genFuncTemplate(params, instanceMethod);
         }
       },
       PATCH: (params: IGenMethodInput, instanceMethod: IInstanseMethod) => {
         return () => {
-          return ApiClient.genFuncTemplate(params, instanceMethod);
+          return RESTGen.genFuncTemplate(params, instanceMethod);
         }
       },
     }
@@ -90,12 +90,12 @@ export default class ApiClient extends APIClientAnnotation {
     public reqConfig = {};
     public APIMethods: {[key: string]: TGeneratedFunction} = {};
     private axiosInstance = axios.create;
-    private localStorageKey = "token_agent";
+    private localKey = "token_agent";
 
   constructor(reqsConfig: IRequestsConfig, endPoints: Array<IEndPoint>) {
     super();
     this.axiosInstance = axios.create;
-    this.localStorageKey = reqsConfig.localStorageKey || "token_agent";
+    this.localKey = reqsConfig.localStorageKey || "token_agent";
 
     endPoints.map((endPoint: IEndPoint) => {
       const {
@@ -108,7 +108,7 @@ export default class ApiClient extends APIClientAnnotation {
         matchResponseFunction,
         callbackFunction,
       } = endPoint;
-      this.APIMethods[requestMethod] = ApiClient.generatingFunctions[requestMethod]({
+      this.APIMethods[requestMethod] = RESTGen.generatingFunctions[requestMethod]({
         host,
         url,
         requestMethod,

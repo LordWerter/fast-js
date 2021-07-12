@@ -65,7 +65,7 @@ export interface IAPIClient {
 /**
  * APIClient Class Annotation
  */
-export abstract class APIClientAnnotation implements IAPIClient {
+export abstract class ARESTGen implements IAPIClient {
     public static genFuncTemplate: TGenFuncTemplate;
     public static generatingFunctions: IGenFunctions;
     abstract reqConfig: Object;
@@ -75,4 +75,4 @@ export abstract class APIClientAnnotation implements IAPIClient {
     constructor() {}
 } 
 
-export default APIClientAnnotation;
+export default ARESTGen;
