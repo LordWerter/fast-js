@@ -1,5 +1,5 @@
 {
-	"name": "@fast-js/webpack",
+	"name": "@fast-js/webpack-build",
 	"author": "Alexander Rudenko<learnitnow@yandex.ru>",
 	"repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/configs__webpack",
 	"version": "0.0.6",
