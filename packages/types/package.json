@@ -1,14 +1,10 @@
 {
-	"name": "@udmf-client/types",
+	"name": "@fast-js/types",
 	"version": "0.0.1",
-	"author": "Alexander Rudenko<Aleksandr.Rudenko@ixr.tech>",
+	"author": "Alexander Rudenko<learnitnow@yandex.ru>",
+	"repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/types",
 	"license": "MIT",
-	"repository": {
-		"type": "https",
-		"url": "https://gitlab.ixr.tech/udmf/client.git"
-	},
 	"main": "",
-	"types": "index.d.ts",
 	"scripts": {},
 	"peerDependencies": {},
 	"dependencies": {},
