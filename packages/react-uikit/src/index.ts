@@ -11,7 +11,6 @@ export { default as Label } from './components/Label';
 export { default as Logo } from './components/Logo';
 export { default as MiniCard } from './components/MiniCard';
 export { default as Price } from './components/Price';
-export { default as Product } from './components/Product';
 export { default as Select } from './components/Select';
 export { default as Slider } from './components/Slider';
 export { default as Spinner } from './components/Spinner';
@@ -21,3 +20,4 @@ export { default as TextBlock } from './components/Typography/TextBlock';
 
 export { default as ButtonsGroup } from './containers/ButtonsGroup';
 export { default as StoryWrapper } from './containers/StoryWrapper';
+export { default as GlobalStyles } from './containers/GlobalStyles';
