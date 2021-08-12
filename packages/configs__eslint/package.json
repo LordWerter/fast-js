@@ -3,7 +3,18 @@
   "author": "Alexander Rudenko<learnitnow@yandex.ru>",
   "repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/configs__eslint",
   "description": "ESLint Config for projects on JS",
-  "version": "1.0.0",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "javascript",
+    "styleguide",
+    "es2015",
+    "es2016",
+    "es2017",
+    "es2018"
+  ],
+  "version": "1.0.1",
   "license": "MIT",
   "main": "index.js",
   "scripts": {

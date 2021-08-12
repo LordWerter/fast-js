@@ -14,9 +14,9 @@ module.exports = {
 //        './frameworks/react',
 //        './frameworks/react-hooks',
     ].map(require.resolve),
-
     parserOptions: {
         ecmaVersion: 2018,
         sourceType: 'module',
     },
+    rules: {},
 };
