@@ -1,13 +1,18 @@
 {
-	"name": "@fast-js/types",
-	"version": "0.0.3",
-	"author": "Alexander Rudenko<learnitnow@yandex.ru>",
-	"repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/types",
-	"license": "MIT",
-	"main": "./src/index.d.ts",
-	"scripts": {},
-	"peerDependencies": {},
-	"dependencies": {},
-	"devDependencies": {},
-	"husky": {}
+  "name": "@fast-js/types",
+  "version": "0.0.3",
+  "author": "Alexander Rudenko<learnitnow@yandex.ru>",
+  "repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/types",
+  "license": "MIT",
+  "main": "",
+  "types": "./src/index.d.ts",
+  "keywords": ["css", "style", "typescript", "flow", "typings", "types", "definitions"],
+  "files": [
+    "./src/index.d.ts"
+  ],
+  "scripts": {},
+  "peerDependencies": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "husky": {}
 }
