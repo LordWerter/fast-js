@@ -447,6 +447,7 @@ module.exports = {
     overrides: [
         {
             files: ['**/*.ts?(x)'],
+            plugins: ['@typescript-eslint'],
             rules: {
                 'no-var': 'error', // ts transpiles let/const to var, so no need for vars any more
                 'prefer-const': 'error', // ts provides better types with const
