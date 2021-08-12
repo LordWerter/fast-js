@@ -1,4 +1,5 @@
 module.exports = {
+    parser: '@typescript-eslint/parser',
     rules: {
         // Enforce line breaks after opening and before closing array brackets
         // https://eslint.org/docs/rules/array-bracket-newline

@@ -1,6 +1,7 @@
 const confusingBrowserGlobals = require('confusing-browser-globals');
 
 module.exports = {
+    parser: '@typescript-eslint/parser',
     rules: {
         // Enforce or disallow variable initializations at definition
         // https://eslint.org/docs/rules/init-declarations
