@@ -5,6 +5,7 @@
 /// <reference path="request.d.ts" />
 /// <reference path="response.d.ts" />
 /// <reference path="types.d.ts" />
+/// <reference path="redux-store.d.ts" />
 
 /**
  * Номинальные типы
