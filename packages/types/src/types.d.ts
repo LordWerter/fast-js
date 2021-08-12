@@ -92,3 +92,13 @@ export interface IExchangeRateResponse {
     currency: 'BTC'
   }
 }
+
+export type TObject<T> = {
+  [key: string]: T;
+};
+
+export interface IEffectPayload {
+  mutation: TObject<any>;
+  mode?: 'development' | 'production' | null;
+  logFn?: (mutation: TObject<any>) => any;
+}
