@@ -643,7 +643,7 @@ module.exports = {
     overrides: [
         {
             files: ['**/*.ts?(x)'],
-            extends: 'prettier/@typescript-eslint',
+            extends: ['prettier'],
             rules: {
                 'babel/no-invalid-this': 'off',
                 '@typescript-eslint/no-invalid-this': 'error',
