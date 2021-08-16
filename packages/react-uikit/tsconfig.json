@@ -4,8 +4,7 @@
 		"./src/**/*.ts",
 		"./src/**/*.tsx",
 		".storybook/main.js",
-		"../ui__themes/**/*.ts",
-		"../utils/**/*.ts"
+		"<rootDir>/node_modules/@fast-js/utils/**/*.ts"
 	],
 	"exclude": [
 		"node_modules",
