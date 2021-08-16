@@ -1,3 +1,4 @@
+/* eslint-disable guard-for-in */
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable react/forbid-component-props */
 /* eslint-disable react/prop-types */
@@ -5,9 +6,10 @@
 /**
  * imports & exports of namespaces, interfaces & types
  */
+import { TSize } from '../../definitions/IPropTypes';
 
 export interface IProps {
-    sizeId?: any;
+    sizeId?: TSize;
     customize?: any;
     productCode: string;
     count: number;

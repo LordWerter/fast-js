@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /**
@@ -22,24 +23,7 @@ import { useTheme } from '@emotion/react';
  * imports of components
  */
 import Input from '../Input';
-/**
- * imports of styles
- */
-import {} from './InputWithMask.styles';
-/**
- * imports of constants
- */
-/**
- * imports of utils
- */
-// import { mergeThemeObjects } from '../../../utils';
 
-/**
- * InputWithMask Component
- * @param {Object} props implements IProps
- * @type {Function}
- * @returns {JSX.Element}
- */
 export const InputWithMask: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'xl', value = '', maskTpl, customize = {} } = props;
     const masked = IMask.createMask({

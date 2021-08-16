@@ -31,7 +31,7 @@ export interface IProps {
  * imports of utils
  */
 import { mergeThemeObjects } from '../../utils';
-import { TSize } from 'src/definitions/IPropTypes';
+import { TSize } from '../../definitions/IPropTypes';
 
 /**
  * renders BasicButton Item

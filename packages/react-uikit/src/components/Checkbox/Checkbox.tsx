@@ -35,7 +35,7 @@ import { CWrap, IconBox, Input, Label } from './Checkbox.styles';
  * imports of utils
  */
 import { mergeThemeObjects } from '../../utils';
-import { TSize } from 'src/definitions/IPropTypes';
+import { TSize } from '../../definitions/IPropTypes';
 
 /**
  * Checkbox Component
