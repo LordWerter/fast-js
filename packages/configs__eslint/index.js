@@ -8,7 +8,7 @@ module.exports = {
         './base/stylistic',
         './base/variables',
         './frameworks/jest',
-        './frameworks/typescript',
+//        './frameworks/typescript',
         './frameworks/prettier',
         './frameworks/prettier-typescript',
         './frameworks/react',
@@ -17,7 +17,7 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 2018,
         sourceType: 'module',
-        project: "tsconfig.json",
+        project: `${__dirname}/tsconfig.json`,
     },
     rules: {},
 };

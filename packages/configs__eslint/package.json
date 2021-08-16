@@ -14,7 +14,7 @@
     "es2017",
     "es2018"
   ],
-  "version": "1.0.13",
+  "version": "1.0.14",
   "license": "MIT",
   "main": "index.js",
   "scripts": {},
