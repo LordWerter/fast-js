@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable react/prop-types */
 import React from 'react';
-import {useTheme} from '@emotion/react';
-
+import { useTheme } from '@emotion/react';
 import Image from '../Image';
 
 export interface ICWrapProps {
@@ -28,7 +29,7 @@ export interface IProps {
 /**
  * imports of utils
  */
-import {mergeThemeObjects} from '../../utils';
+import { mergeThemeObjects } from '../../utils';
 
 /**
  * renders BasicButton Item
@@ -37,43 +38,30 @@ import {mergeThemeObjects} from '../../utils';
  * @returns {JSX.Element}
  */
 export const BasicButton: React.FC<any> = (props): JSX.Element => {
-    const {
-        text,
-        onClick,
-        sizeId = 'xl',
-        customize = {},
-        iconId = null,
-    } = props;
+    const { text, onClick, sizeId = 'xl', customize = {}, iconId = null } = props;
 
-    //@ts-ignore
+    // @ts-ignore
     const initTheme = { ...useTheme().components.Button } || {};
-    const requiredThemeKeys = [
-        'container', 'caption', 'icon', 'image', 'images'
-    ];
+    const requiredThemeKeys = ['container', 'caption', 'icon', 'image', 'images'];
     const theme: any = {};
 
     requiredThemeKeys.forEach((curKey) => {
         theme[curKey] = mergeThemeObjects(initTheme[curKey], customize[curKey]);
-    })
+    });
 
     // TODO: add hover effect
     return (
-        <CWrap
-            sizeId={sizeId}
-            theme={theme.container}
-            onClick={onClick}>
+        <CWrap sizeId={sizeId} theme={theme.container} onClick={onClick}>
             {iconId && (
-                <IconWrap
-                    sizeId={sizeId}
-                    theme={theme.icon}
-                >
+                <IconWrap sizeId={sizeId} theme={theme.icon}>
                     <Image customize={theme.image} bgImage={theme.images[iconId]} />
                 </IconWrap>
             )}
-            {text && <Caption
-                sizeId={sizeId}
-                theme={theme.caption}
-            >{text}</Caption>}
+            {text && (
+                <Caption sizeId={sizeId} theme={theme.caption}>
+                    {text}
+                </Caption>
+            )}
         </CWrap>
     );
 };
