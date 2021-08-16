@@ -21,6 +21,10 @@
 		"esModuleInterop": true,
 		"jsx": "preserve",
 		"skipLibCheck": true,
-		"strict": true
+		"strict": true,
+		"typeRoots": [
+			"<rootDir>/node_modules/@types",
+			"<rootDir>/node_modules/@fast-js/types"
+		]
 	}
 }
