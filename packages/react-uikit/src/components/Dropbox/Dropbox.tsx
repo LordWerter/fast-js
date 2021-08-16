@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable guard-for-in */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
@@ -37,7 +39,7 @@ export const Dropbox: React.FC<IProps> = (props): JSX.Element => {
             <SelectedItem sizeId={sizeId} theme={theme.selecteditem}>
                 {selectedItem.text}
             </SelectedItem>
-            {data.map((item, index) => (
+            {data.map((item: any, index: any) => (
                 <Item
                     key={index}
                     sizeId={sizeId}
