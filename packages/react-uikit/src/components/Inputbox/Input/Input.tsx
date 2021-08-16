@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable react/prop-types */
 /**
  * imports & exports of namespaces, interfaces & types
  */
@@ -30,7 +32,6 @@ export interface IProps {
  */
 import React, { useState, ChangeEvent } from 'react';
 import { useTheme } from '@emotion/react';
-
 /**
  * imports of components
  */
@@ -45,6 +46,7 @@ import { CWrap, InputWrap, Label, InputBox, Placeholder, Notice } from './Input.
  * imports of utils
  */
 import { mergeThemeObjects } from '../../../utils';
+
 /**
  * Input Component
  * @param {Object} props implements IProps
@@ -64,10 +66,10 @@ export const Input: React.FC<IProps> = (props): JSX.Element => {
 
     const [isActive, setIsActive] = useState(false);
 
-    //@ts-ignore
+    // @ts-ignore
     const theme = { ...useTheme().components.InputBox } || {};
     const requiredThemeKeys = ['container', 'label', 'inputwrap', 'input', 'placeholder', 'images'];
-    for (let key in requiredThemeKeys) {
+    for (const key in requiredThemeKeys) {
         const curKey = requiredThemeKeys[key];
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
     }
@@ -81,13 +83,10 @@ export const Input: React.FC<IProps> = (props): JSX.Element => {
             ) : (
                 <></>
             )}
-            <InputWrap
-                sizeId={sizeId}
-                theme={isActive ? theme.states.isActive.inputwrap : theme.inputwrap}
-            >
+            <InputWrap sizeId={sizeId} theme={isActive ? theme.states.isActive.inputwrap : theme.inputwrap}>
                 <InputBox
                     sizeId={sizeId}
-                    theme={isActive ? theme.states.isActive.input: theme.input}
+                    theme={isActive ? theme.states.isActive.input : theme.input}
                     value={value}
                     disabled={disabled}
                     onChange={(event: ChangeEvent<HTMLInputElement>) => {
@@ -106,10 +105,9 @@ export const Input: React.FC<IProps> = (props): JSX.Element => {
                     </Placeholder>
                 )}
             </InputWrap>
-            <Notice
-                sizeId={sizeId}
-                theme={theme.notice}
-            >{}</Notice>
+            <Notice sizeId={sizeId} theme={theme.notice}>
+                {}
+            </Notice>
         </CWrap>
     );
 };

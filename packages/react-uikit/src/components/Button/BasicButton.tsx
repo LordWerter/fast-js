@@ -4,6 +4,8 @@ import React from 'react';
 import { useTheme } from '@emotion/react';
 import Image from '../Image';
 
+export type EventHandler = React.MouseEventHandler<HTMLButtonElement>;
+
 export interface ICWrapProps {
     padding: string;
     fontColor: string;
@@ -11,17 +13,16 @@ export interface ICWrapProps {
     fontWeight: string;
     borderRadius: string;
     bgColor?: string;
-    onClick: (event) => void;
+    onClick: EventHandler;
 }
 
 import { CWrap, IconWrap, Caption } from './BasicButton.styles';
 
-export type EventHandler = (event?: Event) => void;
-
 export interface IProps {
     text: string;
-    sizeId?: string;
+    sizeId?: TSize;
     customize?: any;
+    iconId?: string;
     onClick?: EventHandler;
     onFocus?: EventHandler;
     onBlur?: EventHandler;
@@ -30,6 +31,7 @@ export interface IProps {
  * imports of utils
  */
 import { mergeThemeObjects } from '../../utils';
+import { TSize } from 'src/definitions/IPropTypes';
 
 /**
  * renders BasicButton Item
@@ -37,7 +39,7 @@ import { mergeThemeObjects } from '../../utils';
  * @type {Function}
  * @returns {JSX.Element}
  */
-export const BasicButton: React.FC<any> = (props): JSX.Element => {
+export const BasicButton: React.FC<IProps> = (props): JSX.Element => {
     const { text, onClick, sizeId = 'xl', customize = {}, iconId = null } = props;
 
     // @ts-ignore

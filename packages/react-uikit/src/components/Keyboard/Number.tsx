@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable react/prop-types */
 /**
  * imports & exports of namespaces, interfaces & types
  */
@@ -11,17 +13,15 @@ export interface IProps {
  * imports of packages
  */
 import React from 'react';
-import {useTheme} from '@emotion/react';
+import { useTheme } from '@emotion/react';
 /**
  * imports of components
  */
 import Image from '../Image';
-
 /**
  * imports of styles
  */
 import { CWrap, Row, Key } from './Number.styles';
-
 /**
  * imports of constants
  */
@@ -30,7 +30,7 @@ import symbols from './lang/symbols';
 /**
  * imports of utils
  */
-import {mergeThemeObjects} from '../../utils';
+import { mergeThemeObjects } from '../../utils';
 
 /**
  * Number Keyboard Component
@@ -41,26 +41,20 @@ import {mergeThemeObjects} from '../../utils';
 export const Number: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'xl', customize = {}, handleOnClick } = props;
 
-    //@ts-ignore
+    // @ts-ignore
     const theme = { ...useTheme().components.NumbersKeyboard } || {};
 
-    const keyIcons = {...theme.images};
+    const keyIcons = { ...theme.images };
 
     return (
-        <CWrap
-            sizeId={sizeId}
-            theme={mergeThemeObjects(theme.container, customize.container)}
-        >
+        <CWrap sizeId={sizeId} theme={mergeThemeObjects(theme.container, customize.container)}>
             {numRows.map((row, rowInd) => (
-                <Row
-                    sizeId={sizeId}
-                    theme={mergeThemeObjects(theme.row, customize.row)}
-                    key={rowInd}>
+                <Row key={rowInd} sizeId={sizeId} theme={mergeThemeObjects(theme.row, customize.row)}>
                     {row.map((code, index) => (
                         <Key
+                            key={index}
                             sizeId={sizeId}
                             theme={mergeThemeObjects(theme.key, customize.key)}
-                            key={index}
                             onClick={() => {
                                 const keyValue = symbols[code];
                                 const codeValue = code;

@@ -1,6 +1,4 @@
 import styled from '@emotion/styled';
-
-
 import { ICWrapProps } from '../../definitions/IPropTypes';
 import { getResultStyles } from '../../utils';
 
@@ -19,12 +17,11 @@ export const CWrap = styled.div<IWrapperProps>`
 
     :hover {
         ${(props) => {
-            return getResultStyles(props, 'isHover')
+            return getResultStyles(props, 'isHover');
         }}
     }
 `;
 
 export const Roller = styled.div<IRollerProps>`
     ${getResultStyles}
-
 `;

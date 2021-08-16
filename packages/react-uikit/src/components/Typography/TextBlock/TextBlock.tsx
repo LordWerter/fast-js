@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { useTheme } from '@emotion/react';
 // import { useState } from 'react';
-
 import { TSize, TTextBlockType } from '../../../definitions/IPropTypes';
+
 export interface IProps {
     sizeId?: TSize;
     customize?: any;
@@ -18,7 +20,7 @@ import { mergeThemeObjects } from '../../../utils';
 export const TextBlock: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'xl', customize = {}, type = 'P', children } = props;
 
-    //@ts-ignore
+    // @ts-ignore
     const theme = { ...useTheme().components.TextBlock } || {};
 
     switch (type) {

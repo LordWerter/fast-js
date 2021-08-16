@@ -1,3 +1,6 @@
+/* eslint-disable guard-for-in */
+/* eslint-disable react/prop-types */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 export interface IProps {
     text: number | string;
     sizeId?: any;
@@ -7,7 +10,7 @@ export interface IProps {
  * imports of packages
  */
 import React from 'react';
-import {useTheme} from '@emotion/react';
+import { useTheme } from '@emotion/react';
 /**
  * imports of components
  */
@@ -18,7 +21,7 @@ import { CWrap, Prefix, Postfix } from './Label.styles';
 /**
  * imports of utils
  */
-import {mergeThemeObjects} from '../../utils';
+import { mergeThemeObjects } from '../../utils';
 
 /**
  * Label Component
@@ -27,37 +30,25 @@ import {mergeThemeObjects} from '../../utils';
  * @returns {JSX.Element}
  */
 export const Label: React.FC<IProps> = (props): JSX.Element => {
-    const {
-        text,
-        sizeId = 'xl',
-        customize = {},
-    } = props;
+    const { text, sizeId = 'xl', customize = {} } = props;
 
-    //@ts-ignore
+    // @ts-ignore
     const theme = { ...useTheme().components.Label } || {};
-    const requiredThemeKeys = [
-        'container', 'prefix', 'postfix', 'images'
-    ];
-    for (let key in requiredThemeKeys) {
+    const requiredThemeKeys = ['container', 'prefix', 'postfix', 'images'];
+    for (const key in requiredThemeKeys) {
         const curKey = requiredThemeKeys[key];
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
     }
 
-
     return (
-        <CWrap
-            sizeId={sizeId}
-            theme={theme.container}
-        >
-            <Prefix
-                sizeId={sizeId}
-                theme={theme.prefix}
-            >{}</Prefix>
+        <CWrap sizeId={sizeId} theme={theme.container}>
+            <Prefix sizeId={sizeId} theme={theme.prefix}>
+                {}
+            </Prefix>
             {text}
-            <Postfix
-                sizeId={sizeId}
-                theme={theme.postfix}
-            >{}</Postfix>
+            <Postfix sizeId={sizeId} theme={theme.postfix}>
+                {}
+            </Postfix>
         </CWrap>
     );
 };

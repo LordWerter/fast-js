@@ -1,7 +1,13 @@
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable react/prop-types */
 /**
  * imports & exports of namespaces, interfaces & types
  */
 import { TSize } from '../../definitions/IPropTypes';
+
 export interface IProps {
     boardId: string;
     keyCode: string;
@@ -16,7 +22,7 @@ export interface IProps {
  * imports of packages
  */
 import React from 'react';
-import {useTheme} from '@emotion/react';
+import { useTheme } from '@emotion/react';
 /**
  * imports of components
  */
@@ -25,11 +31,10 @@ import Image from '../Image';
  * imports of styles
  */
 import { CWrap } from './KeyBtn.styles';
-
 /**
  * imports of utils
  */
-import {mergeThemeObjects} from '../../utils';
+import { mergeThemeObjects } from '../../utils';
 
 /**
  * KeyBtn Component
@@ -40,10 +45,10 @@ import {mergeThemeObjects} from '../../utils';
 export const KeyBtn: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'xl', customize = {}, boardId, keyCode, keyValue, capslock, callback } = props;
 
-    //@ts-ignore
+    // @ts-ignore
     const theme = { ...useTheme().components.KeyBtn } || {};
 
-    const keyIcons = {...theme.images};
+    const keyIcons = { ...theme.images };
 
     let width = 0;
 

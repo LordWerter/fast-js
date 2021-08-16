@@ -1,23 +1,26 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable react/prop-types */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable react/forbid-component-props */
 /**
  * imports & exports of namespaces, interfaces & types
  */
-export type CheckboxEvent<T> = (event: T, data?: { name?: string; value: boolean }) => void;
+export type EventHandler = React.MouseEventHandler<HTMLButtonElement>;
 export interface IProps {
     hash: string;
-    sizeId?: any;
+    sizeId?: TSize;
     name?: string;
     label?: string;
     disabled?: boolean;
     callback?: (isChecked: boolean) => void;
-    onChange?: (event?: any) => any;
+    onChange?: EventHandler;
     customize?: any;
 }
 /**
  * imports of packages
  */
 import React, { useState } from 'react';
-import {useTheme} from '@emotion/react';
-
+import { useTheme } from '@emotion/react';
 /**
  * imports of components
  */
@@ -31,7 +34,8 @@ import { CWrap, IconBox, Input, Label } from './Checkbox.styles';
 /**
  * imports of utils
  */
-import {mergeThemeObjects} from '../../utils';
+import { mergeThemeObjects } from '../../utils';
+import { TSize } from 'src/definitions/IPropTypes';
 
 /**
  * Checkbox Component
@@ -44,13 +48,11 @@ export const Checkbox: React.FC<IProps> = (props): JSX.Element => {
 
     // const [active, setActive] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
-    //@ts-ignore
+    // @ts-ignore
     const theme = { ...useTheme().components.Checkbox } || {};
-    const requiredThemeKeys = [
-        'container', 'icon', 'label', 'images'
-    ];
+    const requiredThemeKeys = ['container', 'icon', 'label', 'images'];
 
-    for (let key in requiredThemeKeys) {
+    for (const key in requiredThemeKeys) {
         const curKey = requiredThemeKeys[key];
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
     }
@@ -60,25 +62,29 @@ export const Checkbox: React.FC<IProps> = (props): JSX.Element => {
             sizeId={sizeId}
             theme={theme.container}
             color4Active={theme.color4Active}
-            onClick={(event: any) => {
+            onClick={(event) => {
                 setIsChecked(!isChecked);
                 console.log('click');
                 callback && callback(!isChecked);
-        }}>
+            }}>
             <IconBox
                 sizeId={sizeId}
                 theme={theme.icon}
-                style={isChecked ? {
-                    backgroundColor: theme.color4Active,
-                    backgroundImage: `url('${theme.images.image4Active}')`,
-                } : {}}
-            >
+                style={
+                    isChecked
+                        ? {
+                              backgroundColor: theme.color4Active,
+                              backgroundImage: `url('${theme.images.image4Active}')`,
+                          }
+                        : {}
+                }>
                 <Input id={props.hash} type={'checkbox'} disabled={disabled} name={name} />
             </IconBox>
-            {label && <Label
-                sizeId={sizeId}
-                theme={theme.label}
-                htmlFor={props.hash}>{label}</Label>}
+            {label && (
+                <Label sizeId={sizeId} theme={theme.label} htmlFor={props.hash}>
+                    {label}
+                </Label>
+            )}
         </CWrap>
     );
 };

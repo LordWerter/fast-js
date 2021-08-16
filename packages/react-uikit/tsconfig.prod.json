@@ -1,5 +1,5 @@
 {
-  "extends": "../configs__typescript/client/tsconfig.prod.json",
+  "extends": "@fast-js/typescript/client/tsconfig.prod.json",
   "include": [
     "./src/**/*.ts",
     "./src/**/*.tsx",

@@ -1,3 +1,7 @@
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable react/forbid-component-props */
+/* eslint-disable react/prop-types */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /**
  * imports & exports of namespaces, interfaces & types
  */
@@ -15,46 +19,34 @@ export interface IProps {
  * imports of packages
  */
 import React from 'react';
-import {useTheme} from '@emotion/react';
+import { useTheme } from '@emotion/react';
 /**
  * imports of components
  */
-
 /**
  * imports of styles
  */
 import { CWrap, Value, Btn } from './Counter.styles';
-
 /**
  * imports of constants
  */
 /**
  * imports of utils
  */
-import {mergeThemeObjects} from '../../utils';
+import { mergeThemeObjects } from '../../utils';
 
-/**
- * Counter Component
- * @param props implements IProps
- * @description renders Counter
- */
 export const Counter: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'xl', customize = {}, count, productCode, handleMinusCount, handlePlusCount } = props;
-    //@ts-ignore
+    // @ts-ignore
     const theme = { ...useTheme().components.Counter } || {};
-    const requiredThemeKeys = [
-        'container', 'button', 'value', 'images'
-    ];
-    for (let key in requiredThemeKeys) {
+    const requiredThemeKeys = ['container', 'button', 'value', 'images'];
+    for (const key in requiredThemeKeys) {
         const curKey = requiredThemeKeys[key];
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
     }
 
     return (
-        <CWrap
-            sizeId={sizeId}
-            theme={mergeThemeObjects(theme.container, customize.container)}
-        >
+        <CWrap sizeId={sizeId} theme={mergeThemeObjects(theme.container, customize.container)}>
             <Btn
                 sizeId={sizeId}
                 theme={mergeThemeObjects(theme.button, customize.button)}
@@ -63,11 +55,11 @@ export const Counter: React.FC<IProps> = (props): JSX.Element => {
                 }}
                 onClick={() => {
                     handleMinusCount(productCode);
-                }} />
-            <Value
-                sizeId={sizeId}
-                theme={mergeThemeObjects(theme.value, customize.value)}
-            >{count}</Value>
+                }}
+            />
+            <Value sizeId={sizeId} theme={mergeThemeObjects(theme.value, customize.value)}>
+                {count}
+            </Value>
             <Btn
                 sizeId={sizeId}
                 theme={mergeThemeObjects(theme.button, customize.button)}
@@ -76,7 +68,8 @@ export const Counter: React.FC<IProps> = (props): JSX.Element => {
                 }}
                 onClick={() => {
                     handlePlusCount(productCode);
-                }} />
+                }}
+            />
         </CWrap>
     );
 };

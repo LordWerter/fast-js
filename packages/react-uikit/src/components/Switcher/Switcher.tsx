@@ -1,8 +1,11 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable react/prop-types */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useState, FocusEventHandler, FocusEvent } from 'react';
-import {useTheme} from '@emotion/react';
-
+import { useTheme } from '@emotion/react';
 import { CWrap, Roller } from './Switcher.styles';
-
 import { TSize } from '../../definitions/IPropTypes';
 
 export type SwitcherEvent<T> = (event: T, data?: { name?: string; value: boolean }) => void;
@@ -20,47 +23,48 @@ export interface IProps {
 /**
  * imports of utils
  */
-import {mergeThemeObjects} from '../../utils';
+import { mergeThemeObjects } from '../../utils';
 
-/**
- * 
- * @param props 
- * @returns 
- */
 export const Switcher: React.FC<IProps> = (props): JSX.Element => {
-    const { children, sizeId = 'xl', customize = {}, isEnabled = false, isDisabled = false, onChange, onBlur, onFocus } = props;
+    const {
+        children,
+        sizeId = 'xl',
+        customize = {},
+        isEnabled = false,
+        isDisabled = false,
+        onChange,
+        onBlur,
+        onFocus,
+    } = props;
 
     const [isEnable, setIsEnable] = useState(isEnabled);
-    //@ts-ignore
+    // @ts-ignore
     const theme = { ...useTheme().components.Switcher };
     const containerStyles = mergeThemeObjects(theme.container, customize.container);
     const rollerStyles = mergeThemeObjects(theme.roller, customize.roller);
 
-    return <CWrap
-        sizeId={sizeId} theme={containerStyles}
-        isDisabled={isDisabled}
-        isEnabled={isEnable}
-        onClick={() => {
-            setIsEnable(!isEnable);
-        }}
-        onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-            onChange && onChange(event)
-        }}
-        onBlur={(event: FocusEvent<HTMLInputElement>) => {
-            onBlur && onBlur(event);
-        }}
-        onFocus={(event: FocusEvent<HTMLInputElement>) => {
-            onFocus && onFocus(event);
-        }}
-    >
-        <Roller
+    return (
+        <CWrap
             sizeId={sizeId}
-            theme={rollerStyles}
-            isEnabled={isEnable}
+            theme={containerStyles}
             isDisabled={isDisabled}
-        />
-        {children}
-    </CWrap>;
+            isEnabled={isEnable}
+            onClick={() => {
+                setIsEnable(!isEnable);
+            }}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                onChange && onChange(event);
+            }}
+            onBlur={(event: FocusEvent<HTMLInputElement>) => {
+                onBlur && onBlur(event);
+            }}
+            onFocus={(event: FocusEvent<HTMLInputElement>) => {
+                onFocus && onFocus(event);
+            }}>
+            <Roller sizeId={sizeId} theme={rollerStyles} isEnabled={isEnable} isDisabled={isDisabled} />
+            {children}
+        </CWrap>
+    );
 };
 
-export default Switcher ;
+export default Switcher;

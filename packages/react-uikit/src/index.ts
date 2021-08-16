@@ -4,7 +4,7 @@ export { default as CheckBoxBar } from './containers/CheckBoxBar';
 export { default as Counter } from './components/Counter';
 export { default as Dropbox } from './components/Dropbox';
 export { default as Image } from './components/Image';
-export { default as InputBox } from './components/InputBox';
+export { default as InputBox } from './components/Inputbox';
 export { default as SymbKeyboard } from './components/Keyboard';
 export { Number as NumKeyboard } from './components/Keyboard';
 export { default as Label } from './components/Label';

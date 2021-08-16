@@ -1,8 +1,8 @@
 {
-	"extends": "../configs__typescript/client/tsconfig.json",
+	"extends": "@fast-js/typescript/client/tsconfig.json",
 	"include": [
-		"./src/**/*.ts",
-		"./src/**/*.tsx",
+		"<rootDir>/src/**/*.ts",
+		"<rootDir>/src/**/*.tsx",
 		".storybook/main.js",
 		"<rootDir>/node_modules/@fast-js/utils/**/*.ts"
 	],

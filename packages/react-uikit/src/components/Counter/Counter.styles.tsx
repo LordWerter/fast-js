@@ -1,16 +1,12 @@
 import styled from '@emotion/styled';
-
 import { ICWrapProps } from '../../definitions/IPropTypes';
 import { getResultStyles } from '../../utils';
 
-export interface IWrapperProps extends ICWrapProps {
-}
+export type IWrapperProps = ICWrapProps;
 
-export interface IButtonProps extends ICWrapProps {
-}
+export type IButtonProps = ICWrapProps;
 
-export interface IValueProps extends ICWrapProps {
-}
+export type IValueProps = ICWrapProps;
 
 export const CWrap = styled.div<IWrapperProps>`
     display: flex;
@@ -43,6 +39,6 @@ export const Btn = styled.button<IButtonProps>`
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    
+
     ${getResultStyles}
 `;

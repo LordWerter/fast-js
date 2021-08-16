@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-
 import { ICWrapProps } from '../../definitions/IPropTypes';
 import { getResultStyles } from '../../utils';
 
@@ -7,11 +6,9 @@ export interface IWrapperProps extends ICWrapProps {
     color4Active: any;
 }
 
-export interface IIconProps extends ICWrapProps {
-}
+export type IIconProps = ICWrapProps;
 
-export interface ILabelProps extends ICWrapProps {
-}
+export type ILabelProps = ICWrapProps;
 
 export const IconBox = styled.div<IIconProps>`
     position: relative;

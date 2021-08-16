@@ -18,7 +18,7 @@ export default class AppUpdateUtility {
     public updateAppNow() {
         autoUpdater.checkForUpdatesAndNotify();
 
-        autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
+        autoUpdater.on('update-downloaded', (event: any, releaseNotes: any, releaseName: any) => {
             const dialogOpts = {
                 type: 'info',
                 buttons: ['Restart', 'Later'],
@@ -27,12 +27,12 @@ export default class AppUpdateUtility {
                 detail: 'A new version has been downloaded. Restart the application to apply the updates.',
             };
 
-            dialog.showMessageBox(dialogOpts).then((returnValue) => {
+            dialog.showMessageBox(dialogOpts).then((returnValue: { response: number; }) => {
                 if (returnValue.response === 0) autoUpdater.quitAndInstall();
             });
         });
 
-        this.autoUpdater.on('error', (message) => {
+        this.autoUpdater.on('error', (message: any) => {
             console.error('There was a problem updating the application');
             console.error(message);
         });

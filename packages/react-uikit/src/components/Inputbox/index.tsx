@@ -1,13 +1,13 @@
-import Inputbox from './Input';
+import Input from './Input';
 import InputWithMask from './InputWithMask';
 import Input4Search from './Input4Search';
 
-export { Inputbox as Inputbox };
-export { InputWithMask as InputWithMask };
-export { Input4Search as Input4Search };
+export { Input };
+export { InputWithMask };
+export { Input4Search };
 
 export default {
-    Inputbox,
+    Input,
     InputWithMask,
     Input4Search,
 };

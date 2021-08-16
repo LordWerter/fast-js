@@ -1,5 +1,8 @@
+/* eslint-disable guard-for-in */
+/* eslint-disable react/prop-types */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from 'react';
-import {useTheme} from '@emotion/react';
+import { useTheme } from '@emotion/react';
 
 export interface ICWrapProps {
     padding: string;
@@ -24,7 +27,7 @@ export interface IProps {
 /**
  * imports of utils
  */
-import {mergeThemeObjects} from '../../utils';
+import { mergeThemeObjects } from '../../utils';
 
 /**
  * renders BasicButton Item
@@ -33,30 +36,21 @@ import {mergeThemeObjects} from '../../utils';
  * @returns {JSX.Element}
  */
 export const Modal: React.FC<any> = (props): JSX.Element => {
-    const {
-        sizeId = 'xl',
-        customize = {},
-        children,
-    } = props;
+    const { sizeId = 'xl', customize = {}, children } = props;
 
-    const requiredThemeKeys = [
-        'container', 'modalwinwrap'
-    ];
+    const requiredThemeKeys = ['container', 'modalwinwrap'];
 
-    //@ts-ignore
-    const theme: {[key in string]: any} = { ...useTheme().components.Modal } || {};
-    for (let key in requiredThemeKeys) {
+    // @ts-ignore
+    const theme: { [key in string]: any } = { ...useTheme().components.Modal } || {};
+    for (const key in requiredThemeKeys) {
         const curKey = requiredThemeKeys[key];
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
     }
 
     // TODO: add hover effect
     return (
-        <CWrap
-            sizeId={sizeId}
-            theme={theme.container}
-        >
-                {children}
+        <CWrap sizeId={sizeId} theme={theme.container}>
+            {children}
         </CWrap>
     );
 };

@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /**
  * imports & exports of namespaces, interfaces & types
  */
@@ -16,7 +18,6 @@ export interface IProps {
 import React from 'react';
 import IMask from 'imask';
 import { useTheme } from '@emotion/react';
-
 /**
  * imports of components
  */
@@ -45,8 +46,8 @@ export const InputWithMask: React.FC<IProps> = (props): JSX.Element => {
         mask: maskTpl,
     });
     const maskedValue = masked.resolve(value);
-    
-    //@ts-ignore
+
+    // @ts-ignore
     const theme = { ...useTheme().components.InputWithMask };
 
     return (

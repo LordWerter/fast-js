@@ -1,16 +1,12 @@
 import styled from '@emotion/styled';
-
 import { ICWrapProps } from '../../definitions/IPropTypes';
 import { getResultStyles } from '../../utils';
 
-export interface IWrapperProps extends ICWrapProps {
-}
+export type IWrapperProps = ICWrapProps;
 
-export interface IIconProps extends ICWrapProps {
-}
+export type IIconProps = ICWrapProps;
 
-export interface ICaptionProps extends ICWrapProps {
-}
+export type ICaptionProps = ICWrapProps;
 
 export const CWrap = styled.button<IWrapperProps>`
     ${getResultStyles}

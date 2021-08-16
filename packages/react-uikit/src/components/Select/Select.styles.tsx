@@ -1,16 +1,12 @@
 import styled from '@emotion/styled';
-
 import { ICWrapProps } from '../../definitions/IPropTypes';
 import { getResultStyles } from '../../utils';
 
-export interface IWrapperProps extends ICWrapProps {
-}
+export type IWrapperProps = ICWrapProps;
 
-export interface IMainBtnProps extends ICWrapProps {
-}
+export type IMainBtnProps = ICWrapProps;
 
-export interface ILabelProps extends ICWrapProps {
-}
+export type ILabelProps = ICWrapProps;
 
 export interface IListProps extends ICWrapProps {
     isVisible: boolean;

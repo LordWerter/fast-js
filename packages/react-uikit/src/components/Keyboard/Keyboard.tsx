@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable react/prop-types */
 /**
  * imports & exports of namespaces, interfaces & types
  */
@@ -12,8 +15,7 @@ export interface IProps {
  * imports of packages
  */
 import React, { useState } from 'react';
-import {useTheme} from '@emotion/react';
-
+import { useTheme } from '@emotion/react';
 /**
  * imports of components
  */
@@ -22,7 +24,6 @@ import KeyBtn from './KeyBtn';
  * imports of styles
  */
 import { CWrap, Board, Row } from './Keyboard.styles';
-
 /**
  * imports of constants
  */
@@ -31,7 +32,7 @@ import langRows from './langRows';
 /**
  * imports of utils
  */
-import {mergeThemeObjects} from '../../utils';
+import { mergeThemeObjects } from '../../utils';
 
 /**
  * Keyboard Component
@@ -44,19 +45,18 @@ export const Keyboard: React.FC<IProps> = (props): JSX.Element => {
     const [activeBoard, setActiveBoard] = useState(lang);
     const [isShift, setIsShift] = useState(false);
 
-    //@ts-ignore
+    // @ts-ignore
     const theme = { ...useTheme().components.SymbolsKeyboard } || {};
-    const keyBtnStyles = mergeThemeObjects(theme.keybtn, customize.keybtn)
+    const keyBtnStyles = mergeThemeObjects(theme.keybtn, customize.keybtn);
 
     const renderRow = (code, boardId) => {
-
         switch (code) {
             case '16':
                 return (
                     activeBoard !== 'symbols' && (
                         <KeyBtn
-                            customize={keyBtnStyles}
                             key={Number(code)}
+                            customize={keyBtnStyles}
                             boardId={boardId}
                             keyCode={code}
                             keyValue={keysTable[boardId][code]}
@@ -70,8 +70,8 @@ export const Keyboard: React.FC<IProps> = (props): JSX.Element => {
             case '8':
                 return (
                     <KeyBtn
-                        customize={keyBtnStyles}
                         key={Number(code)}
+                        customize={keyBtnStyles}
                         boardId={boardId}
                         keyCode={code}
                         keyValue={keysTable[boardId][code]}
@@ -84,8 +84,8 @@ export const Keyboard: React.FC<IProps> = (props): JSX.Element => {
             case '1':
                 return (
                     <KeyBtn
-                        customize={keyBtnStyles}
                         key={Number(code)}
+                        customize={keyBtnStyles}
                         boardId={boardId}
                         keyCode={code}
                         keyValue={keysTable[boardId][code]}
@@ -98,8 +98,8 @@ export const Keyboard: React.FC<IProps> = (props): JSX.Element => {
             case '0':
                 return (
                     <KeyBtn
-                        customize={keyBtnStyles}
                         key={Number(code)}
+                        customize={keyBtnStyles}
                         boardId={boardId}
                         keyCode={code}
                         keyValue={keysTable[boardId][code]}
@@ -116,8 +116,8 @@ export const Keyboard: React.FC<IProps> = (props): JSX.Element => {
             default:
                 return (
                     <KeyBtn
-                        customize={keyBtnStyles}
                         key={Number(code)}
+                        customize={keyBtnStyles}
                         keyCode={code}
                         boardId={boardId}
                         keyValue={keysTable[boardId][code]}
@@ -131,46 +131,43 @@ export const Keyboard: React.FC<IProps> = (props): JSX.Element => {
     };
 
     return (
-        <CWrap
-            sizeId={sizeId}
-            theme={mergeThemeObjects(theme.container, customize.container)}
-        >
+        <CWrap sizeId={sizeId} theme={mergeThemeObjects(theme.container, customize.container)}>
             {activeBoard === 'ru' && (
                 <Board
+                    key={'ru'}
                     sizeId={sizeId}
                     theme={mergeThemeObjects(theme.board, customize.board)}
-                    activeBoard={activeBoard} key={'ru'}>
+                    activeBoard={activeBoard}>
                     {langRows.ru.map((row, rowInd) => (
-                        <Row
-                            sizeId={sizeId}
-                            theme={mergeThemeObjects(theme.row, customize.row)}
-                            key={rowInd}>{row.map((code) => renderRow(code, 'ru'))}</Row>
+                        <Row key={rowInd} sizeId={sizeId} theme={mergeThemeObjects(theme.row, customize.row)}>
+                            {row.map((code) => renderRow(code, 'ru'))}
+                        </Row>
                     ))}
                 </Board>
             )}
             {activeBoard === 'en' && (
                 <Board
+                    key={'ru'}
                     sizeId={sizeId}
                     theme={mergeThemeObjects(theme.board, customize.board)}
-                    activeBoard={activeBoard} key={'ru'}>
+                    activeBoard={activeBoard}>
                     {langRows.en.map((row, rowInd) => (
-                        <Row
-                            sizeId={sizeId}
-                            theme={mergeThemeObjects(theme.row, customize.row)}
-                            key={rowInd}>{row.map((code) => renderRow(code, 'en'))}</Row>
+                        <Row key={rowInd} sizeId={sizeId} theme={mergeThemeObjects(theme.row, customize.row)}>
+                            {row.map((code) => renderRow(code, 'en'))}
+                        </Row>
                     ))}
                 </Board>
             )}
             {activeBoard === 'symbols' && (
                 <Board
+                    key={'symbols'}
                     sizeId={sizeId}
                     theme={mergeThemeObjects(theme.board, customize.board)}
-                    activeBoard={activeBoard} key={'symbols'}>
+                    activeBoard={activeBoard}>
                     {langRows.symbols.map((row, rowInd) => (
-                        <Row
-                            sizeId={sizeId}
-                            theme={mergeThemeObjects(theme.row, customize.row)}
-                            key={rowInd}>{row.map((code) => renderRow(code, 'symbols'))}</Row>
+                        <Row key={rowInd} sizeId={sizeId} theme={mergeThemeObjects(theme.row, customize.row)}>
+                            {row.map((code) => renderRow(code, 'symbols'))}
+                        </Row>
                     ))}
                 </Board>
             )}

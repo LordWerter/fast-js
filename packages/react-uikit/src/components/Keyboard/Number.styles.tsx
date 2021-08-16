@@ -1,16 +1,12 @@
 import styled from '@emotion/styled';
-
 import { ICWrapProps } from '../../definitions/IPropTypes';
 import { getResultStyles } from '../../utils';
 
-export interface IWrapperProps extends ICWrapProps {
-}
+export type IWrapperProps = ICWrapProps;
 
-export interface IRowProps extends ICWrapProps {
-}
+export type IRowProps = ICWrapProps;
 
-export interface IKeyProps extends ICWrapProps {
-}
+export type IKeyProps = ICWrapProps;
 
 export const CWrap = styled.div<IWrapperProps>`
     display: flex;
@@ -28,7 +24,6 @@ export const Row = styled.div<IRowProps>`
 
     box-sizing: border-box;
     ${getResultStyles}
-
 `;
 
 export const Key = styled.button<IKeyProps>`
@@ -51,5 +46,4 @@ export const Key = styled.button<IKeyProps>`
     border-radius: 15px;
 
     ${getResultStyles}
-
 `;

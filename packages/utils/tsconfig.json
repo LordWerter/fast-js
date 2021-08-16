@@ -1,4 +1,5 @@
 {
+	"extends": "@fast-js/typescript/client/tsconfig.json",
 	"include": [
 		"./src/**/*.ts",
 	],
@@ -16,10 +17,10 @@
 		"baseUrl": ".",
 		"esModuleInterop": true,
 		"skipLibCheck": true,
-		"strict": true
+		"strict": true,
+		"typeRoots": [
+			"<rootDir>/node_modules/@fast-js/types",
+			"<rootDir>/node_modules/@types"
+		]
 	},
-	"typeRoots": [
-		"<rootDir>/../../types/src",
-		"<rootDir>/node_modules/@types"
-	]
 }

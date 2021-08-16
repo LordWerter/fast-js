@@ -1,10 +1,8 @@
 import styled from '@emotion/styled';
-
 import { ICWrapProps } from '../../../definitions/IPropTypes';
 import { getResultStyles } from '../../../utils';
 
-export interface IWrapperProps extends ICWrapProps {
-}
+export type IWrapperProps = ICWrapProps;
 
 export const CWrap = styled.div<IWrapperProps>`
     position: relative;
@@ -12,8 +10,7 @@ export const CWrap = styled.div<IWrapperProps>`
     ${getResultStyles}
 `;
 
-export interface ILabelProps extends ICWrapProps {
-}
+export type ILabelProps = ICWrapProps;
 
 export const Label = styled.div<ILabelProps>`
     display: flex;
@@ -21,15 +18,13 @@ export const Label = styled.div<ILabelProps>`
     ${getResultStyles}
 `;
 
-export interface IInputWrapProps extends ICWrapProps {
-}
+export type IInputWrapProps = ICWrapProps;
 
 export const InputWrap = styled.div<IInputWrapProps>`
     ${getResultStyles}
 `;
 
-export interface IInpitProps extends ICWrapProps {
-}
+export type IInpitProps = ICWrapProps;
 
 export const InputBox = styled.input<IInpitProps>`
     position: relative;
@@ -40,8 +35,7 @@ export const InputBox = styled.input<IInpitProps>`
     ${getResultStyles}
 `;
 
-export interface IPlaceholderProps extends ICWrapProps {
-}
+export type IPlaceholderProps = ICWrapProps;
 
 export const Placeholder = styled.div<IPlaceholderProps>`
     position: absolute;
@@ -56,8 +50,7 @@ export const Placeholder = styled.div<IPlaceholderProps>`
     ${getResultStyles}
 `;
 
-export interface INoticeProps extends ICWrapProps {
-}
+export type INoticeProps = ICWrapProps;
 
 export const Notice = styled.div<INoticeProps>`
     ${getResultStyles}

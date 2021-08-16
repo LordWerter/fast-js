@@ -1,8 +1,12 @@
+/* eslint-disable react/forbid-component-props */
+/* eslint-disable guard-for-in */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable react/prop-types */
 /**
  * imports of packages
  */
 import React from 'react';
-import {useTheme} from '@emotion/react';
+import { useTheme } from '@emotion/react';
 /**
  * imports of components
  */
@@ -13,41 +17,23 @@ import { CWrap, ImageWrap, ClockImg, Circle, LoadingText } from './Spinner.style
 /**
  * imports of utils
  */
-import {mergeThemeObjects} from '../../utils';
+import { mergeThemeObjects } from '../../utils';
 
-/**
- * Label Component
- * @param {Object} props implements IProps
- * @type {Function}
- * @returns {JSX.Element}
- */
 export const Spinner: React.FC<any> = (props): JSX.Element => {
-    const {
-        loadingText,
-        sizeId = 'xl',
-        customize = {},
-    } = props;
+    const { loadingText, sizeId = 'xl', customize = {} } = props;
 
-    //@ts-ignore
+    // @ts-ignore
     const theme = { ...useTheme().components.Spinner } || {};
-    const requiredThemeKeys = [
-        'container', 'title', 'imagewrap', 'clockimg', 'circle', 'loadingtext', 'images'
-    ];
+    const requiredThemeKeys = ['container', 'title', 'imagewrap', 'clockimg', 'circle', 'loadingtext', 'images'];
 
-    for (let key in requiredThemeKeys) {
+    for (const key in requiredThemeKeys) {
         const curKey = requiredThemeKeys[key];
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
     }
 
     return (
-        <CWrap
-            sizeId={sizeId}
-            theme={theme.container}
-        >
-            <ImageWrap
-                sizeId={sizeId}
-                theme={theme.imagewrap}
-            >
+        <CWrap sizeId={sizeId} theme={theme.container}>
+            <ImageWrap sizeId={sizeId} theme={theme.imagewrap}>
                 <ClockImg
                     sizeId={sizeId}
                     theme={theme.clockimg}
@@ -63,10 +49,9 @@ export const Spinner: React.FC<any> = (props): JSX.Element => {
                     }}
                 />
             </ImageWrap>
-            <LoadingText
-                sizeId={sizeId}
-                theme={theme.loadingtext}
-            >{loadingText}</LoadingText>
+            <LoadingText sizeId={sizeId} theme={theme.loadingtext}>
+                {loadingText}
+            </LoadingText>
         </CWrap>
     );
 };

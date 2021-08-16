@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, object } from '@storybook/addon-knobs';
-
 import StoryWrapper from '../../containers/StoryWrapper';
 import Keyboard from './Keyboard';
 import mocks from './__mocks__';

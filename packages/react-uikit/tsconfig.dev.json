@@ -1,5 +1,5 @@
 {
-	"extends": "../configs__typescript/client/tsconfig.dev.json",
+	"extends": "@fast-js/typescript/client/tsconfig.dev.json",
 	"include": ["./src/**/*.ts", "./src/**/*.tsx", "./.storybook/main.ts"],
 	"exclude": [
 		"node_modules",

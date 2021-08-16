@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable guard-for-in */
+/* eslint-disable react/prop-types */
 import { TSize } from '../../definitions/IPropTypes';
-
 import React from 'react';
 import { useTheme } from '@emotion/react';
 
@@ -12,7 +14,6 @@ export interface IProps {
 }
 
 import { CWrap, IntValue, Delimiter, FractionValue, Сurrency, Line } from './Price.styles';
-
 import currencies from './currencies';
 /**
  * imports of utils
@@ -36,12 +37,12 @@ export const Price: React.FC<IProps> = (props): JSX.Element => {
         'currency',
         'line',
         'lineStyles',
-        'lineDecorations'
+        'lineDecorations',
     ];
 
-    //@ts-ignore
+    // @ts-ignore
     const theme: { [key in string]: any } = { ...useTheme().components.Price } || {};
-    for (let key in requiredThemeKeys) {
+    for (const key in requiredThemeKeys) {
         const curKey = requiredThemeKeys[key];
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
     }
@@ -58,7 +59,10 @@ export const Price: React.FC<IProps> = (props): JSX.Element => {
     const intValue = `${value}`.split('.')[0];
     const fractionValue = getFractionDigits(value);
 
-    const targetDecoration = mergeThemeObjects(theme.lineDecorations[theme.config.decoration], theme.lineStyles[theme.config.lineStyle])
+    const targetDecoration = mergeThemeObjects(
+        theme.lineDecorations[theme.config.decoration],
+        theme.lineStyles[theme.config.lineStyle]
+    );
 
     return (
         <CWrap sizeId={sizeId} theme={theme.container}>
