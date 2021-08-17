@@ -1,4 +1,4 @@
-const en = {
+const en: any = {
     currencyCode: 'funt',
     count: 'pieces',
 };

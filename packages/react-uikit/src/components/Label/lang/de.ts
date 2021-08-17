@@ -1,4 +1,4 @@
-const de = {
+const de: any = {
     currencyCode: 'euro',
     count: 'stücke',
 };

@@ -1,4 +1,4 @@
-const br = {
+const br: any = {
     currencyCode: 'dollar',
     count: 'peças',
 };

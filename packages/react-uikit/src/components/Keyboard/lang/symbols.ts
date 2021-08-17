@@ -1,4 +1,4 @@
-export default {
+export const symbols: any = {
     '81': '1',
     '87': '2',
     '69': '3',
@@ -41,3 +41,5 @@ export default {
     '17': 'ctrl',
     '20': 'capslock',
 };
+
+export default symbols;

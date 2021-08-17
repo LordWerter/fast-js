@@ -1,4 +1,4 @@
-const zh = {
+const zh: any = {
     currencyCode: 'uan',
     count: '件',
 };

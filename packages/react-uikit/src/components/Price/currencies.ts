@@ -1,4 +1,4 @@
-export default {
+export const currencies: any = {
     ru: '₽',
     kz: '₸',
     en: '₸',
@@ -8,3 +8,5 @@ export default {
     br: '$',
     us: '$',
 };
+
+export default currencies;

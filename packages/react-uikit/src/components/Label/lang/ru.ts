@@ -1,4 +1,4 @@
-const ru = {
+const ru: any = {
     currencyCode: 'ruble',
     count: 'шт',
 };

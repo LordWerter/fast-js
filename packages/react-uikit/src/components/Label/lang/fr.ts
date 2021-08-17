@@ -1,4 +1,4 @@
-const fr = {
+const fr: any = {
     currencyCode: 'euro',
     count: 'pièces',
 };
