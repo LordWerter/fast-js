@@ -40,13 +40,14 @@ export const Switcher: React.FC<IProps> = (props): JSX.Element => {
     const [isEnable, setIsEnable] = useState(isEnabled);
     // @ts-ignore
     const theme = { ...useTheme().components.Switcher };
-    const containerStyles = mergeThemeObjects(theme.container, customize.container);
-    const rollerStyles = mergeThemeObjects(theme.roller, customize.roller);
+    Object.keys(theme).forEach((key: string) => {
+        theme[key] = mergeThemeObjects(theme[key], customize[key]);
+    });
 
     return (
         <CWrap
             sizeId={sizeId}
-            theme={containerStyles}
+            theme={theme.container}
             isDisabled={isDisabled}
             isEnabled={isEnable}
             onClick={() => {
@@ -61,7 +62,7 @@ export const Switcher: React.FC<IProps> = (props): JSX.Element => {
             onFocus={(event: FocusEvent<HTMLInputElement>) => {
                 onFocus && onFocus(event);
             }}>
-            <Roller sizeId={sizeId} theme={rollerStyles} isEnabled={isEnable} isDisabled={isDisabled} />
+            <Roller sizeId={sizeId} theme={theme.roller} isEnabled={isEnable} isDisabled={isDisabled} />
             {children}
         </CWrap>
     );

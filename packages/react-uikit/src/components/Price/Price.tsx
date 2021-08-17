@@ -4,6 +4,9 @@
 import { TSize } from '../../definitions/IPropTypes';
 import React from 'react';
 import { useTheme } from '@emotion/react';
+import { mergeThemeObjects } from '../../utils';
+import currencies from './currencies';
+import { CWrap, IntValue, Delimiter, FractionValue, Сurrency, Line } from './Price.styles';
 
 export interface IProps {
     value: any;
@@ -12,13 +15,6 @@ export interface IProps {
     customize?: any;
     caseName?: string; // for debug only
 }
-
-import { CWrap, IntValue, Delimiter, FractionValue, Сurrency, Line } from './Price.styles';
-import currencies from './currencies';
-/**
- * imports of utils
- */
-import { mergeThemeObjects } from '../../utils';
 
 export const Price: React.FC<IProps> = (props): JSX.Element => {
     const {
@@ -37,7 +33,7 @@ export const Price: React.FC<IProps> = (props): JSX.Element => {
         'currency',
         'line',
         'lineStyles',
-        'lineDecorations',
+        'lineDecorations'
     ];
 
     // @ts-ignore
