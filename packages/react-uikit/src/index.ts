@@ -15,7 +15,6 @@ export { default as Select } from './components/Select';
 export { default as Slider } from './components/Slider';
 export { default as Spinner } from './components/Spinner';
 export { default as Switcher } from './components/Switcher';
-export { default as Table } from './components/Table';
 export { default as TextBlock } from './components/Typography/TextBlock';
 
 export { default as ButtonsGroup } from './containers/ButtonsGroup';
