@@ -11,7 +11,7 @@ export interface ICWrapProps {
     fontWeight: string;
     borderRadius: string;
     bgColor?: string;
-    onClick: (event) => void;
+    onClick: (event: any) => void;
 }
 
 import { CWrap } from './Modal.styles';

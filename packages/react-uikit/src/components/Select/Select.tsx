@@ -49,7 +49,7 @@ export const Select: React.FC<any> = (props): JSX.Element => {
                             key={index}
                             sizeId={sizeId}
                             theme={theme.label}
-                            onClick={(event) => {
+                            onClick={(event: any) => {
                                 const id = item.id;
                                 const handler = item.handler;
                                 setLabelImg(id);

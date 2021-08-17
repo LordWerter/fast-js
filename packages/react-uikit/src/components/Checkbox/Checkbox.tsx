@@ -1,3 +1,7 @@
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable guard-for-in */
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable react/prop-types */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
@@ -62,7 +66,7 @@ export const Checkbox: React.FC<IProps> = (props): JSX.Element => {
             sizeId={sizeId}
             theme={theme.container}
             color4Active={theme.color4Active}
-            onClick={(event) => {
+            onClick={() => {
                 setIsChecked(!isChecked);
                 console.log('click');
                 callback && callback(!isChecked);

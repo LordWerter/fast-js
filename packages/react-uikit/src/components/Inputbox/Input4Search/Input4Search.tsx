@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-bind */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable react/prop-types */
 /**
@@ -9,7 +10,7 @@ export interface IProps {
     sizeId?: TSize;
     value?: string;
     params?: any;
-    onClick?: (event) => void;
+    onClick?: (event: any) => any;
     customize?: any;
 }
 /**
@@ -52,7 +53,7 @@ export const Input4Search: React.FC<IProps> = (props): JSX.Element => {
             <SearchBtn
                 sizeId={sizeId}
                 theme={customize.searchBtn ? mergeThemeObjects(theme.searchBtn, customize.searchBtn) : theme.searchBtn}
-                onClick={(event) => {
+                onClick={(event: any) => {
                     if (onClick) onClick(event);
                 }}
             />

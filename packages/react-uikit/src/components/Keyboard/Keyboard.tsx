@@ -76,7 +76,7 @@ export const Keyboard: React.FC<IProps> = (props): JSX.Element => {
                         keyCode={code}
                         keyValue={keysTable[boardId][code]}
                         capslock={isShift}
-                        callback={(event) => {
+                        callback={() => {
                             handleOnKeyPress(code, keysTable[boardId][code]);
                         }}
                     />
@@ -122,7 +122,7 @@ export const Keyboard: React.FC<IProps> = (props): JSX.Element => {
                         boardId={boardId}
                         keyValue={keysTable[boardId][code]}
                         capslock={isShift}
-                        callback={(event) => {
+                        callback={() => {
                             handleOnKeyPress(code, keysTable[boardId][code]);
                         }}
                     />
