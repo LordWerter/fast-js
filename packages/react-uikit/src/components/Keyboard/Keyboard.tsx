@@ -22,7 +22,7 @@ export const Keyboard: React.FC<IProps> = (props): JSX.Element => {
     const [isShift, setIsShift] = useState(false);
 
     // @ts-ignore
-    const theme = { ...useTheme().components.SymbolsKeyboard } || {};
+    const theme = { ...useTheme().components.SymbolsKeyboard };
     const keyBtnStyles = mergeThemeObjects(theme.keybtn, customize.keybtn);
 
     const renderRow = (code: string, boardId: string) => {
