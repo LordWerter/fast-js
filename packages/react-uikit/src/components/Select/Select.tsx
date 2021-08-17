@@ -2,8 +2,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable guard-for-in */
 /* eslint-disable react/jsx-no-bind */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable @typescript-eslint/no-unused-expressions */
 import React, { useState } from 'react';
 import { useTheme } from '@emotion/react';
 import { mergeThemeObjects } from '../../utils';

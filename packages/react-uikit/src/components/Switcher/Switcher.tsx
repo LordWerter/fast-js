@@ -5,6 +5,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useState, FocusEventHandler, FocusEvent } from 'react';
 import { useTheme } from '@emotion/react';
+import { mergeThemeObjects } from '../../utils';
 import { CWrap, Roller } from './Switcher.styles';
 import { TSize } from '../../definitions/IPropTypes';
 
@@ -20,10 +21,6 @@ export interface IProps {
     onChange?: SwitcherEvent<React.ChangeEvent<HTMLInputElement>>;
     callback?: any;
 }
-/**
- * imports of utils
- */
-import { mergeThemeObjects } from '../../utils';
 
 export const Switcher: React.FC<IProps> = (props): JSX.Element => {
     const {

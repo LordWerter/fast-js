@@ -2,22 +2,10 @@
 /* eslint-disable guard-for-in */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable react/prop-types */
-/**
- * imports of packages
- */
 import React from 'react';
 import { useTheme } from '@emotion/react';
-/**
- * imports of components
- */
-/**
- * imports of styles
- */
-import { CWrap, ImageWrap, ClockImg, Circle, LoadingText } from './Spinner.styles';
-/**
- * imports of utils
- */
 import { mergeThemeObjects } from '../../utils';
+import { CWrap, ImageWrap, ClockImg, Circle, LoadingText } from './Spinner.styles';
 
 export const Spinner: React.FC<any> = (props): JSX.Element => {
     const { loadingText, sizeId = 'xl', customize = {} } = props;
