@@ -41,11 +41,11 @@ export const Modal: React.FC<any> = (props): JSX.Element => {
     const requiredThemeKeys = ['container', 'modalwinwrap'];
 
     // @ts-ignore
-    const theme: { [key in string]: any } = { ...useTheme().components.Modal } || {};
-    for (const key in requiredThemeKeys) {
-        const curKey = requiredThemeKeys[key];
+    const theme: { [key in string]: any } = { ...useTheme().components.Modal };
+
+    requiredThemeKeys.forEach((curKey) => {
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
-    }
+    });
 
     // TODO: add hover effect
     return (

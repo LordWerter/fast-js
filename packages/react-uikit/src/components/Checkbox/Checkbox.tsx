@@ -53,13 +53,12 @@ export const Checkbox: React.FC<IProps> = (props): JSX.Element => {
     // const [active, setActive] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
     // @ts-ignore
-    const theme = { ...useTheme().components.Checkbox } || {};
+    const theme = { ...useTheme().components.Checkbox };
     const requiredThemeKeys = ['container', 'icon', 'label', 'images'];
 
-    for (const key in requiredThemeKeys) {
-        const curKey = requiredThemeKeys[key];
+    requiredThemeKeys.forEach((curKey) => {
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
-    }
+    });
 
     return (
         <CWrap

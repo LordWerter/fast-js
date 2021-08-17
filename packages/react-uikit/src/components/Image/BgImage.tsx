@@ -24,12 +24,12 @@ const BgImage: React.FC<IProps> = (props): JSX.Element => {
     const { bgImage, sizeId = 'xl', customize = {} } = props;
 
     // @ts-ignore
-    const theme = { ...useTheme().components.Image } || {};
+    const theme = { ...useTheme().components.Image };
     const requiredThemeKeys = ['container'];
 
-    for (const key of requiredThemeKeys) {
-        theme[key] = mergeThemeObjects(theme[key], customize[key]);
-    }
+    requiredThemeKeys.forEach((curKey) => {
+        theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
+    });
 
     return (
         <CWrap

@@ -33,12 +33,12 @@ export const Label: React.FC<IProps> = (props): JSX.Element => {
     const { text, sizeId = 'xl', customize = {} } = props;
 
     // @ts-ignore
-    const theme = { ...useTheme().components.Label } || {};
+    const theme = { ...useTheme().components.Label };
     const requiredThemeKeys = ['container', 'prefix', 'postfix', 'images'];
-    for (const key in requiredThemeKeys) {
-        const curKey = requiredThemeKeys[key];
+
+    requiredThemeKeys.forEach((curKey) => {
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
-    }
+    });
 
     return (
         <CWrap sizeId={sizeId} theme={theme.container}>

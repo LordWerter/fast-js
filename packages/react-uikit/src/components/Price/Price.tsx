@@ -41,11 +41,11 @@ export const Price: React.FC<IProps> = (props): JSX.Element => {
     ];
 
     // @ts-ignore
-    const theme: { [key in string]: any } = { ...useTheme().components.Price } || {};
-    for (const key in requiredThemeKeys) {
-        const curKey = requiredThemeKeys[key];
+    const theme: { [key in string]: any } = { ...useTheme().components.Price };
+
+    requiredThemeKeys.forEach((curKey) => {
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
-    }
+    });
 
     const roundToN = function (value: number, n: number) {
         return Math.round(value * Math.pow(10, n)) / Math.pow(10, n);

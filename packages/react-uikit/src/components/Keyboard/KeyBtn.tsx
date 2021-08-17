@@ -46,7 +46,7 @@ export const KeyBtn: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'xl', customize = {}, boardId, keyCode, keyValue, capslock, callback } = props;
 
     // @ts-ignore
-    const theme = { ...useTheme().components.KeyBtn } || {};
+    const theme = { ...useTheme().components.KeyBtn };
 
     const keyIcons = { ...theme.images };
 

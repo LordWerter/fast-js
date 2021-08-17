@@ -40,12 +40,12 @@ import { mergeThemeObjects } from '../../utils';
 export const Counter: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'xl', customize = {}, count, productCode, handleMinusCount, handlePlusCount } = props;
     // @ts-ignore
-    const theme = { ...useTheme().components.Counter } || {};
+    const theme = { ...useTheme().components.Counter };
     const requiredThemeKeys = ['container', 'button', 'value', 'images'];
-    for (const key in requiredThemeKeys) {
-        const curKey = requiredThemeKeys[key];
+
+    requiredThemeKeys.forEach((curKey) => {
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
-    }
+    });
 
     return (
         <CWrap sizeId={sizeId} theme={mergeThemeObjects(theme.container, customize.container)}>

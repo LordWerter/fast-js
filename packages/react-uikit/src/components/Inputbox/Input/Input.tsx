@@ -69,12 +69,13 @@ export const Input: React.FC<IProps> = (props): JSX.Element => {
     const [isActive, setIsActive] = useState(false);
 
     // @ts-ignore
-    const theme = { ...useTheme().components.InputBox } || {};
+    const theme = { ...useTheme().components.InputBox };
     const requiredThemeKeys = ['container', 'label', 'inputwrap', 'input', 'placeholder', 'images'];
-    for (const key in requiredThemeKeys) {
-        const curKey = requiredThemeKeys[key];
+
+    requiredThemeKeys.forEach((curKey) => {
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
-    }
+    });
+
 
     return (
         <CWrap sizeId={sizeId} theme={theme.container}>

@@ -23,13 +23,12 @@ export const Spinner: React.FC<any> = (props): JSX.Element => {
     const { loadingText, sizeId = 'xl', customize = {} } = props;
 
     // @ts-ignore
-    const theme = { ...useTheme().components.Spinner } || {};
+    const theme = { ...useTheme().components.Spinner };
     const requiredThemeKeys = ['container', 'title', 'imagewrap', 'clockimg', 'circle', 'loadingtext', 'images'];
 
-    for (const key in requiredThemeKeys) {
-        const curKey = requiredThemeKeys[key];
+    requiredThemeKeys.forEach((curKey) => {
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
-    }
+    });
 
     return (
         <CWrap sizeId={sizeId} theme={theme.container}>

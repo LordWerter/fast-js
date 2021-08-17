@@ -32,14 +32,12 @@ export const MiniCard: React.FC<IProps> = (props): JSX.Element => {
     } = props;
 
     // @ts-ignore
-    const theme = { ...useTheme().components.MiniCard } || {};
+    const theme = { ...useTheme().components.MiniCard };
     const requiredThemeKeys = ['container', 'image', 'title', 'images'];
 
-    // @ts-ignore
-    for (const key of requiredThemeKeys) {
-        const curKey = requiredThemeKeys[key];
+    requiredThemeKeys.forEach((curKey) => {
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
-    }
+    });
 
     return (
         <CWrap

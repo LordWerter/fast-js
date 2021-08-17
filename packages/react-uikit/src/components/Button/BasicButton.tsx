@@ -43,7 +43,7 @@ export const BasicButton: React.FC<IProps> = (props): JSX.Element => {
     const { text, onClick, sizeId = 'xl', customize = {}, iconId = null } = props;
 
     // @ts-ignore
-    const initTheme = { ...useTheme().components.Button } || {};
+    const initTheme = { ...useTheme().components.Button };
     const requiredThemeKeys = ['container', 'caption', 'icon', 'image', 'images'];
     const theme: any = {};
 

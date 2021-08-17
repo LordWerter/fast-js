@@ -27,12 +27,12 @@ export const Dropbox: React.FC<IProps> = (props): JSX.Element => {
     const [selectedItem, setSelectedItem] = useState(defaultItem);
 
     // @ts-ignore
-    const theme = { ...useTheme().components.Counter } || {};
+    const theme = { ...useTheme().components.Counter };
     const requiredThemeKeys = ['container', 'selecteditem', 'item', 'images'];
-    for (const key in requiredThemeKeys) {
-        const curKey = requiredThemeKeys[key];
+
+    requiredThemeKeys.forEach((curKey) => {
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
-    }
+    });
 
     return (
         <CWrap sizeId={sizeId} theme={theme.container}>

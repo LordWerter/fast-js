@@ -21,7 +21,7 @@ export const TextBlock: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'xl', customize = {}, type = 'P', children } = props;
 
     // @ts-ignore
-    const theme = { ...useTheme().components.TextBlock } || {};
+    const theme = { ...useTheme().components.TextBlock };
 
     switch (type) {
         case 'H1':
