@@ -1,7 +1,8 @@
 import React from 'react';
+import { TSize } from '../../../../definitions/IPropTypes';
 
 export interface IProps {
-    size;
+    sizeId?: TSize;
     column: {
         filterValue: any;
         preFilteredRows: any;
@@ -10,7 +11,7 @@ export interface IProps {
     };
 }
 
-export const SelectColumnFilter: React.FC<IProps> = (props) => {
+export const SelectColumnFilter: React.FC<IProps> = () => {
     // Render a multi-select box
     return <></>;
 };

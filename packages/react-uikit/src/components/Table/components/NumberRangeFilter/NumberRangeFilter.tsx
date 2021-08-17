@@ -1,9 +1,11 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable react/prop-types */
 import React, { ChangeEvent } from 'react';
+import { TSize } from '../../../../definitions/IPropTypes';
 
 export interface IProps {
-    sizeId;
+    sizeId?: TSize;
     column: {
         filterValue: any;
         preFilteredRows: any;

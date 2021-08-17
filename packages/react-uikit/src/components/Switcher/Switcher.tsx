@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable @typescript-eslint/no-unused-expressions */
