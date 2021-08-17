@@ -1,9 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable react/prop-types */
-/**
- * imports & exports of namespaces, interfaces & types
- */
 export interface IProps {
     lang: string;
     sizeId?: any;
@@ -11,35 +8,14 @@ export interface IProps {
     handleOnKeyPress: (codeValue: string, keyValue: string) => any;
 }
 
-/**
- * imports of packages
- */
 import React, { useState } from 'react';
 import { useTheme } from '@emotion/react';
-/**
- * imports of components
- */
 import KeyBtn from './KeyBtn';
-/**
- * imports of styles
- */
 import { CWrap, Board, Row } from './Keyboard.styles';
-/**
- * imports of constants
- */
 import { default as keysTable } from './lang';
 import langRows from './langRows';
-/**
- * imports of utils
- */
 import { mergeThemeObjects } from '../../utils';
 
-/**
- * Keyboard Component
- * @param {Object} props implements IProps
- * @type {Function}
- * @returns {JSX.Element}
- */
 export const Keyboard: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'xl', customize = {}, handleOnKeyPress, lang } = props;
     const [activeBoard, setActiveBoard] = useState(lang);
@@ -49,7 +25,7 @@ export const Keyboard: React.FC<IProps> = (props): JSX.Element => {
     const theme = { ...useTheme().components.SymbolsKeyboard } || {};
     const keyBtnStyles = mergeThemeObjects(theme.keybtn, customize.keybtn);
 
-    const renderRow = (code, boardId) => {
+    const renderRow = (code: string, boardId: any) => {
         switch (code) {
             case '16':
                 return (
