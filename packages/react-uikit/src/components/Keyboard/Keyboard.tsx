@@ -25,7 +25,7 @@ export const Keyboard: React.FC<IProps> = (props): JSX.Element => {
     const theme = { ...useTheme().components.SymbolsKeyboard } || {};
     const keyBtnStyles = mergeThemeObjects(theme.keybtn, customize.keybtn);
 
-    const renderRow = (code: string, boardId: any) => {
+    const renderRow = (code: string, boardId: string) => {
         switch (code) {
             case '16':
                 return (
