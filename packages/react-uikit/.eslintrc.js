@@ -1,5 +1,5 @@
 module.exports = {
-    extends: ['./node_modules/@fast-js/eslint'],
+    extends: ['../../node_modules/@fast-js/eslint/index.js'],
     globals: {
         React: true,
         google: true,

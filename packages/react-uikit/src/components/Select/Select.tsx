@@ -37,7 +37,7 @@ export const Select: React.FC<any> = (props): JSX.Element => {
                 </Label>
             </MainBtn>
             <List sizeId={sizeId} theme={theme.list} isVisible={listVisibility}>
-                {items.map((item, index) => {
+                {items.map((item: any, index: number) => {
                     return (
                         <Label
                             key={index}
