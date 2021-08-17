@@ -61,6 +61,7 @@ export const TextBlock: React.FC<IProps> = (props): JSX.Element => {
                 </H6>
             );
         case 'P':
+        default:
             return (
                 <P sizeId={sizeId} theme={mergeThemeObjects(theme.P, customize.P)}>
                     {children}

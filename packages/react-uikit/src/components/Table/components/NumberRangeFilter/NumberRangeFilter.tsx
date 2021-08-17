@@ -24,7 +24,7 @@ export const NumberRangeColumnFilter: React.FC<IProps> = ({
     const [min, max] = React.useMemo(() => {
         let min = preFilteredRows.length ? preFilteredRows[0].values[id] : 0;
         let max = preFilteredRows.length ? preFilteredRows[0].values[id] : 0;
-        preFilteredRows.forEach((row) => {
+        preFilteredRows.forEach((row: any) => {
             min = Math.min(row.values[id], min);
             max = Math.max(row.values[id], max);
         });
@@ -46,8 +46,8 @@ export const NumberRangeColumnFilter: React.FC<IProps> = ({
                 sizeId={sizeId}
                 value={filterValue[1] || ''}
                 placeholder={`Max (${max})`}
-                onChange={(e) => {
-                    const val = e.target.value;
+                onChange={(event: ChangeEvent<HTMLInputElement>) => {
+                    const val = event.target.value;
                     setFilter((old = []) => [old[0], val ? parseInt(val, 10) : undefined]);
                 }}
             />

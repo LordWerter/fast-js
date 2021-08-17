@@ -15,7 +15,7 @@ export interface IProps {
 }
 
 export const SliderColumnFilter: React.FC<IProps> = ({
-    // size,
+    // sizeId,
     column: { filterValue, setFilter, preFilteredRows, id },
 }) => {
     const [min, max] = React.useMemo(() => {

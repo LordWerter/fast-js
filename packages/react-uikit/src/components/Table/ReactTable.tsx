@@ -46,9 +46,9 @@ export const ReactTable: React.FC<IProps> = ({ columns, data }): JSX.Element => 
     return (
         <CWrap {...getTableProps()}>
             <Header>
-                {headerGroups.map((headerGroup) => (
+                {headerGroups.map((headerGroup: any) => (
                     <div {...headerGroup.getHeaderGroupProps()}>
-                        {headerGroup.headers.map((column) => (
+                        {headerGroup.headers.map((column: any) => (
                             <motion.div
                                 {...column.getHeaderProps({
                                     layoutTransition: spring,
@@ -68,7 +68,7 @@ export const ReactTable: React.FC<IProps> = ({ columns, data }): JSX.Element => 
             </Header>
             <Body {...getTableBodyProps()}>
                 <AnimatePresence>
-                    {rows.slice(0, 10).map((row) => {
+                    {rows.slice(0, 10).map((row: any) => {
                         prepareRow(row);
                         return (
                             <motion.tr
@@ -76,7 +76,7 @@ export const ReactTable: React.FC<IProps> = ({ columns, data }): JSX.Element => 
                                     layoutTransition: spring,
                                     exit: { opacity: 0, maxHeight: 0 },
                                 })}>
-                                {row.cells.map((cell) => {
+                                {row.cells.map((cell: any) => {
                                     return (
                                         <motion.td
                                             {...cell.getCellProps({
@@ -97,16 +97,16 @@ export const ReactTable: React.FC<IProps> = ({ columns, data }): JSX.Element => 
 
 export default ReactTable;
 
-function fuzzyTextFilterFn(rows, id, filterValue) {
+function fuzzyTextFilterFn(rows: any, id: any, filterValue: any) {
     // @ts-ignore
-    return matchSorter(rows, filterValue, { keys: [(row) => row.values[id]] });
+    return matchSorter(rows, filterValue, { keys: [(row: any) => row.values[id]] });
 }
 
 // Let the table remove the filter if the string is empty
-fuzzyTextFilterFn.autoRemove = (val) => !val;
+fuzzyTextFilterFn.autoRemove = (val: any) => !val;
 
 // Define a custom filter filter function!
-function filterGreaterThan(rows, id, filterValue) {
+function filterGreaterThan(rows: any, id: any, filterValue: any) {
     return rows.filter((row) => {
         const rowValue = row.values[id];
         return rowValue >= filterValue;
@@ -117,4 +117,4 @@ function filterGreaterThan(rows, id, filterValue) {
 // when given the new filter value and returns true, the filter
 // will be automatically removed. Normally this is just an undefined
 // check, but here, we want to remove the filter if it's not a number
-filterGreaterThan.autoRemove = (val) => typeof val !== 'number';
+filterGreaterThan.autoRemove = (val: any) => typeof val !== 'number';

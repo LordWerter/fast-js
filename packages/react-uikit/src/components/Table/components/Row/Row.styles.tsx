@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
-
 import { ICWrapProps } from '../../../../definitions/IPropTypes';
 
-export interface ICRowProps extends ICWrapProps {
-}
+export interface ICRowProps extends ICWrapProps {}
 
 export interface ICeilProps extends ICWrapProps {
     width: string;
