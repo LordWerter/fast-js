@@ -11,7 +11,7 @@ export const isStrictDeepEqual: TCompareObjects<any> = (objOne, objTwo) => {
 
     if (!isObject(objOne) || !isObject(objOne)) return false;
 
-    const __checkProps = (objOne, objTwo) => {
+    const __checkProps = (objOne: any, objTwo: any) => {
         for (let propertyName in objOne) {
             if (objTwo.hasOwnProperty(propertyName)) {
                 if (isObject(objOne[propertyName])) {
