@@ -7,6 +7,8 @@
 import React, { useState } from 'react';
 import { useTheme } from '@emotion/react';
 import { TSize } from '../../definitions/IPropTypes';
+import { mergeThemeObjects } from '../../utils';
+import { CWrap, SelectedItem, Item } from './Dropbox.styles';
 
 export interface IProps {
     defaultItem: any;
@@ -15,14 +17,8 @@ export interface IProps {
     data?: any;
 }
 
-import { CWrap, SelectedItem, Item } from './Dropbox.styles';
-/**
- * imports of utils
- */
-import { mergeThemeObjects } from '../../utils';
-
 export const Dropbox: React.FC<IProps> = (props): JSX.Element => {
-    const { defaultItem, data, sizeId = 'xl', customize = {}, children } = props;
+    const { defaultItem, data, sizeId = 'mobile', customize = {}, children } = props;
 
     const [selectedItem, setSelectedItem] = useState(defaultItem);
 

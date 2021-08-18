@@ -1,6 +1,7 @@
-/* eslint-disable react/jsx-no-bind */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable no-unused-expressions */
+/* eslint-disable react/jsx-no-bind */
 /* eslint-disable guard-for-in */
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable react/prop-types */
@@ -20,35 +21,22 @@ export interface IProps {
     onChange?: EventHandler;
     customize?: any;
 }
-/**
- * imports of packages
- */
+
 import React, { useState } from 'react';
 import { useTheme } from '@emotion/react';
-/**
- * imports of components
- */
-/**
- * imports of styles
- */
 import { CWrap, IconBox, Input, Label } from './Checkbox.styles';
-/**
- * imports of constants
- */
-/**
- * imports of utils
- */
 import { mergeThemeObjects } from '../../utils';
 import { TSize } from '../../definitions/IPropTypes';
 
-/**
- * Checkbox Component
- * @param {Object} props implements IProps
- * @type {Function}
- * @returns {JSX.Element}
- */
 export const Checkbox: React.FC<IProps> = (props): JSX.Element => {
-    const { name = `checkbox_${props.hash}`, label, sizeId = 'xl', disabled = false, callback, customize = {} } = props;
+    const {
+        name = `checkbox_${props.hash}`,
+        label,
+        sizeId = 'mobile',
+        disabled = false,
+        callback,
+        customize = {},
+    } = props;
 
     // const [active, setActive] = useState(false);
     const [isChecked, setIsChecked] = useState(false);

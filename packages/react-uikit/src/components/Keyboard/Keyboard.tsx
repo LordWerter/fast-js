@@ -1,6 +1,15 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable react/prop-types */
+import React, { useState } from 'react';
+import { useTheme } from '@emotion/react';
+import KeyBtn from './KeyBtn';
+import { mergeThemeObjects } from '../../utils';
+import { default as keysTable } from './lang';
+import langRows from './langRows';
+import { CWrap, Board, Row } from './Keyboard.styles';
+
 export interface IProps {
     lang: string;
     sizeId?: any;
@@ -8,16 +17,8 @@ export interface IProps {
     handleOnKeyPress: (codeValue: string, keyValue: string) => any;
 }
 
-import React, { useState } from 'react';
-import { useTheme } from '@emotion/react';
-import KeyBtn from './KeyBtn';
-import { CWrap, Board, Row } from './Keyboard.styles';
-import { default as keysTable } from './lang';
-import langRows from './langRows';
-import { mergeThemeObjects } from '../../utils';
-
 export const Keyboard: React.FC<IProps> = (props): JSX.Element => {
-    const { sizeId = 'xl', customize = {}, handleOnKeyPress, lang } = props;
+    const { sizeId = 'mobile', customize = {}, handleOnKeyPress, lang } = props;
     const [activeBoard, setActiveBoard] = useState(lang);
     const [isShift, setIsShift] = useState(false);
 

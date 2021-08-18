@@ -6,9 +6,16 @@ import React from 'react';
 import { useTheme } from '@emotion/react';
 import { mergeThemeObjects } from '../../utils';
 import { CWrap, ImageWrap, ClockImg, Circle, LoadingText } from './Spinner.styles';
+import { TSize } from '../../definitions/IPropTypes';
 
-export const Spinner: React.FC<any> = (props): JSX.Element => {
-    const { loadingText, sizeId = 'xl', customize = {} } = props;
+export interface IProps {
+    sizeId?: TSize;
+    customize?: any;
+    loadingText?: string;
+}
+
+export const Spinner: React.FC<IProps> = (props): JSX.Element => {
+    const { loadingText, sizeId = 'mobile', customize = {} } = props;
 
     // @ts-ignore
     const theme = { ...useTheme().components.Spinner };

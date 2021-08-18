@@ -1,10 +1,13 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 /* eslint-disable guard-for-in */
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable react/prop-types */
-/**
- * imports & exports of namespaces, interfaces & types
- */
+import React, { useState, ChangeEvent } from 'react';
+import { useTheme } from '@emotion/react';
+import { mergeThemeObjects } from '../../../utils';
+import { CWrap, InputWrap, Label, InputBox, Placeholder, Notice } from './Input.styles';
 import { TSize } from '../../../definitions/IPropTypes';
 
 export type TLabel = {
@@ -29,35 +32,10 @@ export interface IProps {
     handleReset2EmptyValueBtn?: () => any;
     onChange?: (event: ChangeEvent<HTMLInputElement>) => any | null;
 }
-/**
- * imports of packages
- */
-import React, { useState, ChangeEvent } from 'react';
-import { useTheme } from '@emotion/react';
-/**
- * imports of components
- */
-/**
- * imports of styles
- */
-import { CWrap, InputWrap, Label, InputBox, Placeholder, Notice } from './Input.styles';
-/**
- * imports of constants
- */
-/**
- * imports of utils
- */
-import { mergeThemeObjects } from '../../../utils';
 
-/**
- * Input Component
- * @param {Object} props implements IProps
- * @type {Function}
- * @returns {JSX.Element}
- */
 export const Input: React.FC<IProps> = (props): JSX.Element => {
     const {
-        sizeId = 'xl',
+        sizeId = 'mobile',
         value = '',
         label = null,
         placeholder = null,
@@ -75,7 +53,6 @@ export const Input: React.FC<IProps> = (props): JSX.Element => {
     requiredThemeKeys.forEach((curKey) => {
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
     });
-
 
     return (
         <CWrap sizeId={sizeId} theme={theme.container}>

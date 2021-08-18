@@ -40,7 +40,7 @@ import { TSize } from '../../definitions/IPropTypes';
  * @returns {JSX.Element}
  */
 export const BasicButton: React.FC<IProps> = (props): JSX.Element => {
-    const { text, onClick, sizeId = 'xl', customize = {}, iconId = null } = props;
+    const { text, onClick, sizeId = 'mobile', customize = {}, iconId = null } = props;
 
     // @ts-ignore
     const initTheme = { ...useTheme().components.Button };

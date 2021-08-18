@@ -1,7 +1,10 @@
+/* eslint-disable react/forbid-component-props */
+/* eslint-disable no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-/**
- * imports & exports of namespaces, interfaces & types
- */
+import React from 'react';
+import { useTheme } from '@emotion/react';
+import { mergeThemeObjects } from '../../utils';
+import { CWrap, Image, Text } from './Logo.styles';
 import { TSize } from '../../definitions/IPropTypes';
 
 export type TLogoRenderType =
@@ -49,29 +52,8 @@ export interface IProps {
     curID: TLogoRenderType;
 }
 
-/**
- * imports of packages
- */
-import React from 'react';
-import { useTheme } from '@emotion/react';
-/**
- * imports of components
- */
-// import Image from '../Image';
-/**
- * imports of styles
- */
-import { CWrap, Image, Text } from './Logo.styles';
-/**
- * imports of constants
- */
-/**
- * imports of utils
- */
-import { mergeThemeObjects } from '../../utils';
-
 const Logo = (props: IProps) => {
-    const { sizeId = 'xl', customize = {}, curID } = props;
+    const { sizeId = 'mobile', customize = {}, curID } = props;
 
     const idArr = curID.split('__');
 
@@ -79,11 +61,9 @@ const Logo = (props: IProps) => {
 
     // @ts-ignore
     const theme: { [key in string]: any } = { ...useTheme().components.Logo };
-    if (typeof theme === 'object') {
-        for (const key in theme) {
-            theme[key] = mergeThemeObjects(theme[key], customize[key]);
-        }
-    }
+    Object.keys(theme).forEach((elementName: string) => {
+        theme[elementName] = mergeThemeObjects(theme[elementName], customize[elementName]);
+    });
 
     return (
         <CWrap sizeId={sizeId} theme={theme.container}>

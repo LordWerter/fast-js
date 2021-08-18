@@ -1,11 +1,9 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable guard-for-in */
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable react/forbid-component-props */
 /* eslint-disable react/prop-types */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-/**
- * imports & exports of namespaces, interfaces & types
- */
 import { TSize } from '../../definitions/IPropTypes';
 
 export interface IProps {
@@ -17,28 +15,13 @@ export interface IProps {
     handlePlusCount: (productCode: string) => any;
 }
 
-/**
- * imports of packages
- */
 import React from 'react';
 import { useTheme } from '@emotion/react';
-/**
- * imports of components
- */
-/**
- * imports of styles
- */
-import { CWrap, Value, Btn } from './Counter.styles';
-/**
- * imports of constants
- */
-/**
- * imports of utils
- */
 import { mergeThemeObjects } from '../../utils';
+import { CWrap, Value, Btn } from './Counter.styles';
 
 export const Counter: React.FC<IProps> = (props): JSX.Element => {
-    const { sizeId = 'xl', customize = {}, count, productCode, handleMinusCount, handlePlusCount } = props;
+    const { sizeId = 'mobile', customize = {}, count, productCode, handleMinusCount, handlePlusCount } = props;
     // @ts-ignore
     const theme = { ...useTheme().components.Counter };
     const requiredThemeKeys = ['container', 'button', 'value', 'images'];

@@ -1,4 +1,4 @@
-export type TSize = 'xs' | 's' | 'm' | 'l' | 'xl';
+export type TSize = 'mobile' | 'laptop' | 'desktop';
 
 export type TTextBlockType = 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6' | 'P';
 

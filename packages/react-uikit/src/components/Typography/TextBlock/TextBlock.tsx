@@ -18,7 +18,7 @@ import { H1, H2, H3, H4, H5, H6, P } from './TextBlock.styles';
 import { mergeThemeObjects } from '../../../utils';
 
 export const TextBlock: React.FC<IProps> = (props): JSX.Element => {
-    const { sizeId = 'xl', customize = {}, type = 'P', children } = props;
+    const { sizeId = 'mobile', customize = {}, type = 'P', children } = props;
 
     // @ts-ignore
     const theme = { ...useTheme().components.TextBlock };

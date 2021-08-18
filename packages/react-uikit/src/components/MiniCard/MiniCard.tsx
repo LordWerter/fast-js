@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable react/prop-types */
 import React from 'react';
@@ -21,7 +24,7 @@ import { mergeThemeObjects } from '../../utils';
 
 export const MiniCard: React.FC<IProps> = (props): JSX.Element => {
     const {
-        sizeId = 'xl',
+        sizeId = 'mobile',
         customize = {},
         data = {
             link: '/',
@@ -33,10 +36,10 @@ export const MiniCard: React.FC<IProps> = (props): JSX.Element => {
 
     // @ts-ignore
     const theme = { ...useTheme().components.MiniCard };
-    const requiredThemeKeys = ['container', 'image', 'title', 'images'];
+    // const requiredThemeKeys = ['container', 'image', 'title', 'images']; // it's for checking required theme keys
 
-    requiredThemeKeys.forEach((curKey) => {
-        theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
+    Object.keys(theme).forEach((elementName: string) => {
+        theme[elementName] = mergeThemeObjects(theme[elementName], customize[elementName]);
     });
 
     return (

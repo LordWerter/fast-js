@@ -13,7 +13,6 @@ import { TSize } from '../../definitions/IPropTypes';
 
 export type SwitcherEvent<T> = (event: T, data?: { name?: string; value: boolean }) => void;
 export interface IProps {
-    children?: React.ReactNode;
     sizeId?: TSize;
     customize?: any;
     isEnabled?: boolean;
@@ -27,7 +26,7 @@ export interface IProps {
 export const Switcher: React.FC<IProps> = (props): JSX.Element => {
     const {
         children,
-        sizeId = 'xl',
+        sizeId = 'mobile',
         customize = {},
         isEnabled = false,
         isDisabled = false,

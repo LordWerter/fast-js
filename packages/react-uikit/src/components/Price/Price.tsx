@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable guard-for-in */
 /* eslint-disable react/prop-types */
@@ -20,7 +21,7 @@ export const Price: React.FC<IProps> = (props): JSX.Element => {
     const {
         value = 0,
         config = { type: 'default', delimiter: 'none', lang: 'ru' },
-        sizeId = 'xl',
+        sizeId = 'mobile',
         customize = {},
     } = props;
 
@@ -33,7 +34,7 @@ export const Price: React.FC<IProps> = (props): JSX.Element => {
         'currency',
         'line',
         'lineStyles',
-        'lineDecorations'
+        'lineDecorations',
     ];
 
     // @ts-ignore
@@ -43,7 +44,7 @@ export const Price: React.FC<IProps> = (props): JSX.Element => {
         theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
     });
 
-    const roundToN = function (value: number, n: number) {
+    const roundToN = (value: number, n: number) => {
         return Math.round(value * Math.pow(10, n)) / Math.pow(10, n);
     };
 

@@ -1,14 +1,6 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable react/prop-types */
-/**
- * imports & exports of namespaces, interfaces & types
- */
-export interface IProps {
-    sizeId?: any;
-    customize?: any;
-    handleOnClick?: (codeValue: string, keyValue: string) => any;
-}
-
 import React from 'react';
 import { useTheme } from '@emotion/react';
 import Image from '../Image';
@@ -16,6 +8,12 @@ import { CWrap, Row, Key } from './Number.styles';
 import numRows from './numRows';
 import symbols from './lang/symbols';
 import { mergeThemeObjects } from '../../utils';
+
+export interface IProps {
+    sizeId?: any;
+    customize?: any;
+    handleOnClick?: (codeValue: string, keyValue: string) => any;
+}
 
 export const Number: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'xl', customize = {}, handleOnClick } = props;

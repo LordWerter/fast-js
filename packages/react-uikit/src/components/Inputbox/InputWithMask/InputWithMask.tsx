@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-/**
- * imports & exports of namespaces, interfaces & types
- */
+import React from 'react';
+import IMask from 'imask';
+import { useTheme } from '@emotion/react';
+import Input from '../Input';
 import { TSize } from '../../../definitions/IPropTypes';
 
 export interface IProps {
@@ -13,19 +14,9 @@ export interface IProps {
     maskOptions?: any;
     customize?: any;
 }
-/**
- * imports of packages
- */
-import React from 'react';
-import IMask from 'imask';
-import { useTheme } from '@emotion/react';
-/**
- * imports of components
- */
-import Input from '../Input';
 
 export const InputWithMask: React.FC<IProps> = (props): JSX.Element => {
-    const { sizeId = 'xl', value = '', maskTpl, customize = {} } = props;
+    const { sizeId = 'mobile', value = '', maskTpl } = props;
     const masked = IMask.createMask({
         mask: maskTpl,
     });
@@ -36,7 +27,7 @@ export const InputWithMask: React.FC<IProps> = (props): JSX.Element => {
 
     return (
         <>
-            <Input customize={customize} sizeId={sizeId} value={maskedValue} />
+            <Input customize={theme} sizeId={sizeId} value={maskedValue} />
         </>
     );
 };
