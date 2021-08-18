@@ -4,14 +4,11 @@
 import React from 'react';
 import { useTheme, Global } from '@emotion/react';
 
-// import BaseStyle from './base.styles';
-// import ResetStyle from './reset.styles';
-
 export interface IProps {}
 
-export const GlobalStyles: React.FC<IProps> = (props): JSX.Element => {
+export const GlobalStyles: React.FC<IProps> = (): JSX.Element => {
     // @ts-ignore
-    const core = { ...useTheme().core } || {};
+    const core = { ...useTheme().core };
 
     return (
         <>

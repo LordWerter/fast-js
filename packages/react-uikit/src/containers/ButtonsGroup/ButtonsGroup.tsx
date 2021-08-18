@@ -2,9 +2,12 @@
 /* eslint-disable guard-for-in */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable react/prop-types */
-/**
- * imports & exports of namespaces, interfaces & types
- */
+import React, { CSSProperties } from 'react';
+import { useTheme } from '@emotion/react';
+import Button from '../../components/Button';
+import { mergeThemeObjects } from '../../utils';
+import { CWrap } from './ButtonsGroup.styles';
+
 export interface IAdminJob {
     name?: string;
     type?: string;
@@ -21,43 +24,15 @@ export interface IProps {
     data: IAdminJob[];
 }
 
-/**
- * imports of packages
- */
-import React, { CSSProperties } from 'react';
-import { useTheme } from '@emotion/react';
-/**
- * imports of components
- */
-import Button from '../../components/Button';
-/**
- * imports of styles
- */
-import { CWrap } from './ButtonsGroup.styles';
-/**
- * imports of constants
- */
-/**
- * imports of utils
- */
-import { mergeThemeObjects } from '../../utils';
-
-/**
- * Service Component
- * @param {Object} props implements IProps
- * @type {Function}
- * @returns {JSX.Element}
- */
 const ButtonsGroup: React.FC<IProps> = (props): JSX.Element => {
-    const { sizeId = 'xl', customize = {}, data } = props;
+    const { sizeId = 'mobile', customize = {}, data } = props;
     // @ts-ignore
-    const theme = { ...useTheme().containers.ButtonsGroup } || {};
+    const theme = { ...useTheme().containers.ButtonsGroup };
     const requiredThemeKeys = ['container', 'button'];
 
-    for (const key in requiredThemeKeys) {
-        const curKey = requiredThemeKeys[key];
-        theme[curKey] = mergeThemeObjects(theme[curKey], customize[curKey]);
-    }
+    requiredThemeKeys.forEach((key: string) => {
+        theme[key] = mergeThemeObjects(theme[key], customize[key]);
+    });
 
     return (
         <CWrap sizeId={sizeId} theme={theme.container}>

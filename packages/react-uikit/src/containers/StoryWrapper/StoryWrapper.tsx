@@ -1,6 +1,10 @@
-/**
- * imports & exports of namespaces, interfaces & types
- */
+import React, { ReactNode } from 'react';
+import { ThemeProvider } from '@emotion/react';
+import { MemoryRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import GlobalStyles from '../GlobalStyles';
+import { CWrap } from './StoryWrapper.styles';
+
 export interface IProps {
     theme?: any;
     children?: ReactNode;
@@ -8,19 +12,6 @@ export interface IProps {
     initialEntries?: any;
     bgColor?: string;
 }
-
-/**
- * imports of packages
- */
-import React, { ReactNode } from 'react';
-import { ThemeProvider } from '@emotion/react';
-import { MemoryRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import GlobalStyles from '../GlobalStyles';
-/**
- * imports of styles
- */
-import { CWrap } from './StoryWrapper.styles';
 
 export const StoryWrapper: React.FC<IProps> = (props: IProps): JSX.Element => {
     const { children, store, theme = null, initialEntries = ['/'], bgColor = 'white' } = props;
