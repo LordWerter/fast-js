@@ -48,7 +48,7 @@ module.exports = {
         'react/no-will-update-set-state': 2,
         'react/prefer-es6-class': 2,
         'react/prefer-stateless-function': [2, { ignorePureComponents: true }],
-        'react/prop-types': 2,
+        'react/prop-types': 'off',
         'react/react-in-jsx-scope': 2,
         'react/require-default-props': 0,
         'react/require-optimization': 0,
