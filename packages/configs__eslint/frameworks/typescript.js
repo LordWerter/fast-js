@@ -4,6 +4,9 @@ module.exports = {
         '@typescript-eslint',
         'eslint-plugin-tsdoc',
     ],
+    extends: [
+        'airbnb-typescript'
+    ],
     globals: { Atomics: 'readonly', SharedArrayBuffer: 'readonly' },
     parserOptions: {
         ecmaFeatures: { jsx: true },

@@ -14,11 +14,13 @@
     "es2017",
     "es2018"
   ],
-  "version": "1.1.0",
+  "version": "1.2.0",
   "license": "MIT",
   "main": "index.js",
   "scripts": {},
-  "dependencies": {},
+  "dependencies": {
+    "eslint-config-airbnb-typescript": "^14.0.0"
+  },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
