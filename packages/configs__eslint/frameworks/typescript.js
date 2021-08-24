@@ -1,12 +1,7 @@
 module.exports = {
     parser: '@typescript-eslint/parser',
-    plugins: [
-        '@typescript-eslint',
-        'eslint-plugin-tsdoc',
-    ],
-    extends: [
-        'airbnb-typescript'
-    ],
+    plugins: ['@typescript-eslint', 'eslint-plugin-tsdoc'],
+    extends: ['airbnb-typescript'],
     globals: { Atomics: 'readonly', SharedArrayBuffer: 'readonly' },
     parserOptions: {
         ecmaFeatures: { jsx: true },
@@ -28,10 +23,26 @@ module.exports = {
         // Disallows awaiting a value that is not a Thenable
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/await-thenable.md
         '@typescript-eslint/await-thenable': 'error',
-
         // Bans // @ts-<directive> comments from being used
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-comment.md
-        '@typescript-eslint/ban-ts-ignore': 'warn',
+        '@typescript-eslint/ban-ts-comment': [
+            {
+                code: '// @ts-expect-error',
+                options: [{ 'ts-expect-error': true }],
+            },
+            {
+                code: '// @ts-ignore',
+                options: [{ 'ts-ignore': false }],
+            },
+            {
+                code: '// @ts-nocheck',
+                options: [{ 'ts-nocheck': false }],
+            },
+            {
+                code: '// @ts-check',
+                options: [{ 'ts-check': false }],
+            },
+        ],
 
         // Bans specific types from being used
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md
