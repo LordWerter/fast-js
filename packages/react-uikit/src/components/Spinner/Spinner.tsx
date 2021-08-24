@@ -1,7 +1,3 @@
-/* eslint-disable react/forbid-component-props */
-/* eslint-disable guard-for-in */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { useTheme } from '@emotion/react';
 import { mergeThemeObjects } from '../../utils';

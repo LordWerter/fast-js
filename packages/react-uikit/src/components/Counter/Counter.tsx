@@ -1,9 +1,7 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable guard-for-in */
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable react/forbid-component-props */
-/* eslint-disable react/prop-types */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
+import React from 'react';
+import { useTheme } from '@emotion/react';
+import { mergeThemeObjects } from '../../utils';
+import { CWrap, Value, Btn } from './Counter.styles';
 import { TSize } from '../../definitions/IPropTypes';
 
 export interface IProps {
@@ -14,11 +12,6 @@ export interface IProps {
     handleMinusCount: (productCode: string) => any;
     handlePlusCount: (productCode: string) => any;
 }
-
-import React from 'react';
-import { useTheme } from '@emotion/react';
-import { mergeThemeObjects } from '../../utils';
-import { CWrap, Value, Btn } from './Counter.styles';
 
 export const Counter: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'mobile', customize = {}, count, productCode, handleMinusCount, handlePlusCount } = props;

@@ -1,6 +1,6 @@
 {
   "name": "@fast-js/react-uikit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Aleksander Rudenko<learnitnow@yandex.ru>",
   "license": "MIT",
   "repository": "https://github.com/LordWerter/fast-js/tree/main/packages/react-uikit",
@@ -38,7 +38,7 @@
     "@babel/preset-typescript": "^7.14.5",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
-    "@fast-js/eslint": "^1.2.0",
+    "@fast-js/eslint": "^1.2.2",
     "@fast-js/prettier": "^3.2.1",
     "@fast-js/types": "^0.0.6",
     "@loki/is-loki-running": "^0.28.0",

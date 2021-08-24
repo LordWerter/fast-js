@@ -34,6 +34,6 @@ const data = [
 
 stories.add('Darvin', () => (
     <StoryWrapper store={store1} theme={{}} initialEntries={['/']}>
-        <Dropbox sizeId={'xl'} defaultItem={defaultItem} data={data} customize={{}} />
+        <Dropbox sizeId={'mobile'} defaultItem={defaultItem} data={data} customize={{}} />
     </StoryWrapper>
 ));

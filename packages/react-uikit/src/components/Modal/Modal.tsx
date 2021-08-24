@@ -1,8 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
-/* eslint-disable guard-for-in */
-/* eslint-disable react/prop-types */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from 'react';
 import { useTheme } from '@emotion/react';
 

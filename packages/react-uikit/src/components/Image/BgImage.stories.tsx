@@ -9,7 +9,7 @@ import BgImage from './BgImage';
 
 const stories = storiesOf('Image', module);
 
-stories.add('Darvin', () => (
+stories.add('Basic', () => (
     <StoryWrapper store={store1} theme={{}} initialEntries={['/']}>
         <BgImage bgImage={''} customize={{}} />
     </StoryWrapper>

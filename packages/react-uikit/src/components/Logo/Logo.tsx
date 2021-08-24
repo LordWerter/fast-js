@@ -1,6 +1,3 @@
-/* eslint-disable react/forbid-component-props */
-/* eslint-disable no-unused-vars */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from 'react';
 import { useTheme } from '@emotion/react';
 import { mergeThemeObjects } from '../../utils';

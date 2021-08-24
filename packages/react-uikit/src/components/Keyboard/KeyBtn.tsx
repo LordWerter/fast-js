@@ -1,9 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable @typescript-eslint/no-unused-expressions */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { useTheme } from '@emotion/react';
 import Image from '../Image';

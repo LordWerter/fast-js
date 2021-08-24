@@ -1,9 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable guard-for-in */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import { useTheme } from '@emotion/react';
 import { TSize } from '../../definitions/IPropTypes';

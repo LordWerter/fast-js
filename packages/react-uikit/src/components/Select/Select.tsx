@@ -1,11 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable @typescript-eslint/no-unused-expressions */
-/* eslint-disable react/prop-types */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable guard-for-in */
-/* eslint-disable react/jsx-no-bind */
 import React, { useState } from 'react';
 import { useTheme } from '@emotion/react';
 import { mergeThemeObjects } from '../../utils';
@@ -13,7 +5,7 @@ import Image from '../Image';
 import { List, CWrap, MainBtn, Label, LabelText } from './Select.styles';
 
 export const Select: React.FC<any> = (props): JSX.Element => {
-    const { sizeId = 'xl', customize = {}, labelImg, labelText, items } = props;
+    const { sizeId = 'mobile', customize = {}, labelImg, labelText, items } = props;
 
     const [lblImg, setLabelImg] = useState(labelImg);
     const [listVisibility, setListVisibility] = useState<boolean>(false);

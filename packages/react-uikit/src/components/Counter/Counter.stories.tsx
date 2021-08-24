@@ -29,7 +29,7 @@ const TestCounter = () => {
     );
 };
 
-stories.add('Darvin', () => (
+stories.add('Basic', () => (
     <StoryWrapper store={store1} theme={{}} initialEntries={['/']}>
         <TestCounter />
     </StoryWrapper>

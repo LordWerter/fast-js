@@ -1,10 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable @typescript-eslint/no-unused-expressions */
-/* eslint-disable react/prop-types */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useState, FocusEventHandler, FocusEvent } from 'react';
 import { useTheme } from '@emotion/react';
 import { mergeThemeObjects } from '../../utils';

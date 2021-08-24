@@ -1,7 +1,6 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import { init } from '@rematch/core';
-import styled from '@emotion/styled';
 import StoryWrapper from '../../containers/StoryWrapper';
 
 const store1 = init({ models: {} });

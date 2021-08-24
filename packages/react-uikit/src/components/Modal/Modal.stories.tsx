@@ -9,7 +9,7 @@ import Modal from './Modal';
 
 const stories = storiesOf('Modal', module);
 
-stories.add('Default', () => (
+stories.add('Basic', () => (
     <StoryWrapper store={store1} theme={{}} initialEntries={['/']}>
         <Modal>Hello</Modal>
     </StoryWrapper>

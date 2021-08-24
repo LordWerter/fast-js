@@ -9,8 +9,8 @@ import Spinner from './Spinner';
 
 const stories = storiesOf('Spinner', module);
 
-stories.add('Darvin', () => (
+stories.add('Basic', () => (
     <StoryWrapper store={store1} theme={{}} initialEntries={['/']}>
-        <Spinner loadingText={'Help me'} sizeId={'xl'} customize={{}} />
+        <Spinner loadingText={'Help me'} sizeId={'mobile'} customize={{}} />
     </StoryWrapper>
 ));

@@ -1,7 +1,3 @@
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable react/prop-types */
 import React, { CSSProperties } from 'react';
 import { useTheme } from '@emotion/react';
 import CheckBox from '../../components/Checkbox';

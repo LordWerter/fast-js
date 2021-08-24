@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from 'react';
 import IMask from 'imask';
 import { useTheme } from '@emotion/react';

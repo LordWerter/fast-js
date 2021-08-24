@@ -1,21 +1,14 @@
-/* eslint-disable react/forbid-component-props */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable react/prop-types */
-import { TSize } from '../../definitions/IPropTypes';
 import React from 'react';
 import { useTheme } from '@emotion/react';
+import { mergeThemeObjects } from '../../utils';
+import { CWrap } from './BgImage.styles';
+import { TSize } from '../../definitions/IPropTypes';
 
 export interface IProps {
     bgImage: string;
     sizeId?: TSize;
     customize?: any;
 }
-
-import { CWrap } from './BgImage.styles';
-/**
- * imports of utils
- */
-import { mergeThemeObjects } from '../../utils';
 
 const BgImage: React.FC<IProps> = (props): JSX.Element => {
     const { bgImage, sizeId = 'mobile', customize = {} } = props;

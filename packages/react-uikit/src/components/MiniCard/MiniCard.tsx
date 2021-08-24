@@ -1,12 +1,8 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable @typescript-eslint/no-unused-expressions */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { useTheme } from '@emotion/react';
 import { Link } from 'react-router-dom';
-// import {useState} from 'react';
+import { mergeThemeObjects } from '../../utils';
+import { CWrap, Image, Title } from './MiniCard.styles';
 import { TSize } from '../../definitions/IPropTypes';
 
 export interface IProps {
@@ -16,11 +12,6 @@ export interface IProps {
     handleOnClick?: any;
 }
 
-import { CWrap, Image, Title } from './MiniCard.styles';
-/**
- * imports of utils
- */
-import { mergeThemeObjects } from '../../utils';
 
 export const MiniCard: React.FC<IProps> = (props): JSX.Element => {
     const {

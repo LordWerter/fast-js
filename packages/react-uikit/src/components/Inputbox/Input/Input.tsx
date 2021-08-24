@@ -1,9 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-/* eslint-disable guard-for-in */
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable react/prop-types */
 import React, { useState, ChangeEvent } from 'react';
 import { useTheme } from '@emotion/react';
 import { mergeThemeObjects } from '../../../utils';

@@ -1,7 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import { useTheme } from '@emotion/react';
 import KeyBtn from './KeyBtn';

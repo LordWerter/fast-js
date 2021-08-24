@@ -1,6 +1,3 @@
-/* eslint-disable guard-for-in */
-/* eslint-disable react/prop-types */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from 'react';
 import { useTheme } from '@emotion/react';
 import { mergeThemeObjects } from '../../utils';
@@ -13,7 +10,7 @@ export interface IProps {
 }
 
 export const Label: React.FC<IProps> = (props): JSX.Element => {
-    const { text, sizeId = 'xl', customize = {} } = props;
+    const { text, sizeId = 'mobile', customize = {} } = props;
 
     // @ts-ignore
     const theme = { ...useTheme().components.Label };

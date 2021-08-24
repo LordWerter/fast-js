@@ -8,7 +8,7 @@ const stories = storiesOf('Text Blocks', module);
 
 stories.add('H1 Title', () => (
     <StoryWrapper theme={mocks.theme}>
-        <TextBlock sizeId={'xl'} customize={{}} type={'H1'}>
+        <TextBlock sizeId={'mobile'} customize={{}} type={'H1'}>
             {mocks.data.medium}
         </TextBlock>
     </StoryWrapper>
@@ -16,7 +16,7 @@ stories.add('H1 Title', () => (
 
 stories.add('H2 Title', () => (
     <StoryWrapper theme={mocks.theme}>
-        <TextBlock sizeId={'xl'} customize={{}} type={'H2'}>
+        <TextBlock sizeId={'mobile'} customize={{}} type={'H2'}>
             {mocks.data.medium}
         </TextBlock>
     </StoryWrapper>
@@ -24,7 +24,7 @@ stories.add('H2 Title', () => (
 
 stories.add('H3 Title', () => (
     <StoryWrapper theme={mocks.theme}>
-        <TextBlock sizeId={'xl'} customize={{}} type={'H3'}>
+        <TextBlock sizeId={'mobile'} customize={{}} type={'H3'}>
             {mocks.data.medium}
         </TextBlock>
     </StoryWrapper>
@@ -32,7 +32,7 @@ stories.add('H3 Title', () => (
 
 stories.add('H4 Title', () => (
     <StoryWrapper theme={mocks.theme}>
-        <TextBlock sizeId={'xl'} customize={{}} type={'H4'}>
+        <TextBlock sizeId={'mobile'} customize={{}} type={'H4'}>
             {mocks.data.medium}
         </TextBlock>
     </StoryWrapper>
@@ -40,7 +40,7 @@ stories.add('H4 Title', () => (
 
 stories.add('H5 Title', () => (
     <StoryWrapper theme={mocks.theme}>
-        <TextBlock sizeId={'xl'} customize={{}} type={'H5'}>
+        <TextBlock sizeId={'mobile'} customize={{}} type={'H5'}>
             {mocks.data.medium}
         </TextBlock>
     </StoryWrapper>
@@ -48,7 +48,7 @@ stories.add('H5 Title', () => (
 
 stories.add('H6 Title', () => (
     <StoryWrapper theme={mocks.theme}>
-        <TextBlock sizeId={'xl'} customize={{}} type={'H6'}>
+        <TextBlock sizeId={'mobile'} customize={{}} type={'H6'}>
             {mocks.data.medium}
         </TextBlock>
     </StoryWrapper>
@@ -56,7 +56,7 @@ stories.add('H6 Title', () => (
 
 stories.add('P Block', () => (
     <StoryWrapper theme={mocks.theme}>
-        <TextBlock sizeId={'xl'} customize={{}} type={'P'}>
+        <TextBlock sizeId={'mobile'} customize={{}} type={'P'}>
             {mocks.data.medium}
         </TextBlock>
     </StoryWrapper>

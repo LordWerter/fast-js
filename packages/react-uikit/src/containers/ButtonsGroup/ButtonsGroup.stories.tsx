@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
@@ -13,38 +12,38 @@ stories.add('Basic config', () => (
             customize={{}}
             data={[
                 {
-                    name: 'Перейти в режим продаж',
+                    name: 'Перейти в режим Я_В_ТАНКЕ',
                     onClick: () => {
                         const history = useHistory();
                         history.push('/basket/');
                     },
                 },
                 {
-                    name: 'Функции КСО',
+                    name: 'Функции тупежки',
                     onClick: () => {
                         const history = useHistory();
-                        history.push('/basket/');
+                        history.push('/stupidness/');
                     },
                 },
                 {
-                    name: 'Настройка продажи пакетов',
+                    name: 'Настройка цены парашютов',
                     onClick: () => {
                         const history = useHistory();
-                        history.push('/basket/');
+                        history.push('/parachute-price-config/');
                     },
                 },
                 {
-                    name: 'Закрыть кассу',
+                    name: 'Запустить уничтожение всех продавальников',
                     onClick: () => {
                         const history = useHistory();
-                        history.push('/basket/');
+                        history.push('/destroy-all-sco/');
                     },
                 },
                 {
-                    name: 'Перезапустить КСО',
+                    name: 'Рестарт убийц кожаных мешков',
                     onClick: () => {
                         const history = useHistory();
-                        history.push('/basket/');
+                        history.push('/reboot-killers/');
                     },
                 },
             ]}

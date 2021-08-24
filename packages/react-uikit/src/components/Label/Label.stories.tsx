@@ -9,7 +9,7 @@ import Label from './Label';
 
 const stories = storiesOf('Label', module);
 
-stories.add('Darvin', () => (
+stories.add('Basic', () => (
     <StoryWrapper store={store1} theme={{}} initialEntries={['/']}>
         <Label sizeId={'xl'} customize={{}} text={'10000000'} />
     </StoryWrapper>

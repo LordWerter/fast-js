@@ -9,8 +9,8 @@ import Input from './Input';
 
 const stories = storiesOf('Inputbox', module);
 
-stories.add('Darvin: simple', () => (
+stories.add('Basic', () => (
     <StoryWrapper store={store1} theme={{}} initialEntries={['/']}>
-        <Input sizeId={'xl'} value={'Текст для теста'} placeholder={'Введите значение'} customize={{}} />
+        <Input sizeId={'mobile'} value={'Текст для теста'} placeholder={'Введите значение'} customize={{}} />
     </StoryWrapper>
 ));

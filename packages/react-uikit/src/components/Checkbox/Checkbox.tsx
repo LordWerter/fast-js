@@ -1,15 +1,9 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable guard-for-in */
-/* eslint-disable @typescript-eslint/no-unused-expressions */
-/* eslint-disable react/prop-types */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable react/forbid-component-props */
-/**
- * imports & exports of namespaces, interfaces & types
- */
+import React, { useState } from 'react';
+import { useTheme } from '@emotion/react';
+import { CWrap, IconBox, Input, Label } from './Checkbox.styles';
+import { mergeThemeObjects } from '../../utils';
+import { TSize } from '../../definitions/IPropTypes';
+
 export type EventHandler = React.MouseEventHandler<HTMLButtonElement>;
 export interface IProps {
     hash: string;
@@ -21,12 +15,6 @@ export interface IProps {
     onChange?: EventHandler;
     customize?: any;
 }
-
-import React, { useState } from 'react';
-import { useTheme } from '@emotion/react';
-import { CWrap, IconBox, Input, Label } from './Checkbox.styles';
-import { mergeThemeObjects } from '../../utils';
-import { TSize } from '../../definitions/IPropTypes';
 
 export const Checkbox: React.FC<IProps> = (props): JSX.Element => {
     const {

@@ -1,8 +1,5 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { useTheme } from '@emotion/react';
-// import { useState } from 'react';
 import { TSize, TTextBlockType } from '../../../definitions/IPropTypes';
 
 export interface IProps {
