@@ -42,7 +42,8 @@ module.exports = {
 
         // Disallow declaration of variables that are not used in the code
         // https://eslint.org/docs/rules/no-unused-vars
-        'no-unused-vars': ['error', { vars: 'all', args: 'after-used', varsIgnorePattern: '^React$' }],
+        // example - 'no-unused-vars': ['error', { vars: 'all', args: 'after-used', varsIgnorePattern: '^React$' }],
+        'no-unused-vars': 'off',
 
         // Disallow use of variables before they are defined
         // https://eslint.org/docs/rules/no-use-before-define

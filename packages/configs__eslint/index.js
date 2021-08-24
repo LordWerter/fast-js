@@ -8,7 +8,7 @@ module.exports = {
         './base/stylistic',
         './base/variables',
         './frameworks/jest',
-//        './frameworks/typescript',
+        './frameworks/typescript',
         './frameworks/prettier',
         './frameworks/prettier-typescript',
         './frameworks/react',

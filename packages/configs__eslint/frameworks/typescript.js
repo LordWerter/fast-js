@@ -408,7 +408,6 @@ module.exports = {
 
         // Disallow unused variables
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md
-        'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': [
             'error',
             { vars: 'all', args: 'after-used', varsIgnorePattern: '^React$' },
