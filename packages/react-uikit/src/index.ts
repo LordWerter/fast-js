@@ -20,3 +20,4 @@ export { default as TextBlock } from './components/Typography/TextBlock';
 export { default as ButtonsGroup } from './containers/ButtonsGroup';
 export { default as StoryWrapper } from './containers/StoryWrapper';
 export { default as GlobalStyles } from './containers/GlobalStyles';
+export { default as ErrorBoundary } from './containers/ErrorBoundary';
