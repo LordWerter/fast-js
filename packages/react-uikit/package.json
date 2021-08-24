@@ -38,7 +38,7 @@
     "@babel/preset-typescript": "^7.15.0",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
-    "@fast-js/eslint": "^1.2.2",
+    "@fast-js/eslint": "^1.2.3",
     "@fast-js/prettier": "^3.2.1",
     "@fast-js/types": "^0.0.6",
     "@loki/is-loki-running": "^0.28.0",
