@@ -8,7 +8,6 @@
   "module": "dist/fast-js__utils.cjs.js",
   "browser": "dist/fast-js__utils.iife.js",
   "types": "dist/types/index.d.ts",
-  "files": ["dist", "LICENSE"],
   "publishConfig": {
     "access": "public"
   },
