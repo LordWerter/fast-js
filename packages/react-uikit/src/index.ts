@@ -1,47 +1,66 @@
-export { default as Button } from './components/Button';
+export { Button } from './components/Button';
 export type { IButtonProps } from './components/Button';
 
-export { default as CheckBox } from './components/Checkbox';
+export { Checkbox } from './components/Checkbox/Checkbox';
 export type { ICheckboxProps } from './components/Checkbox';
 
-export { default as CheckBoxBar } from './containers/CheckBoxBar';
-export type { ICheckBoxBarProps } from './components/CheckBoxBar';
+export { CheckBoxBar } from './containers/CheckBoxBar';
+export type { ICheckBoxBarProps } from './containers/CheckBoxBar';
 
-export { default as Counter } from './components/Counter';
+export { Counter } from './components/Counter';
 export type { ICounterProps } from './components/Counter';
-export { default as Dropbox } from './components/Dropbox';
-export type { IButtonProps } from './components/Button';
-export { default as Image } from './components/Image';
-export type { IButtonProps } from './components/Button';
-export { default as InputBox } from './components/Inputbox';
-export type { IButtonProps } from './components/Button';
-export { default as SymbKeyboard } from './components/Keyboard';
-export type { IButtonProps } from './components/Button';
-export { Number as NumKeyboard } from './components/Keyboard';
-export { default as Label } from './components/Label';
-export type { IButtonProps } from './components/Button';
-export { default as Logo } from './components/Logo';
-export type { IButtonProps } from './components/Button';
-export { default as MiniCard } from './components/MiniCard';
-export type { IButtonProps } from './components/Button';
-export { default as Price } from './components/Price';
-export type { IButtonProps } from './components/Button';
-export { default as Select } from './components/Select';
-export type { IButtonProps } from './components/Button';
-export { default as Slider } from './components/Slider';
-export type { IButtonProps } from './components/Button';
-export { default as Spinner } from './components/Spinner';
-export type { IButtonProps } from './components/Button';
-export { default as Switcher } from './components/Switcher';
-export type { IButtonProps } from './components/Button';
-export { default as TextBlock } from './components/Typography/TextBlock';
-export type { IButtonProps } from './components/Button';
 
-export { default as ButtonsGroup } from './containers/ButtonsGroup';
-export type { IButtonProps } from './components/Button';
-export { default as StoryWrapper } from './containers/StoryWrapper';
-export type { IButtonProps } from './components/Button';
-export { default as GlobalStyles } from './containers/GlobalStyles';
-export type { IButtonProps } from './components/Button';
-export { default as ErrorBoundary } from './containers/ErrorBoundary';
-export type { IButtonProps } from './components/Button';
+export { Dropbox } from './components/Dropbox';
+export type { IDropboxProps } from './components/Dropbox';
+
+export { Image } from './components/Image';
+export type { IImageProps } from './components/Image';
+
+export { Input } from './components/Inputbox';
+export type { IInputProps } from './components/Inputbox';
+
+export { InputWithMask } from './components/Inputbox';
+export type { IInputWithMaskProps } from './components/Inputbox';
+
+export { Input4Search } from './components/Inputbox';
+export type { IInput4SearchProps } from './components/Inputbox';
+
+export { SymbKeyboard } from './components/Keyboard';
+export type { ISymbKeyboardProps } from './components/Keyboard';
+
+export { Number as NumKeyboard } from './components/Keyboard';
+
+export { Label } from './components/Label';
+export type { ILabelProps } from './components/Label';
+
+export { Logo } from './components/Logo';
+export type { ILogoProps } from './components/Logo';
+
+export { MiniCard } from './components/MiniCard';
+export type { IMiniCardProps } from './components/MiniCard';
+export { Price } from './components/Price';
+export type { IPriceProps } from './components/Price';
+export { Select } from './components/Select';
+export type { ISelectProps } from './components/Select';
+export { Slider } from './components/Slider';
+export type { ISliderProps } from './components/Slider';
+export { Spinner } from './components/Spinner';
+export type { ISpinnerProps } from './components/Spinner';
+
+export { Switcher } from './components/Switcher';
+export type { ISwitcherProps } from './components/Switcher';
+
+export { TextBlock } from './components/Typography/TextBlock';
+export type { ITextBlockProps } from './components/Typography/TextBlock';
+
+export { ButtonsGroup } from './containers/ButtonsGroup';
+export type { IButtonsGroupProps } from './containers/ButtonsGroup';
+
+export { StoryWrapper } from './containers/StoryWrapper';
+export type { IStoryWrapperProps } from './containers/StoryWrapper';
+
+export { GlobalStyles } from './containers/GlobalStyles';
+export type { IGlobalStylesProps } from './containers/GlobalStyles';
+
+export { ErrorBoundary } from './containers/ErrorBoundary';
+export type { IErrorBoundaryProps } from './containers/ErrorBoundary';

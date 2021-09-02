@@ -1,4 +1,6 @@
-export { IProps as IErrorBoundaryProps } from './ErrorBoundary';
 import ErrorBoundary from './ErrorBoundary';
+
+export { ErrorBoundary };
+export type { IProps as IErrorBoundaryProps } from './ErrorBoundary';
 
 export default ErrorBoundary;

@@ -1,4 +1,6 @@
-export { IProps as ICheckBoxBarProps } from './CheckBoxBar';
-import ButtonsGroup from './CheckBoxBar';
+import CheckBoxBar from './CheckBoxBar';
 
-export default ButtonsGroup;
+export { CheckBoxBar };
+export type { IProps as ICheckBoxBarProps } from './CheckBoxBar';
+
+export default CheckBoxBar;

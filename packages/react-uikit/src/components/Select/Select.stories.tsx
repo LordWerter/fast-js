@@ -14,7 +14,7 @@ const mockedLabel = {
     text: 'Выбрать язык',
 };
 
-const handleListItem = (id) => {
+const handleListItem = (id: any) => {
     console.log(id);
 };
 

@@ -1,6 +1,6 @@
-import Number from './Number';
-import Keyboard from './Keyboard';
+import { default as Number } from './Number';
+import { default as SymbKeyboard } from './Keyboard';
+export type { IProps as ISymbKeyboardProps} from './Keyboard';
+export { Number, SymbKeyboard };
 
-export { Number, Keyboard };
-
-export default Keyboard;
+export default SymbKeyboard;

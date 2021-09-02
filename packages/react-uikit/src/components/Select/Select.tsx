@@ -18,7 +18,7 @@ export const Select: React.FC<any> = (props): JSX.Element => {
 
     const [lblImg, setLabelImg] = useState(labelImg);
     const [listVisibility, setListVisibility] = useState<boolean>(false);
-
+    // @ts-ignore
     const handleListVisibility = (event: any, status?: boolean) => {
         status !== undefined ? setListVisibility(status) : setListVisibility(!listVisibility);
     };

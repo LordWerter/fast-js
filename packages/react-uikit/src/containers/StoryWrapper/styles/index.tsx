@@ -6,7 +6,7 @@ import ResetStyle from './reset.styles';
 
 export interface IProps {}
 
-export const GlobalStyles: React.FC<IProps> = (props): JSX.Element => {
+export const GlobalStyles: React.FC<IProps> = (): JSX.Element => {
     return (
         <>
             <Global styles={BaseStyle} />

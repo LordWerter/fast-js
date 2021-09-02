@@ -1,23 +1,40 @@
 {
+  "types": [
+    "@emotion/core",
+    "node"
+  ],
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "noUnusedLocals": true,
-    "noImplicitAny": true,
-    "declarationDir": "dist/types",
+    "outDir": "dist",
+    "target": "es5",
+    "sourceMap": false,
     "declaration": true,
-    "target": "esnext",
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "experimentalDecorators": true,
+    "noErrorTruncation": false,
+    "lib": ["es5", "es6", "dom", "esnext"],
     "module": "esnext",
-    "strict": true
+    "allowJs": true,
+    "jsx": "react",
   },
-  "include": ["src/**/*"],
+  "include": [
+    "src"
+  ],
   "exclude": [
-	  "node_modules", 
-	  "dist",
-	  "**/__tests__"
-	]
+    "node_modules",
+    "dist",
+    "src/**/*.test.tsx",
+    "src/**/*.test.ts",
+    "src/**/*.spec.tsx",
+    "src/**/*.spec.ts"
+  ]
 }
