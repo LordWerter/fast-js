@@ -6,9 +6,9 @@
  */
 export default {
     process() {
-      return 'module.exports = {};';
+        return 'module.exports = {};';
     },
     getCacheKey() {
-      return 'cssTransform';
-    }
+        return 'cssTransform';
+    },
 };

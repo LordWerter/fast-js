@@ -1,30 +1,34 @@
 {
 	"extends": "@fast-js/typescript/client/tsconfig.json",
 	"include": [
-		"<rootDir>/src/**/*.ts",
-		"<rootDir>/src/**/*.tsx",
-		".storybook/main.js",
-		"<rootDir>/node_modules/@fast-js/utils/**/*.ts"
+		"src"
 	],
 	"exclude": [
 		"node_modules",
-		"**/node_modules",
 		"build",
 		"scripts",
 		"config",
 		"*.js",
 		"coverage",
-		"dist"
+		"dist",
+		"dist",
+		"example",
+		"docs",
+		"src/**/*.test.ts",
+		"src/**/*.test.tsx"
 	],
 	"compilerOptions": {
 		"baseUrl": ".",
 		"esModuleInterop": true,
-		"jsx": "preserve",
+		"jsx": "react",
 		"skipLibCheck": true,
 		"strict": true,
 		"typeRoots": [
-			"<rootDir>/node_modules/@types",
-			"<rootDir>/node_modules/@fast-js/types"
-		]
+			"src/definitions",
+			"node_modules/@types",
+			"node_modules/@fast-js/types"
+		],
+		"declarationDir": "./dist/types",
+		"declaration": true	
 	}
 }

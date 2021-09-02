@@ -9,7 +9,7 @@ import getPreset4Server from './jest.config.server';
  * @param type {'client' | 'lib' | 'server'}
  * @returns
  */
-export const getPreset = (type?: 'client' | 'lib' | 'server'):Config.InitialOptions => {
+export const getPreset = (type?: 'client' | 'lib' | 'server'): Config.InitialOptions => {
     switch (type) {
         case 'lib':
             return getPreset4Lib();
@@ -19,6 +19,6 @@ export const getPreset = (type?: 'client' | 'lib' | 'server'):Config.InitialOpti
         default:
             return getPreset4ClientApp();
     }
-}
+};
 
 export default getPreset;

@@ -1,11 +1,11 @@
 import React from 'react';
 import Catch from './FunctionalErrorBoundary';
 
-type TProps = {
+export interface IProps {
     children: React.ReactNode;
 };
 
-export const ErrorBoundary = Catch(function MyErrorBoundary(props: TProps, error?: Error) {
+export const ErrorBoundary = Catch(function MyErrorBoundary(props: IProps, error?: Error) {
     if (error) {
         return (
             <>

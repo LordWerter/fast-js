@@ -6,10 +6,11 @@
 /// <reference path="response.d.ts" />
 /// <reference path="types.d.ts" />
 /// <reference path="redux-store.d.ts" />
+/// <reference path="data-structures.d.ts" />
 
 /**
- * Номинальные типы
- * Например `type Foo = `Nominal<'Foo', string>` - подтип строки, который:
+ * Nominal type
+ * For example `type Foo = `Nominal<'Foo', string>` - string subtype when:
  *   - может быть использован, кок строка (можно передать `let x: Foo` в функцию `function(arg:string){...}`)
  *   - не принимает произвольную строку (нельзя передать `let x: string` в функцию `function(arg:Foo){...}`)
  *   - не совместим с `type Bar = Nominal<'Bar', string>`
@@ -33,7 +34,7 @@ export type Nominal<Name extends string, Supertype> = Supertype & {
   /** Number as string (e.g. '2020', '1.23') */
   export type NumberAsString = Nominal<"NumberAsString", string>;
   
-  /** Date in ISO-8601 format (YYYY-MM-DD) (e.g. '2020-12-31') */
+  /** Date in ISO-8601 format (YYYY-MM-DD) (e.g. '2021-11-30') */
   export type ISODate = Nominal<"ISODate", string>;
   
   /** Timestamp in ISO-8601 format (YYYY-MM-DDThh:mm:ss[.sss][Z])

@@ -1,26 +1,23 @@
 {
-	"extends": "@fast-js/typescript/client/tsconfig.json",
-	"include": [
-		"./src/**/*.ts",
-	],
-	"exclude": [
-		"node_modules",
-		"**/node_modules",
-		"build",
-		"scripts",
-		"config",
-		"*.js",
-		"coverage",
-		"dist"
-	],
-	"compilerOptions": {
-		"baseUrl": ".",
-		"esModuleInterop": true,
-		"skipLibCheck": true,
-		"strict": true,
-		"typeRoots": [
-			"<rootDir>/node_modules/@fast-js/types",
-			"<rootDir>/node_modules/@types"
-		]
-	},
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "declarationDir": "dist/types",
+    "declaration": true,
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+	  "node_modules", 
+	  "dist",
+	  "**/__tests__"
+	]
 }

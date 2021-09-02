@@ -18,7 +18,7 @@ export default class AppUpdateUtility {
     public updateAppNow() {
         autoUpdater.checkForUpdatesAndNotify();
 
-        autoUpdater.on('update-downloaded', (event: any, releaseNotes: any, releaseName: any) => {
+        autoUpdater.on('update-downloaded', (_event: any, releaseNotes: any, releaseName: any) => {
             const dialogOpts = {
                 type: 'info',
                 buttons: ['Restart', 'Later'],

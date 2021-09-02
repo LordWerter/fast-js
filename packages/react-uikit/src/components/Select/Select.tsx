@@ -3,6 +3,15 @@ import { useTheme } from '@emotion/react';
 import { mergeThemeObjects } from '../../utils';
 import Image from '../Image';
 import { List, CWrap, MainBtn, Label, LabelText } from './Select.styles';
+import { TSize } from '../../definitions/IPropTypes';
+
+export interface IProps {
+    sizeId: TSize;
+    customize: unknown;
+    labelImg: string;
+    labelText: string;
+    items: any[];
+}
 
 export const Select: React.FC<any> = (props): JSX.Element => {
     const { sizeId = 'mobile', customize = {}, labelImg, labelText, items } = props;

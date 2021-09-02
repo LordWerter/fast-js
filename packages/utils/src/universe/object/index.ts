@@ -4,6 +4,7 @@ import isNotEmptyObject from './isNotEmptyObject';
 import { isObjectPropEqualTo } from './isObjectPropEqualTo';
 import compare from './compare';
 import specifyObjectType from './specifyObjectType';
+import genObjectFromPairsArr from './genObjectFromPairsArr';
 
 export default {
     hasObjectProperty,
@@ -12,4 +13,5 @@ export default {
     isObjectPropEqualTo,
     ...compare,
     specifyObjectType,
+    genObjectFromPairsArr,
 };
