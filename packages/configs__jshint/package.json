@@ -1,13 +1,17 @@
 {
-	"name": "@fast-js/jshint",
-	"version": "0.0.6",
-	"license": "MIT",
-	"author": "Alexander Rudenko<learnitnow@yandex.ru>",
-	"repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/configs__jshint",
-	  "scripts": {
-	},
-	"peerDependencies": {},
-	"dependencies": {},
-	"devDependencies": {},
-	"husky": {}
+  "name": "@fast-js/jshint",
+  "version": "0.0.6",
+  "license": "MIT",
+  "author": "Alexander Rudenko<learnitnow@yandex.ru>",
+  "repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/configs__jshint",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {},
+  "peerDependencies": {},
+  "dependencies": {},
+  "devDependencies": {
+	"husky": "^7.0.2"
+  },
+  "husky": {}
 }

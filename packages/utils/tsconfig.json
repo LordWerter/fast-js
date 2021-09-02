@@ -1,6 +1,5 @@
 {
   "types": [
-    "@emotion/core",
     "node"
   ],
   "compilerOptions": {

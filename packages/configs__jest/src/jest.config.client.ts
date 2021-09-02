@@ -22,7 +22,7 @@ export const getPreset4ClientApp = (): Config.InitialOptions => {
             window: true,
             snapshot: false,
             'ts-jest': {
-                tsConfig: '<rootDir>/tsconfig.json',
+                tsconfig: '<rootDir>/test.tsconfig.json',
             },
         },
     };

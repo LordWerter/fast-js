@@ -1,7 +1,6 @@
 {
     "private": true,
     "name": "fast-js",
-    "version": "1.0.0",
 	"author": "Alexander Rudenko<learnitnow@yandex.ru>",
     "license": "MIT",
     "repository": {
@@ -27,6 +26,7 @@
         "typescript preset",
         "webpack configs",
         "react uikit",
+        "flexible uikit",
         "websocket api",
         "react auth provider"
 
@@ -36,7 +36,11 @@
         "packages": [
           "packages/*"
         ],
-        "nohoist": []
+        "nohoist": [
+            "@fast-js/react-uikit/**",
+            "@fast-js/rest/axios",
+            "@fast-js/logger/react"
+        ]
     },
     "bugs": {
         "url": "https://github.com/LordWerter/fast-js/issues"

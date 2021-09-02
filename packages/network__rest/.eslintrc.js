@@ -5,7 +5,7 @@ module.exports = {
         es6: true,
         node: true,
     },
-    extends: ['@fast-js/eslint/index.js'],
+    extends: ['../../node_modules/@fast-js/eslint/index.js'],
     globals: {
         React: true,
         google: true,

@@ -1,6 +1,5 @@
 {
   "types": [
-    "@emotion/core",
     "node"
   ],
   "compilerOptions": {
@@ -25,6 +24,9 @@
     "module": "esnext",
     "allowJs": true,
     "jsx": "react",
+    "paths": {
+      "@fast-js/*": ["../../packages/*/src"]
+    }
   },
   "include": [
     "src"
@@ -35,6 +37,7 @@
     "src/**/*.test.tsx",
     "src/**/*.test.ts",
     "src/**/*.spec.tsx",
+    "src/**/*.stories.tsx",
     "src/**/*.spec.ts"
-  ]
+  ],
 }

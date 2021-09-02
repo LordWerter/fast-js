@@ -11,9 +11,11 @@
   },
   "scripts": {
   },
-  "dependencies": {},
+  "dependencies": {
+    "prettier": "2.3.2"
+  },
   "devDependencies": {
-    "prettier": "2.3.1"
+    "husky": "^7.0.2"
   },
 	"husky": {}
 }

@@ -9,6 +9,8 @@
 	},
 	"peerDependencies": {},
 	"dependencies": {},
-	"devDependencies": {},
+	"devDependencies": {
+		"husky": "^7.0.2"
+	},
 	"husky": {}
 }

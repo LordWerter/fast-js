@@ -12,15 +12,9 @@
         "noImplicitThis": false,
         "strictNullChecks": false,
         "strictFunctionTypes": true,
-        "baseUrl": "./src",
-        "typeRoots": [
-            "./src"
-        ],
+        "baseUrl": ".",
         "types": [],
         "noEmit": true,
         "forceConsistentCasingInFileNames": true
-    },
-    "files": [
-        "./src/index.d.ts"
-    ]
+    }
 }

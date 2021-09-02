@@ -8,8 +8,14 @@
     "types": "",
 	"scripts": {
 	},
-    "peerDependencies": {},
-	"dependencies": {},
-	"devDependencies": {},
+    "peerDependencies": {
+		"typescript": "^4.4.2"
+	},
+	"dependencies": {
+		"typescript": "^4.4.2"
+	},
+	"devDependencies": {
+		"husky": "^7.0.2"
+	},
 	"husky": {}
 }
