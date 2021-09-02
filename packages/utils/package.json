@@ -1,10 +1,10 @@
 {
   "name": "@fast-js/utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Aleksander Rudenko<learnitnow@yandex.ru>",
   "repository": "https://github.com/LordWerter/fast-js/tree/main/packages/utils",
   "license": "MIT",
-  "main": "dist/fast-js__utils.esm.js",
+  "main": "dist/fast-js__utils.umd.js",
   "module": "dist/fast-js__utils.cjs.js",
   "browser": "dist/fast-js__utils.iife.js",
   "types": "dist/types/index.d.ts",
