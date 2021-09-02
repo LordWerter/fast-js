@@ -25,12 +25,12 @@ export default {
     babel({
       extensions,
       babelHelpers: 'inline',
-      include: EXTENSIONS.map(ext => `src/**/*${ext}`)
+      include: extensions.map(ext => `src/**/*${ext}`)
     }),
   ],
 
   output: [{
-    file: pkg.main,
+    dir: "dist",
     sourcemap: true,
     format: "esm",
     preserveModules: true
