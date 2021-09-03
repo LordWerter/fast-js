@@ -35,7 +35,7 @@ module.exports = {
             },
         },
         {
-            files: ['**/src/*', '**/src/**/*'],
+            files: ['**/packages/*/src/*', '**/packages/*/src/**/*'],
             rules: {
                 'import/no-commonjs': 2,
             },

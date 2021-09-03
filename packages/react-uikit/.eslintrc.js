@@ -42,9 +42,24 @@ module.exports = {
     },
     overrides: [
         {
+            files: ['*.test.js', '**/__tests__/**'],
+            env: {
+                jest: true,
+            },
+        },
+        {
             files: ['**/*.stories.*'],
             rules: {
                 'import/no-anonymous-default-export': 'off',
+            },
+            parserOptions: {
+                project: './tsconfig.json',
+            },
+        },
+        {
+            files: ['**/src/*', '**/src/**/*'],
+            rules: {
+                'import/no-commonjs': 2,
             },
         },
     ],
