@@ -1,6 +1,6 @@
 {
   "name": "@fast-js/react-uikit",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "author": "Aleksander Rudenko<learnitnow@yandex.ru>",
   "license": "MIT",
   "repository": "https://github.com/LordWerter/fast-js/tree/main/packages/react-uikit",
@@ -35,7 +35,7 @@
     "@emotion/is-prop-valid": "^1.1.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "@fast-js/utils": "^1.0.5",
+    "@fast-js/utils": "^1.0.6",
     "@rematch/core": "^2.1.0",
     "imask": "^6.1.0",
     "match-sorter": "^6.3.0",
