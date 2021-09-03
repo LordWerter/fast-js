@@ -7,8 +7,12 @@
 	"main": "",
 	"scripts": {
 	},
-	"peerDependencies": {},
-	"dependencies": {},
+	"peerDependencies": {
+		"markdownlint": ">=0.24.0"
+	},
+	"dependencies": {
+		"markdownlint": "^0.24.0"
+	},
 	"devDependencies": {
 		"husky": "^7.0.2"
 	},

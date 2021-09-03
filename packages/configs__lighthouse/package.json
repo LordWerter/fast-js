@@ -6,8 +6,13 @@
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {},
-	"peerDependencies": {},
+	"peerDependencies": {
+		"mocha": ">=9.1.1",
+		"chai": ">=4.3.4",
+		"chrome-launcher": ">=0.14.0"
+	},
 	"dependencies": {
+		"mocha": "^9.1.1",
 		"chai": "^4.3.4",
 		"chrome-launcher": "^0.14.0"
 	},

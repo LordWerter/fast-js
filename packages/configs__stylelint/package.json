@@ -7,8 +7,12 @@
   "main": "",
   "types": "",
   "scripts": {},
-  "peerDependencies": {},
-  "dependencies": {},
+  "peerDependencies": {
+    "stylelint": ">=13.13.1"
+  },
+  "dependencies": {
+    "stylelint": "^13.13.1"
+  },
   "devDependencies": {
     "husky": "^7.0.2"
   },
