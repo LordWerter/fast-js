@@ -23,10 +23,7 @@
     "lib": ["es5", "es6", "dom", "esnext"],
     "module": "esnext",
     "allowJs": true,
-    "jsx": "react",
-    "paths": {
-      "@fast-js/*": ["../../packages/*/src"]
-    }
+    "jsx": "react"
   },
   "include": [
     "src"

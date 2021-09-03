@@ -9,7 +9,7 @@ const extensions = [
 // Excluded dependencies
 const EXTERNAL = Object.keys(pkg.devDependencies);
 
-// const name = 'FastJSUtils';
+const name = 'FastJSReactUIKit';
 
 export default {
   input: 'src/index.tsx',
@@ -30,10 +30,10 @@ export default {
   ],
 
   output: [{
-    dir: "dist",
+    name,
+    file: pkg.main,
     sourcemap: false,
-    format: "esm",
-    preserveModules: true
+    format: "umd",
   }],
   external: EXTERNAL
 };
