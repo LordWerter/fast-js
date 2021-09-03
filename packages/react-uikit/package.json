@@ -1,11 +1,22 @@
 {
   "name": "@fast-js/react-uikit",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "author": "Aleksander Rudenko<learnitnow@yandex.ru>",
   "license": "MIT",
   "repository": "https://github.com/LordWerter/fast-js/tree/main/packages/react-uikit",
-  "main": "dist/index.js",
-  "types": "dist/types/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "src",
+    "dist",
+    "jsx-runtime",
+    "jsx-dev-runtime",
+    "isolated-hoist-non-react-statics-do-not-use-this-in-your-code",
+    "types/*.d.ts",
+    "macro.js",
+    "macro.d.ts",
+    "macro.js.flow"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -18,6 +29,7 @@
     "lint": "eslint --quiet --ext .js,.jsx,.ts,.tsx --config ./.eslintrc.js",
     "test:jest": "cross-env CI=TRUE jest --colors --coverage test --passWithNoTests --config jest.config.ts"
   },
+  "sideEffects": false,
   "peerDependencies": {
     "@emotion/is-prop-valid": "^1.1.0",
     "@emotion/react": "^11.4.1",
