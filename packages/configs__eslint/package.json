@@ -4,9 +4,9 @@
   "repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/configs__eslint",
   "description": "ESLint Config for projects on JS",
   "keywords": ["eslint", "eslintconfig", "config", "javascript", "styleguide", "es2015", "es2016", "es2017", "es2018"],
-  "version": "1.2.4",
+  "version": "1.2.5",
   "license": "MIT",
-  "main": "index.js",
+  "main": "./src/index.js",
   "publishConfig": {
     "access": "public"
   },

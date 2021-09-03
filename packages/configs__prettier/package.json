@@ -3,7 +3,7 @@
 	"author": "Alexander Rudenko<learnitnow@yandex.ru>",
 	"repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/configs__prettier",
   "description": "Frontend Prettier Config",
-  "version": "3.2.1",
+  "version": "1.0.0",
 	"license": "MIT",
   "main": "./index.ts",
   "scripts": {

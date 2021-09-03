@@ -2,9 +2,9 @@
   "name": "@fast-js/commitlint",
   "author": "Alexander Rudenko<learnitnow@yandex.ru>",
   "repository": "https://https://github.com/LordWerter/js-tools/tree/main/packages/configs__commitlint",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
-  "main": "index.js",
+  "main": "./index.js",
   "publishConfig": {
     "access": "public"
   },

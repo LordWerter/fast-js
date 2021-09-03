@@ -1,36 +1,40 @@
 {
   "name": "@fast-js/types",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "author": "Alexander Rudenko<learnitnow@yandex.ru>",
   "repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/types",
   "license": "MIT",
   "main": "",
   "types": "index.d.ts",
   "keywords": ["typescript", "typings", "types", "definitions"],
-  "files": [
-    "index.d.ts",
-	"images.d.ts",
-	"jwt.d.ts",
-	"redux-store.d.ts",
-	"request.d.ts",
-	"response.d.ts",
-	"types.d.ts"
-  ],
+  "files": ["index.d.ts", "images.d.ts", "jwt.d.ts", "redux-store.d.ts", "request.d.ts", "response.d.ts", "types.d.ts"],
   "scripts": {},
-  "peerDependencies": {},
-  "dependencies": {},
-  "devDependencies": {
-    "@types/jest": "^27.0.0",
+  "peerDependencies": {
+    "@types/jest": "^27.0.1",
     "@types/jsdom": "^16.2.13",
-    "@types/node": "^16.6.0",
+    "@types/node": "^16.7.10",
     "@types/prettier": "^2.3.2",
     "@types/request": "^2.48.7",
-    "jest": "^27.0.6",
-    "jsdom": "^16.7.0",
+    "jest": "^27.1.0",
+    "jsdom": "^17.0.0",
     "prettier": "^2.3.2",
-    "ts-jest": "^27.0.4",
-    "ts-node": "^10.2.0",
-    "typescript": "^4.3.5"
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.2"
   },
+  "dependencies": {
+    "@types/jest": "^27.0.1",
+    "@types/jsdom": "^16.2.13",
+    "@types/node": "^16.7.10",
+    "@types/prettier": "^2.3.2",
+    "@types/request": "^2.48.7",
+    "jest": "^27.1.0",
+    "jsdom": "^17.0.0",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.2"
+  },
+  "devDependencies": {},
   "husky": {}
 }

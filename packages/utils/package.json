@@ -4,8 +4,9 @@
   "author": "Aleksander Rudenko<learnitnow@yandex.ru>",
   "repository": "https://github.com/LordWerter/fast-js/tree/main/packages/utils",
   "license": "MIT",
-  "main": "dist/index.js",
-  "types": "dist/types/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
   "publishConfig": {
     "access": "public"
   },
@@ -17,15 +18,15 @@
     "build": "npm run build:types && npm run build:js"
   },
   "dependencies": {
-    "core-js": "^3.17.1",
+    "core-js": "^3.17.2",
     "electron": "^14.0.0",
     "electron-log": "^4.4.1",
     "electron-updater": "^4.3.9",
     "regenerator-runtime": "^0.13.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
+    "@babel/core": "^7.15.4",
+    "@babel/preset-env": "^7.15.4",
     "@babel/preset-typescript": "^7.15.0",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^20.0.0",

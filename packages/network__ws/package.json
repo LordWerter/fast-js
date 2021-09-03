@@ -2,9 +2,11 @@
   "name": "@fast-js/ws-connect",
   "author": "Alexander Rudenko<learnitnow@yandex.ru>",
   "repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/network__ws",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
-  "main": "./src/WSConnect.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
     "test:jest": "cross-env CI=TRUE jest --colors --coverage test --passWithNoTests --config jest.config.ts"
   },
