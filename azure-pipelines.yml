@@ -1,7 +1,8 @@
+trigger:
+  - main
+
 jobs:
 - job: Linux
-  trigger:
-  - main
   pool:
     vmImage: 'ubuntu-latest'
   steps:
