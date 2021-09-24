@@ -1,2 +1,2 @@
-import Contacts from "./contacts";
+import Contacts from "./Contacts";
 export default Contacts;
