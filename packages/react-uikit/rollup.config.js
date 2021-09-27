@@ -24,7 +24,7 @@ export default {
     // Compile TypeScript/JavaScript files
     babel({
       extensions,
-      babelHelpers: 'inline',
+      babelHelpers: 'bundled',
       include: extensions.map(ext => `src/**/*${ext}`)
     }),
   ],
@@ -33,7 +33,7 @@ export default {
     name,
     file: pkg.main,
     sourcemap: false,
-    format: "umd",
+    format: "esm",
   }],
   external: EXTERNAL
 };

@@ -1,14 +1,25 @@
-import electron from './electron';
-import universe from './universe';
+import ArrMap from './array';
+import DateMap from './date';
+import HashMap from './hash';
+import NumMap from './number';
+import ObjMap from './object';
+import StrMap from './string';
 
-export { default as Arr } from './universe/array';
-export { default as Dates } from './universe/date';
-export { default as hash } from './universe/hash';
-export { default as Num } from './universe/number';
-export { default as Obj } from './universe/object';
-export { default as Str } from './universe/string';
-
-export default {
-    ...electron,
-    ...universe,
+export const map = {
+    Arr: { ...ArrMap },
+    Dates: { ...DateMap },
+    Num: { ...NumMap },
+    Obj: { ...ObjMap },
+    Hash: { ...HashMap },
+    Str: { ...StrMap },
 };
+export const {
+    Arr,
+    Dates,
+    Num,
+    Obj,
+    Hash,
+    Str,
+} = map;
+
+export default map;
