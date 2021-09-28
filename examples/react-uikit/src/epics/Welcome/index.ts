@@ -1,2 +1,3 @@
-import Main from "./main";
-export default Main;
+import Welcome from "./Welcome";
+
+export default Welcome
