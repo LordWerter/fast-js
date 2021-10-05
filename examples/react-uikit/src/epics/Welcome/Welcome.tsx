@@ -1,11 +1,13 @@
-import React from 'react'
+import { FC } from 'react'
+import ImageSlides from '../../features/ImageSlides'
+import { Cwelcome } from './Welcome.styles'
 
-const Welcome = () => {
+const Welcome: FC = ():JSX.Element => {
     return (
-        <h1>
-            Hello world!
-        </h1>
-    )
-}
+        <Cwelcome>
+            <ImageSlides/>
+        </Cwelcome>
+    );
+};
 
-export default Welcome
+export default Welcome;
