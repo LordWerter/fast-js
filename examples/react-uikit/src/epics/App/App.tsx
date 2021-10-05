@@ -1,14 +1,20 @@
-import React from 'react'
-import Welcome from '../Welcome'
-import Contacts from '../Contacts'
+import { FC } from 'react'
+import { BrowserRouter, Link } from 'react-router-dom'
+import { Global } from '@emotion/react'
+import { Capp, reset } from './App.styles'
+import AppRouter from '../../routes/AppRouter';
 
-const App = () => {
+const App: FC = (): JSX.Element => {
     return (
-        <>
-        <Welcome />
-        <Contacts />
-        </>
-    )
-}
+        <BrowserRouter>
+            <Global styles={reset} />
+            <Capp>
+                <Link to='/ '>Страница приветствия</Link>
+                <Link className="contactLink" to='/contacts'>Контакты</Link>
+            </Capp>
+            <AppRouter />
+        </BrowserRouter>
+    );
+};
 
-export default App
+export default App;

@@ -1,11 +1,12 @@
-import React from 'react'
+import { FC } from 'react'
+import { Ccontact } from './Contacts.styles'
 
-const Contacts = () => {
+const Contacts: FC = ():JSX.Element => {
     return (
-        <div>
-            Contact us!
-        </div>
-    )
-}
+        <Ccontact>
+            <h1>Contact us!</h1>
+        </Ccontact>
+    );
+};
 
-export default Contacts
+export default Contacts;
