@@ -9,9 +9,8 @@ export const reset = css`
 }`;
 
 export const Capp = styled.div`
+margin-left: 50px;
+line-height: 5vh;
+& > .contactLink {
     margin-left: 50px;
-    line-height: 50px;
-    & > .contactLink {
-        margin-left: 50px;
-    }
-`
+}`;
