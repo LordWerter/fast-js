@@ -1,12 +1,12 @@
 import { FC } from 'react'
 import ImageSlides from '../../features/ImageSlides'
-import { Cwelcome } from './Welcome.styles'
+import { WellWrap } from './Welcome.styles'
 
 const Welcome: FC = (): JSX.Element => {
     return (
-        <Cwelcome>
+        <WellWrap>
             <ImageSlides />
-        </Cwelcome>
+        </WellWrap>
     );
 };
 

@@ -1,17 +1,17 @@
 import { FC } from 'react'
 import { BrowserRouter, Link } from 'react-router-dom'
 import { Global } from '@emotion/react'
-import { Capp, reset } from './App.styles'
+import { NavWrop, reset } from './App.styles'
 import AppRouter from '../../routes';
 
 const App: FC = (): JSX.Element => {
     return (
         <BrowserRouter>
             <Global styles={reset} />
-            <Capp>
+            <NavWrop>
                 <Link to='/ '>Страница приветствия</Link>
                 <Link className="contactLink" to='/contacts'>Контакты</Link>
-            </Capp>
+            </NavWrop>
             <AppRouter />
         </BrowserRouter>
     );

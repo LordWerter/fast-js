@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Ccontact = styled.div`
+export const ContWrap = styled.div`
 text-align: center;
 background-color: lightgreen;
 height: 95vh;
