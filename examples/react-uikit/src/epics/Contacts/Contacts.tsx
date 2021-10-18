@@ -1,11 +1,11 @@
 import { FC } from 'react'
-import { ContWrap } from './Contacts.styles'
+import { CWrap } from './Contacts.styles'
 
 const Contacts: FC = ():JSX.Element => {
     return (
-        <ContWrap>
+        <CWrap>
             <h1>Contact us!</h1>
-        </ContWrap>
+        </CWrap>
     );
 };
 

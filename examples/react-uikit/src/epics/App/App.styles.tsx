@@ -8,7 +8,7 @@ export const reset = css`
     box-sizing: border-box;
 }`;
 
-export const NavWrop = styled.div`
+export const CWrap = styled.div`
 margin-left: 50px;
 line-height: 5vh;
 & > .contactLink {
