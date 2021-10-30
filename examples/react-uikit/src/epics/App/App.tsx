@@ -3,14 +3,14 @@ import { BrowserRouter, Link } from 'react-router-dom'
 import { Global } from '@emotion/react'
 import { CWrap, reset } from './App.styles'
 import AppRouter from '../../routes';
+import Header from '../../features/Header';
 
 const App: FC = (): JSX.Element => {
     return (
         <BrowserRouter>
             <Global styles={reset} />
             <CWrap>
-                <Link to='/ '>Страница приветствия</Link>
-                <Link className="contactLink" to='/contacts'>Контакты</Link>
+                <Header/>
             </CWrap>
             <AppRouter />
         </BrowserRouter>

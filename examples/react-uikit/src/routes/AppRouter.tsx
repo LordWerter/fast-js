@@ -6,13 +6,8 @@ import Welcome from '../epics/Welcome';
 const AppRouter: FC = ():JSX.Element => {
     return (
         <Switch>
-            <Route path='/ '>
-                <Welcome />
-            </Route>
-            <Route path='/contacts'>
-                <Contacts />
-            </Route>
-            <Redirect to='/ ' />
+            <Route exact path='/ ' component={Welcome}/>
+            <Route exact path='/contacts' component={Contacts}/>
         </Switch>
     );
 };
