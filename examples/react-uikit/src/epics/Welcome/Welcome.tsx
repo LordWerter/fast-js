@@ -1,8 +1,7 @@
-import React, { FC } from 'react'
-import ImageSlides from '../../features/ImageSlides'
+import React from 'react'
 import { CWrap } from './Welcome.styles'
 
-const Welcome: FC = (): JSX.Element => {
+const Welcome: React.FC = (): JSX.Element => {
     return (
         <CWrap>
             <header>

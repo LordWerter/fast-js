@@ -1,9 +1,9 @@
-import { FC } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import Contacts from '../epics/Contacts';
 import Welcome from '../epics/Welcome';
 
-const AppRouter: FC = ():JSX.Element => {
+const AppRouter: React.FC = ():JSX.Element => {
     return (
         <Switch>
             <Route exact path='/ ' component={Welcome}/>

@@ -1,3 +1,1 @@
-import getCSSObj from "./getCSSObj";
-
-export default getCSSObj;
+export {default as getCSSObj} from "./getCSSObj";
