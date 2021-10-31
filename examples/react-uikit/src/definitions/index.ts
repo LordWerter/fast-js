@@ -1,3 +1,1 @@
-import { TElementProps } from "./TElementProps";
-
-export default TElementProps;
+export type { TElementProps } from "./TElementProps";

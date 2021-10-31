@@ -1,7 +1,7 @@
-import { FC } from 'react'
+import React from 'react'
 import { CWrap } from './Contacts.styles'
 
-const Contacts: FC = ():JSX.Element => {
+const Contacts: React.FC = ():JSX.Element => {
     return (
         <CWrap>
             <h1>Contact us!</h1>

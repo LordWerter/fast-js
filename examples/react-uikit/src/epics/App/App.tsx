@@ -1,19 +1,19 @@
-import { FC } from 'react'
-import { BrowserRouter, Link } from 'react-router-dom'
+import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { Global } from '@emotion/react'
 import { CWrap, reset } from './App.styles'
 import AppRouter from '../../routes';
 import Header from '../../features/Header';
 
-const App: FC = (): JSX.Element => {
+const App: React.FC = (): JSX.Element => {
     return (
-        <BrowserRouter>
+        <Router>
             <Global styles={reset} />
             <CWrap>
                 <Header/>
             </CWrap>
             <AppRouter />
-        </BrowserRouter>
+        </Router>
     );
 };
 
