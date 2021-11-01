@@ -1,12 +1,16 @@
+import { Global, ThemeProvider } from '@emotion/react';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { reset } from './epics/App/App.styles';
 import App from './epics/App/index';
 import reportWebVitals from './reportWebVitals';
+import theme from './theme';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <ThemeProvider theme={theme}>
     <App />
-  </React.StrictMode>,
+    <Global styles={reset} />
+  </ThemeProvider>,
   document.getElementById('root')
 );
 
