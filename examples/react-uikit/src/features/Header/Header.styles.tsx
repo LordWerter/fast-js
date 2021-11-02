@@ -8,8 +8,14 @@ export const CWrap = styled.header<ICWrapProps>`
   ${getCSSObj}
 `;
 
-export type TSectionProps = ICWrapProps;
+export type TLogoProps = ICWrapProps;
 
-export const Section = styled.div<TSectionProps>`
+export const Logo = styled.div<TLogoProps>`
+  ${getCSSObj}
+`;
+
+export type TNavBarProps = ICWrapProps;
+
+export const NavBar = styled.div<TNavBarProps>`
   ${getCSSObj}
 `;

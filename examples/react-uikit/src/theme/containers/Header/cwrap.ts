@@ -1,10 +1,11 @@
 export const blocks = {
     core: {
         width: '100%',
-        heigth: '50px',
-        backgroundColor: 'gray',
+        height: '100px',
+        backgroundColor: 'black',
         display: 'flex',
-        justifyContent: 'space-arround',
+        justifyContent: 'center',
+        zIndex: '0',
     },
     mobile: {},
     laptop: {},

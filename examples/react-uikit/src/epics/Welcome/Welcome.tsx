@@ -1,17 +1,15 @@
+import { useTheme } from '@emotion/react';
 import React from 'react'
+import Header from '../../features/Header';
 import { CWrap } from './Welcome.styles'
 
-const Welcome: React.FC = (): JSX.Element => {
+const Welcome: React.FC = (props): JSX.Element => {
+    const fullTheme = useTheme();
+    //@ts-ignore
+    const theme = {...fullTheme.Welcome};
     return (
-        <CWrap>
-            <header>
-                <h1>Logo</h1>
-                <ul>
-                    <li>MainPage</li>
-                    <li>Contacts</li>
-                    <li></li>
-                </ul>
-            </header>
+        <CWrap sizeId={'desktop'} theme={theme.cwrap}>
+            <Header/>   
         </CWrap>
     );
 };

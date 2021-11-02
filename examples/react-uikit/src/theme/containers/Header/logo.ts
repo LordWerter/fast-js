@@ -2,10 +2,13 @@ import LOGOS__HEADER from '../../images';
 
 export const blocks = {
     core: {
-        backgroundImage: `url('${LOGOS__HEADER}')`,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
         backgroundSize: 'contain',
-        height: '45px',
-        width: '45px',
+        backgroundImage: `url('${LOGOS__HEADER}')`,
+        height: '95px',
+        width: '130px',
+        zIndex: '1',
     },
     mobile: {},
     laptop: {},
