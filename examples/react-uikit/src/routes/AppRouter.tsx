@@ -5,10 +5,10 @@ import Welcome from '../epics/Welcome';
 
 const AppRouter: React.FC = (props): JSX.Element => {
     return (
-        <>
+        <Switch>
             <Route exact path='/' component={Welcome} />
             <Route exact path='/contacts' component={Contacts} />
-        </>
+        </Switch>
     );
 };
 

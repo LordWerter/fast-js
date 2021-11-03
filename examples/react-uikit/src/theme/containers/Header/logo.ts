@@ -1,4 +1,4 @@
-import LOGOS__HEADER from '../../images';
+import {LOGOS__HEADER} from '../../images';
 
 export const blocks = {
     core: {
@@ -7,12 +7,13 @@ export const blocks = {
         backgroundSize: 'contain',
         backgroundImage: `url('${LOGOS__HEADER}')`,
         height: '95px',
-        width: '130px',
-        zIndex: '1',
+        width: '85px',
+        
     },
     mobile: {},
     laptop: {},
-    desktop: {},
+    desktop: {
+    },
 }
 
 export default blocks;

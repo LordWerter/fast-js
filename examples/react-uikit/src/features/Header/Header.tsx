@@ -1,9 +1,10 @@
 import { useTheme } from '@emotion/react'
 import React from 'react'
 import { IProps } from '../ImageSlides/ImageSlides'
-import { CWrap, Logo, NavBar } from './Header.styles'
+import MenuButton from '../MenuButton'
+import { CWrap, Logo } from './Header.styles'
 
-const Header: React.FC<IProps> = (props) => {
+const Header: React.FC<IProps> = (props): JSX.Element => {
     const fullTheme = useTheme();
     //@ts-ignore
     const theme = {...fullTheme.Header};
@@ -11,7 +12,7 @@ const Header: React.FC<IProps> = (props) => {
     return (
         <CWrap sizeId={'desktop'} theme={theme.cwrap}>
             <Logo sizeId={'desktop'} theme={theme.logo} />
-            <NavBar sizeId={'desktop'}/>
+            <MenuButton/>
         </CWrap>    
     )
 }
