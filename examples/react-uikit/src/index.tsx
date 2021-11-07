@@ -1,16 +1,32 @@
-import { Global, ThemeProvider } from '@emotion/react';
+import { css, Global, ThemeProvider } from '@emotion/react';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { reset } from './epics/App/App.styles';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import resets from './assets';
 import App from './epics/App/index';
 import reportWebVitals from './reportWebVitals';
 import theme from './theme';
 
+// const initionalState = {},
+
+// const reducer = (state = initionalState, action) => {
+//   switch (action.type) {
+//     default:
+//       return state; 
+//   }
+// }
+
+// const store = createStore(reducer);
+
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    <App />
-    <Global styles={reset} />
-  </ThemeProvider>,
+  // <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <App />
+      <Global styles={resets || css``} />
+    </ThemeProvider>
+  // </Provider>
+  ,
   document.getElementById('root')
 );
 

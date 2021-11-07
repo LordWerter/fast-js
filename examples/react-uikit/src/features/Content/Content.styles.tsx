@@ -4,6 +4,6 @@ import { getCSSObj } from "../../utils";
 
 export type ICWrapProps = TElementProps;
 
-export const Cwrap = styled.div<ICWrapProps>`
+export const CWrap = styled.div<ICWrapProps>`
     ${getCSSObj}
 `;
