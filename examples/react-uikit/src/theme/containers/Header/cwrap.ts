@@ -6,6 +6,12 @@ export const blocks = {
         display: 'flex',
         justifyContent: 'space-around',
         alignItems: 'center',
+        '&>div': {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-end',
+            justifyContent: 'center',
+        },
     },
     mobile: {},
     laptop: {},
