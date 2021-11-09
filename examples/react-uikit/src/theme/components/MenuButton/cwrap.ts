@@ -3,6 +3,7 @@ export const blocks = {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-around',
+        position: 'absolute',
         height: '50px',
         width: '50px',
         cursor: 'pointer',
