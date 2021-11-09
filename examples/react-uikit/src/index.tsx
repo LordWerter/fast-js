@@ -8,25 +8,11 @@ import App from './epics/App/index';
 import reportWebVitals from './reportWebVitals';
 import theme from './theme';
 
-// const initionalState = {},
-
-// const reducer = (state = initionalState, action) => {
-//   switch (action.type) {
-//     default:
-//       return state; 
-//   }
-// }
-
-// const store = createStore(reducer);
-
 ReactDOM.render(
-  // <Provider store={store}>
     <ThemeProvider theme={theme}>
       <App />
       <Global styles={resets || css``} />
-    </ThemeProvider>
-  // </Provider>
-  ,
+    </ThemeProvider>,
   document.getElementById('root')
 );
 
