@@ -8,9 +8,10 @@ export const resets = css`
 }
 html,
 body {
-    height: 100%;
+    height: 100vh;
+    width: 100wh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 `;
 
 export default resets;

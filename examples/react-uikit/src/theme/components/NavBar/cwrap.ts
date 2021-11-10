@@ -1,8 +1,8 @@
 export const blocks = {
     core: {
         position: 'relative',
-        top: '150px',
-        height: '200px',
+        top: '151px',
+        height: '250px',
         width: '300px',
         backgroundColor: 'black',
         display: 'flex',
@@ -13,6 +13,16 @@ export const blocks = {
             fontSize: '3rem',
             textDecoration: 'none',
             color: 'white',
+        },
+        '& .separator': {
+            backgroundColor: 'white',
+            height: '1px',
+            justifySelf: 'flex-start',
+            width: '100%',
+        },
+        '& .middle': {
+            width: '80%',
+            alignSelf: 'center',
         },
     },
     mobile: {},
