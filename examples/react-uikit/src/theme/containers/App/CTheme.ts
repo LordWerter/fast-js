@@ -1,14 +1,11 @@
-import cwrap from './cwrap'
-import hidden from './hidden';
+import cwrap from "./cwrap";
 
 export interface ICTheme {
     cwrap: typeof cwrap;
-    hidden: typeof hidden;
 }
 
 export const CTheme: ICTheme = {
     cwrap,
-    hidden,
 };
 
 export default CTheme;

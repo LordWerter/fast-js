@@ -1,8 +1,11 @@
 import { useTheme } from '@emotion/react';
 import React from 'react'
+import { TElementProps } from '../../definitions';
 import { CWrap } from './Content.styles';
 
-const Content: React.FC = (props): JSX.Element => {
+export type IProps = TElementProps;
+
+const Content: React.FC<IProps> = (props): JSX.Element => {
     const fullTheme = useTheme();
     //@ts-ignore
     const theme = {...fullTheme.Content}

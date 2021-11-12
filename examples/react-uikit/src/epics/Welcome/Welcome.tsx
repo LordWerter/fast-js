@@ -1,15 +1,18 @@
 import { useTheme } from '@emotion/react';
 import React from 'react';
+import { TElementProps } from '../../definitions';
 import Content from '../../features/Content';
 import { CWrap } from './Welcome.styles';
 
-const Welcome: React.FC = (props): JSX.Element => {
+export type IProps = TElementProps;
+
+const Welcome: React.FC<IProps> = (props): JSX.Element => {
     const fullTheme = useTheme();
     //@ts-ignore
     const theme = { ...fullTheme.Welcome };
     return (
         <CWrap sizeId={'desktop'} theme={theme.cwrap}>
-            <Content />
+            <Content sizeId={'desktop'} />
         </CWrap >
     );
 };

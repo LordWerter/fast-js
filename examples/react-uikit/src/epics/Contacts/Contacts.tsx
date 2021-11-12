@@ -1,9 +1,12 @@
 import React from 'react'
+import { TElementProps } from '../../definitions';
 import { CWrap } from './Contacts.styles'
 
-const Contacts: React.FC = ():JSX.Element => {
+export type IProps = TElementProps;
+
+const Contacts: React.FC<IProps> = ():JSX.Element => {
     return (
-        <CWrap>
+        <CWrap sizeId={'desktop'}>
             <h1>Contact us!</h1>
         </CWrap>
     );

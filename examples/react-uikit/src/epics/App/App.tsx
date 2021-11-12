@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { TElementProps } from '../../definitions';
 import Header from '../../features/Header';
 import AppRouter from '../../routes';
+import { CWrap } from './App.styles';
 
-const App: React.FC = (props): JSX.Element => {
+export type IProps = TElementProps;
+
+const App: React.FC<IProps> = (props): JSX.Element => {
     return (
         <Router>
-            <Header/>
-            <AppRouter />
+            <CWrap sizeId={'desktop'}>
+                <Header sizeId={'desktop'}/>
+                <AppRouter />
+            </CWrap>
         </Router>
     );
 };

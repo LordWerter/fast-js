@@ -9,7 +9,7 @@ export const blocks = {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'space-evenly',
-        '&>a': {          
+        '& > a': {          
             fontSize: '3rem',
             textDecoration: 'none',
             color: 'white',
@@ -20,7 +20,7 @@ export const blocks = {
             justifySelf: 'flex-start',
             width: '100%',
         },
-        '& .middle': {
+        '& .separator .middle': {
             width: '80%',
             alignSelf: 'center',
         },
