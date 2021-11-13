@@ -13,16 +13,16 @@ export const blocks = {
             fontSize: '3rem',
             textDecoration: 'none',
             color: 'white',
-        },
-        '& .separator': {
-            backgroundColor: 'white',
-            height: '1px',
-            justifySelf: 'flex-start',
-            width: '100%',
-        },
-        '& .separator .middle': {
-            width: '80%',
-            alignSelf: 'center',
+            cursor: 'pointer',
+            transition: '0.3s',
+            '&:hover': {
+                transition: '0.3s',
+                transform: 'scale(1.1)',
+            },
+            '&:active': {
+                transition: '0.1s',
+                transform: 'scale(1)',
+            },
         },
     },
     mobile: {},

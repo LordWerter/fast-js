@@ -1,8 +1,9 @@
 export const blocks = {
    core: {
-      minHeight: '100%',
-      display: 'flex',
-      flexDirection: 'column',
+      backgroundColor: 'white',
+      height: '1px',
+      width: '80%',
+      alignSelf: 'center',
    },
    mobile: {},
    laptop: {},

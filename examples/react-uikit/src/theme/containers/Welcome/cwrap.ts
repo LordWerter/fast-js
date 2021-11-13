@@ -1,6 +1,7 @@
 export const blocks = {
    core: {
-      heigth: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
    },
    desktop: {},
    laptop: {},

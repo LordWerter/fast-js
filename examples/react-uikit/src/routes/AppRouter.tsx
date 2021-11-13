@@ -1,14 +1,17 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import { TElementProps } from '../definitions';
 import Contacts from '../epics/Contacts';
 import Welcome from '../epics/Welcome';
 
-const AppRouter: React.FC = (props): JSX.Element => {
+export type IProps = TElementProps;
+
+const AppRouter: React.FC<IProps> = (props): JSX.Element => {
     return (
-        <Switch>
+        <>
             <Route exact path='/' component={Welcome} />
             <Route exact path='/contacts' component={Contacts} />
-        </Switch>
+        </>
     );
 };
 

@@ -1,7 +1,7 @@
 export const blocks = {
     core: {
         fontSize: '3rem',
-        marginTop: '100px',
+        marginTop: '80px',
         marginRight: '300px',
         marginBottom: '100px',
         marginLeft: '300px',
