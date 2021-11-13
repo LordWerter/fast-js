@@ -1,10 +1,10 @@
 export const blocks = {
     core: {
+        marginTop: '100px',
         fontSize: '3rem',
-        marginTop: '80px',
-        marginRight: '300px',
-        marginBottom: '100px',
-        marginLeft: '300px',
+        display: 'flex',
+        flexDirection: 'column',
+        width: '80%',
         '& > h1': {
             textAlign: 'center',
             fontSize: '7rem',

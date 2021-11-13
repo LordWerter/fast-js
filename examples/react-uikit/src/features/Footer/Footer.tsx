@@ -3,7 +3,7 @@ import React from 'react'
 import { TElementProps } from '../../definitions';
 import { CWrap } from './Footer.styles';
 
-export type IProps = TElementProps;
+export type IProps = TElementProps & React.HTMLAttributes<HTMLDivElement>;
 
 const Footer: React.FC<IProps> = (props): JSX.Element => {
    const fullTheme = useTheme();
