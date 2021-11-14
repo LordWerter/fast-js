@@ -1,4 +1,4 @@
-import {TObject} from './types';
+import {TObject} from './universe';
 
 export interface IEffectPayload {
     mutation: TObject<any>;

@@ -1,13 +1,12 @@
 {
   "name": "@fast-js/types",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Alexander Rudenko<learnitnow@yandex.ru>",
   "repository": "https://https://github.com/LordWerter/fast-js/tree/main/packages/types",
   "license": "MIT",
   "main": "",
   "types": "index.d.ts",
-  "keywords": ["typescript", "typings", "types", "definitions"],
-  "files": ["index.d.ts", "images.d.ts", "jwt.d.ts", "redux-store.d.ts", "request.d.ts", "response.d.ts", "types.d.ts"],
+  "keywords": ["typescript", "typings", "types", "definitions", "react", "react types"],
   "scripts": {},
   "peerDependencies": {
     "@types/jest": "^27.0.1",
