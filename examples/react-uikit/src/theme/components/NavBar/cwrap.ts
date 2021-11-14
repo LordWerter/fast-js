@@ -1,7 +1,7 @@
 export const blocks = {
     core: {
         position: 'relative',
-        top: '151px',
+        top: '176px',
         height: '250px',
         width: '300px',
         backgroundColor: 'black',

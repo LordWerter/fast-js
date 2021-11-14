@@ -8,12 +8,6 @@ export const CWrap = styled.div<ICWrapProps>`
     ${getCSSObj}
 `;
 
-export type ISeparatorProps = TElementProps;
-
-export const Separator = styled.div<ISeparatorProps>`
-    ${getCSSObj}
-`;
-
 export type ISeparatorMiddleProps = TElementProps;
 
 export const SeparatorMiddle = styled.div<ISeparatorMiddleProps>`
