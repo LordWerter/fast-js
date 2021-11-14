@@ -11,9 +11,8 @@ export type IProps = TElementProps & {
 
 const NavBar: React.FC<IProps> = (props): JSX.Element => {
     const visibility = props.visibility;
-    const fullTheme = useTheme();
     //@ts-ignore
-    const theme = { ...fullTheme.NavBar };
+    const theme = { ...useTheme().NavBar };
     return (
         <CWrap sizeId={'desktop'} theme={visibility ? theme.cwrap : theme.hidden }>
             <Link to={'/'}>Главная</Link>

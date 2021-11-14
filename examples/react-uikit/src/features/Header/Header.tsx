@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react';
 import React, { useState } from 'react';
 import { TElementProps } from '../../definitions';
-import MenuButton from '../MenuButton';
+import MenuBtn from '../MenuBtn';
 import NavBar from '../NavBar';
 import { CWrap, Logo } from './Header.styles';
 
@@ -19,7 +19,7 @@ const Header: React.FC<IProps> = (props): JSX.Element => {
         <CWrap sizeId={'desktop'} theme={theme.cwrap} >
             <Logo sizeId={'desktop'} theme={theme.logo} />
             <div className="menu_wrapper" >
-                <MenuButton
+                <MenuBtn
                     sizeId={'desktop'}
                     setNavBarVisibility={setNavBarVisibility}
                     navBarVisibility={navBarVisibility}
