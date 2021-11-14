@@ -9,8 +9,7 @@ export type IProps = TElementProps & React.HTMLAttributes<HTMLDivElement> & {
 };
 
 const MenuButton: React.FC<IProps> = (props): JSX.Element => {
-    const setNavBarVisibility = props.setNavBarVisibility;
-    const navBarVisibility = props.navBarVisibility;
+    const {navBarVisibility, setNavBarVisibility} = props;
     const fullTheme = useTheme();
     //@ts-ignore
     const theme = {...fullTheme.MenuButton};
