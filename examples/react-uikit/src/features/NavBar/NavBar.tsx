@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 import { TElementProps } from '../../definitions';
 import { CWrap, SeparatorMiddle } from './NavBar.styles';
 
-export type IProps = TElementProps & React.HTMLAttributes<HTMLDivElement> & {
+export type IProps = TElementProps & {
     visibility: boolean;
+    onClick?: (event: Event)=>any;
 };
 
 const NavBar: React.FC<IProps> = (props): JSX.Element => {
