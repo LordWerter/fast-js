@@ -1,12 +1,14 @@
 {
   "name": "@fast-js/react-uikit",
-  "version": "1.0.12",
+  "version": "1.0.21",
   "author": "Aleksander Rudenko<learnitnow@yandex.ru>",
   "license": "MIT",
   "repository": "https://github.com/LordWerter/fast-js/tree/main/packages/react-uikit",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -24,7 +26,7 @@
     "@emotion/is-prop-valid": "^1.1.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "@fast-js/utils": "^1.0.7",
+    "@fast-js/utils": "^1.0.9",
     "@rematch/core": "^2.1.0",
     "imask": "^6.2.0",
     "match-sorter": "^6.3.0",
@@ -37,7 +39,7 @@
     "@emotion/is-prop-valid": "^1.1.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "@fast-js/utils": "^1.0.7",
+    "@fast-js/utils": "^1.0.9",
     "@rematch/core": "^2.1.0",
     "imask": "^6.2.0",
     "match-sorter": "^6.3.0",
@@ -54,15 +56,15 @@
     "@babel/preset-typescript": "^7.15.0",
     "@emotion/babel-plugin": "^11.3.0",
     "@emotion/eslint-plugin": "^11.2.0",
-    "@fast-js/eslint": "^1.2.4",
+    "@fast-js/eslint": "^1.2.6",
     "@fast-js/prettier": "^3.2.1",
-    "@fast-js/types": "^0.0.6",
+    "@fast-js/types": "^1.0.1",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
-    "@testing-library/dom": "^8.3.0",
+    "@testing-library/dom": "^8.5.0",
     "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
+    "@testing-library/react": "^12.1.0",
     "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^27.0.1",
     "@types/react": "^17.0.20",
@@ -102,7 +104,9 @@
     "typescript": "^4.4.3"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": ["prettier --write"],
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write"
+    ],
     "{*.json,.{babelrc,eslintrc,prettierrc,stylelintrc}}": [
       "prettier --ignore-path .eslintignore --parser json --write"
     ],
@@ -110,12 +114,19 @@
       "stylelint --ignore-path .eslintignore --syntax scss --fix",
       "prettier --ignore-path .eslintignore --single-quote --write"
     ],
-    "*.{html,md,yml}": ["prettier --ignore-path .eslintignore --single-quote --write"]
+    "*.{html,md,yml}": [
+      "prettier --ignore-path .eslintignore --single-quote --write"
+    ]
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

@@ -1,4 +1,5 @@
 // export type TGetResultStylesFunc<T> = (props: T) => Object;
+export type TPseudoClass = 'isDisabled' | 'isEnabled' | 'isHovered' | 'isActive';
 
 export const getResultStyles = (props: any, pseudoClass?: string) => {
     if (Object.prototype.hasOwnProperty.call(props, 'isDisabled') && props.isDisabled === true)
