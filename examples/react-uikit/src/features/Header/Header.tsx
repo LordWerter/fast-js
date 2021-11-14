@@ -5,7 +5,9 @@ import MenuBtn from '../MenuBtn';
 import NavBar from '../NavBar';
 import { CWrap, Logo } from './Header.styles';
 
-export type IProps = TElementProps & React.HTMLAttributes<HTMLDivElement>;
+export type IProps = TElementProps & {
+    onClick?: (event: Event) => any;
+};
 
 const Header: React.FC<IProps> = (props): JSX.Element => {
     const [navBarVisibility, setNavBarVisibility] = useState(false);
@@ -25,7 +27,7 @@ const Header: React.FC<IProps> = (props): JSX.Element => {
                 <NavBar
                     sizeId={'desktop'}
                     visibility={navBarVisibility}
-                    onClick={(e: React.MouseEvent) => e.stopPropagation()}
+                    onClick={(e) => e.stopPropagation()}
                 />
             </div>
 

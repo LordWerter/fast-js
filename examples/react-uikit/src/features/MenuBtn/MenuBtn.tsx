@@ -12,7 +12,7 @@ export const MenuBtn: React.FC<IProps> = (props): JSX.Element => {
     const {navBarVisibility, setNavBarVisibility} = props;
     const fullTheme = useTheme();
     //@ts-ignore
-    const theme = {...fullTheme.MenuButton};
+    const theme = {...fullTheme.MenuBtn};
     return (
         <CWrap sizeId={'desktop'} theme={theme.cwrap} onClick={()=>{setNavBarVisibility(!navBarVisibility)}}>
             <Line sizeId={'desktop'} theme={theme.line}/>
