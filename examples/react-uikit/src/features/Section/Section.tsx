@@ -1,14 +1,14 @@
 import { useTheme } from '@emotion/react';
 import React from 'react'
 import { TElementProps } from '../../definitions';
-import { CWrap } from './Content.styles';
+import { CWrap } from './Section.styles';
 
 export type IProps = TElementProps;
 
-const Content: React.FC<IProps> = (props): JSX.Element => {
+const Section: React.FC<IProps> = (props): JSX.Element => {
     const fullTheme = useTheme();
     //@ts-ignore
-    const theme = {...fullTheme.Content}
+    const theme = {...fullTheme.Section}
     return (
         <CWrap sizeId={'desktop'} theme={theme.cwrap}>
             <h1>Header</h1>
@@ -25,4 +25,4 @@ const Content: React.FC<IProps> = (props): JSX.Element => {
     )
 }
 
-export default Content;
+export default Section;

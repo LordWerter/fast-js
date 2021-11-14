@@ -1,12 +1,11 @@
-
-
-/// <reference path="images.d.ts" />
-/// <reference path="jwt.d.ts" />
-/// <reference path="request.d.ts" />
-/// <reference path="response.d.ts" />
-/// <reference path="types.d.ts" />
-/// <reference path="redux-store.d.ts" />
-/// <reference path="data-structures.d.ts" />
+/// <reference path="./data-structures.d.ts" />
+/// <reference path="./images.d.ts" />
+/// <reference path="./jwt.d.ts" />
+/// <reference path="./react-component.d.ts" />
+/// <reference path="./redux-store.d.ts" />
+/// <reference path="./request.d.ts" />
+/// <reference path="./response.d.ts" />
+/// <reference path="./universe.d.ts" />
 
 /**
  * Nominal type

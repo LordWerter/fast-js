@@ -1,4 +1,4 @@
-import Content from "./Content";
+import Section from "./Section";
 import Header from "./Header";
 import Welcome from "./Welcome";
 import App from "./App";
@@ -8,7 +8,7 @@ import Footer from "./Footer";
 export default {
    Header,
    Welcome,
-   Content,
+   Section,
    App,
    Contacts,
    Footer,
