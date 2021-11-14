@@ -1,7 +1,7 @@
-import MenuButton from "./MenuButton";
+import MenuBtn from "./MenuBtn";
 import NavBar from "./NavBar";
 
 export default {
-    MenuButton,
+    MenuBtn,
     NavBar,
 };

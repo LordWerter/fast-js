@@ -1,17 +1,17 @@
 import cwrap from './cwrap'
 import hidden from './hidden';
-import separatorMiddle from './separatorMiddle';
+import line from './line';
 
 export interface ICTheme {
     cwrap: typeof cwrap;
     hidden: typeof hidden;
-    separatorMiddle: typeof separatorMiddle;
+    line: typeof line;
 }
 
 export const CTheme: ICTheme = {
     cwrap,
     hidden,
-    separatorMiddle,
+    line,
 };
 
 export default CTheme;

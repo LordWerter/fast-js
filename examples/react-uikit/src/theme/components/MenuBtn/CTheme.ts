@@ -1,13 +1,13 @@
 import cwrap from './cwrap';
-import menuButtonSticks from './menuButtonSticks';
+import line from './line';
 
 export interface ICTheme {
     cwrap: typeof cwrap;
-    menuButtonSticks: typeof menuButtonSticks;
+    line: typeof line;
 }
 export const CTheme: ICTheme = {
     cwrap,
-    menuButtonSticks,
+    line,
 };
 
 export default CTheme;
