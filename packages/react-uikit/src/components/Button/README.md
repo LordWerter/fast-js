@@ -31,3 +31,20 @@
 ```
 
 ## Usage
+
+### Basic Usage
+
+```typescript
+
+import React from 'react';
+import {Button} from '@fast-js/react-uikit';
+
+export const OurContainer: React.FC<TOurContainerProps> = (props): JSX.Element => {
+    return (<>
+        <Button />
+    </>);
+};
+
+export default OurContainer;
+
+```
