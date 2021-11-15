@@ -5,10 +5,9 @@ import { CWrap } from './Section.styles';
 
 export type IProps = TElementProps;
 
-const Section: React.FC<IProps> = (props): JSX.Element => {
-    const fullTheme = useTheme();
+export const Section: React.FC<IProps> = (props): JSX.Element => {
     //@ts-ignore
-    const theme = {...fullTheme.Section}
+    const theme = {...useTheme().Section}
     return (
         <CWrap sizeId={'desktop'} theme={theme.cwrap}>
             <h1>Header</h1>

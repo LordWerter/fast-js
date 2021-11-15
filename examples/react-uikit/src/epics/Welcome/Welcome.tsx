@@ -6,10 +6,9 @@ import { CWrap } from './Welcome.styles';
 
 export type IProps = TElementProps;
 
-const Welcome: React.FC<IProps> = (props): JSX.Element => {
-    const fullTheme = useTheme();
+export const Welcome: React.FC<IProps> = (props): JSX.Element => {
     //@ts-ignore
-    const theme = { ...fullTheme.Welcome };
+    const theme = { ...useTheme().Welcome };
     return (
         <CWrap sizeId={'desktop'} theme={theme.cwrap}>
             <Section sizeId={'desktop'} />

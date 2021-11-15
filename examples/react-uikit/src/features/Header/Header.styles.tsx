@@ -13,3 +13,11 @@ export type TLogoProps = ICWrapProps;
 export const Logo = styled.div<TLogoProps>`
   ${getCSSObj}
 `;
+
+export type TMenuWrapProps = ICWrapProps & {
+  children?: any;
+};
+
+export const MenuWrap = styled.div<TMenuWrapProps>`
+  ${getCSSObj}
+`;

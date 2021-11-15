@@ -5,10 +5,9 @@ import { CWrap } from './Contacts.styles'
 
 export type IProps = TElementProps;
 
-const Contacts: React.FC<IProps> = (): JSX.Element => {
-    const fullTheme = useTheme();
+export const Contacts: React.FC<IProps> = (): JSX.Element => {
     //@ts-ignore
-    const theme = { ...fullTheme.Contacts };
+    const theme = { ...useTheme().Contacts };
     return (
         <CWrap sizeId={'desktop'} theme={theme.cwrap}>
             <h1>Contact us!</h1>

@@ -8,10 +8,9 @@ import { CWrap } from './App.styles';
 
 export type IProps = TElementProps;
 
-const App: React.FC<IProps> = (props): JSX.Element => {
-    const fullTheme = useTheme();
+export const App: React.FC<IProps> = (props): JSX.Element => {
     //@ts-ignore
-    const theme = { ...fullTheme.App };
+    const theme = { ...useTheme().App };
     return (
         <CWrap sizeId={'desktop'} theme={theme.cwrap}>
             <Header sizeId={'desktop'} />

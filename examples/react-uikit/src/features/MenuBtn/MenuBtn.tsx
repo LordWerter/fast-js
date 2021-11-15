@@ -10,9 +10,8 @@ export type IProps = TElementProps & React.HTMLAttributes<HTMLDivElement> & {
 
 export const MenuBtn: React.FC<IProps> = (props): JSX.Element => {
     const {navBarVisibility, setNavBarVisibility} = props;
-    const fullTheme = useTheme();
     //@ts-ignore
-    const theme = {...fullTheme.MenuBtn};
+    const theme = {...useTheme().MenuBtn};
     return (
         <CWrap sizeId={'desktop'} theme={theme.cwrap} onClick={()=>{setNavBarVisibility(!navBarVisibility)}}>
             <Line sizeId={'desktop'} theme={theme.line}/>
