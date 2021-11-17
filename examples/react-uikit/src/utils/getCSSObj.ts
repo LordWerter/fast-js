@@ -1,4 +1,4 @@
-type TSectionName = 'core' | 'mobile' | 'laptop' | 'desktop';
+import { TSectionName } from "../definitions/TCSSobjProps";
 
 type IElementTheme = {
   [key in TSectionName]: any;

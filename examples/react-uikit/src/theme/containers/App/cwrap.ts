@@ -1,4 +1,6 @@
-export const blocks = {
+import { IBlocks } from "../../../definitions";
+
+export const blocks: IBlocks = {
    core: {
       minHeight: '100vh',
       display: 'flex',
