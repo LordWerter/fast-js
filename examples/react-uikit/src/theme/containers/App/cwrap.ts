@@ -1,6 +1,6 @@
-import { IBlocks } from "../../../definitions";
+import { TCSSObjProps } from "../../../definitions";
 
-export const blocks: IBlocks = {
+export const blocks: TCSSObjProps = {
    core: {
       minHeight: '100vh',
       display: 'flex',

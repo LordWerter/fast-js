@@ -1,10 +1,10 @@
-import { StandardLonghandProperties } from "csstype";
+import { StandardProperties as Properties } from "csstype";
 import { TSize } from "./TElementProps";
 
 export type TSectionName = 'core' | TSize;
 
-export type IBlocks = {
-    [key in TSectionName]: StandardLonghandProperties;
+export type TCSSObjProps = {
+    [key in TSectionName]: Properties;
  };
 
- export default IBlocks;
+ export default TCSSObjProps;

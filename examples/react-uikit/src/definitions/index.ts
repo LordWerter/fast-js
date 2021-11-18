@@ -1,3 +1,3 @@
 export type { TElementProps } from "./TElementProps";
 
-export type { IBlocks } from './TCSSobjProps'
+export type { TCSSObjProps } from './TCSSobjProps'
