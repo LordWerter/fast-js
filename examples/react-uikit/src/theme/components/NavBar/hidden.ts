@@ -1,4 +1,6 @@
-export const blocks = {
+import { TCSSObjProps } from "../../../definitions";
+
+export const blocks: TCSSObjProps = {
    core: {
       visibility: 'hidden',
       position: 'relative',
