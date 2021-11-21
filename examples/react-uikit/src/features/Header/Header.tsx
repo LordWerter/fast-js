@@ -1,5 +1,5 @@
 import { useTheme } from '@emotion/react';
-import React, { useState } from 'react';
+import React, { MouseEventHandler, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { TElementProps } from '../../definitions';
 import MenuBtn from '../MenuBtn';
@@ -7,7 +7,7 @@ import NavBar from '../NavBar';
 import { CWrap, Logo, MenuWrap } from './Header.styles';
 
 export type IProps = TElementProps & {
-    onClick?: (event: Event) => any;
+    onClick?: MouseEventHandler;
 };
 
 export const Header: React.FC<IProps> = (props): JSX.Element => {

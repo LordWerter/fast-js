@@ -2,20 +2,15 @@ import { TCSSObjProps } from "../../../definitions";
 
 export const blocks: TCSSObjProps = {
    core: {
-      visibility: 'hidden',
-      position: 'absolute',
-      top: '176px',
-      height: 'max-content',
-      width: 'max-content',
-      backgroundColor: 'black',
       display: 'flex',
       flexDirection: 'column',
+      flex: '1 1 auto',
       alignItems: 'center',
       justifyContent: 'space-evenly',
    },
-   mobile: {},
-   laptop: {},
    desktop: {},
-};
+   laptop: {},
+   mobile: {},
+}
 
 export default blocks;

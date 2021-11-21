@@ -2,10 +2,12 @@ import { TCSSObjProps } from "../../../definitions";
 
 export const blocks: TCSSObjProps = {
     core: {
-        position: 'relative',
-        top: '176px',
-        height: '250px',
-        width: '300px',
+        position: 'absolute',
+        top: '76px',
+        minWidth: '350px',
+        minHeight: "550px",
+        borderBottomLeftRadius: '5%',
+        borderBottomRightRadius: '5%',
         backgroundColor: 'black',
         display: 'flex',
         flexDirection: 'column',
@@ -13,6 +15,7 @@ export const blocks: TCSSObjProps = {
         justifyContent: 'space-evenly',
         '& > a': {          
             fontSize: '3rem',
+            textAlign: 'center',
             textDecoration: 'none',
             color: 'white',
             cursor: 'pointer',
@@ -30,6 +33,6 @@ export const blocks: TCSSObjProps = {
     mobile: {},
     laptop: {},
     desktop: {},
-}
+};
 
 export default blocks;

@@ -9,6 +9,7 @@ export const resets = css`
 html,
 body {
     height: 100%;
+    line-height: 1;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 `;

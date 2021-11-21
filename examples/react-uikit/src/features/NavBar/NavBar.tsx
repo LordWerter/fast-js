@@ -1,12 +1,12 @@
 import { useTheme } from '@emotion/react';
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import { Link } from 'react-router-dom';
 import { TElementProps } from '../../definitions';
 import { CWrap, Line } from './NavBar.styles';
 
 export type IProps = TElementProps & {
     visibility: boolean;
-    onClick?: (event: Event)=>any;
+    onClick?: MouseEventHandler;
 };
 
 export const NavBar: React.FC<IProps> = (props): JSX.Element => {
@@ -15,15 +15,15 @@ export const NavBar: React.FC<IProps> = (props): JSX.Element => {
     const theme = { ...useTheme().NavBar };
     return (
         <CWrap sizeId={'desktop'} theme={visibility ? theme.cwrap : theme.hidden }>
-            <Link to={'/'}>About us</Link>
+            <Link to={'/about'}>About us</Link>
             <Line sizeId={'desktop'} theme={theme.line} />
-            <Link to={'/contacts'}>Page 1</Link>
+            <Link to={'/gallery'}>Gallery</Link>
             <Line sizeId={'desktop'} theme={theme.line} />
-            <Link to={'/contacts'}>Page 2</Link>
-            <Line sizeId={'desktop'} theme={theme.line} />
-            <Link to={'/contacts'}>Page 3</Link>
+            <Link to={'/promo'}>Promo</Link>
             <Line sizeId={'desktop'} theme={theme.line} />
             <Link to={'/contacts'}>Contacts</Link>
+            <Line sizeId={'desktop'} theme={theme.line} />
+            <Link to={'/faq'}>FAQ</Link>
         </CWrap>
     )
 };

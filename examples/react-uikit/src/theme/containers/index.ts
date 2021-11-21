@@ -4,6 +4,10 @@ import Welcome from "./Welcome";
 import App from "./App";
 import Contacts from "./Contacts";
 import Footer from "./Footer";
+import About from "./About";
+import FAQ from "./FAQ";
+import Gallery from "./Gallery";
+import Promo from "./Promo";
 
 export default {
    Header,
@@ -12,4 +16,8 @@ export default {
    App,
    Contacts,
    Footer,
+   About,
+   FAQ,
+   Gallery,
+   Promo,
 };

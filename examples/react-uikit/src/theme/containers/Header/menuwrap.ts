@@ -6,6 +6,7 @@ export const blocks: TCSSObjProps = {
         flexDirection: 'column',
         alignItems: 'flex-end',
         justifyContent: 'flex-start',
+        position: 'relative',
     },
     mobile: {},
     laptop: {},
