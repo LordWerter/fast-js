@@ -2,7 +2,9 @@ import { TCSSObjProps } from "../../../definitions";
 
 export const blocks: TCSSObjProps = {
    core: {
-      padding: '100px',
+      paddingTop: '5vw',
+      paddingBottom: '5vw',
+      width: '100vw',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -14,15 +16,22 @@ export const blocks: TCSSObjProps = {
          fontSize: '7rem',
       },
       '& .textContent': {
-         marginTop: '50px',
+         marginTop: '5rem',
+         width: '80vw',
          fontSize: '1.5rem',
-         flexBasis: 'auto',
          textAlign: 'justify',
          display: 'flex',
+         alignItems: 'flex-start',
          justifyContent: 'space-around',
+         flexWrap: 'wrap',
       },
       '& .textContent div': {
-         flexBasis: '30%',
+         minWidth: '350px',
+         maxWidth: '30vw',
+      },
+      '& .textContent :first-child': {
+         marginRight: '30px',
+         marginBottom: '30px',
       },
    },
    mobile: {},

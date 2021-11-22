@@ -2,10 +2,11 @@ import { TCSSObjProps } from "../../../definitions";
 
 export const blocks: TCSSObjProps = {
    core: {
-      minHeight: '100vh',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
+      height: '100vh',
+      width: '100vw',
    },
    mobile: {},
    laptop: {},

@@ -2,11 +2,13 @@ import { TCSSObjProps } from "../../../definitions";
 
 export const blocks: TCSSObjProps = {
     core: {
-        marginTop: '100px',
+        marginTop: '5%',
+        marginBottom: '5%',
+        width: '100%',
         fontSize: '3rem',
         display: 'flex',
         flexDirection: 'column',
-        width: '80%',
+        alignItems: 'center',
         '& > h1': {
             textAlign: 'center',
             fontSize: '7rem',
@@ -14,8 +16,8 @@ export const blocks: TCSSObjProps = {
         '& > p': {
             textAlign: 'justify',
             marginTop: '50px',
-            marginBottom: '50px',
-        }
+            width: '80%',
+        },
     },
     mobile: {},
     laptop: {},

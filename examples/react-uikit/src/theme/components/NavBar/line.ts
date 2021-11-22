@@ -4,7 +4,7 @@ export const blocks: TCSSObjProps = {
    core: {
       backgroundColor: 'white',
       height: '1px',
-      width: '80%',
+      width: '70%',
       alignSelf: 'center',
    },
    mobile: {},
