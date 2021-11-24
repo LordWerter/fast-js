@@ -1,5 +1,5 @@
 import { useTheme } from '@emotion/react';
-import React, { MouseEventHandler, useState } from 'react';
+import React, { MouseEventHandler } from 'react';
 import { Link } from 'react-router-dom';
 import { TElementProps } from '../../definitions';
 import MenuBtn from '../MenuBtn';
@@ -11,7 +11,6 @@ export type IProps = TElementProps & {
 };
 
 export const Header: React.FC<IProps> = (props): JSX.Element => {
-    const [navBarVisibility, setNavBarVisibility] = useState(false);
     //@ts-ignore
     const theme = { ...useTheme().Header };
 
@@ -21,13 +20,9 @@ export const Header: React.FC<IProps> = (props): JSX.Element => {
             <MenuWrap sizeId={'desktop'} theme={theme.menuwrap} >
                 <MenuBtn
                     sizeId={'desktop'}
-                    setNavBarVisibility={setNavBarVisibility}
-                    navBarVisibility={navBarVisibility}
                 />
                 <NavBar
                     sizeId={'desktop'}
-                    visibility={navBarVisibility}
-                    onClick={(e) => e.stopPropagation()}
                 />
             </MenuWrap>
 

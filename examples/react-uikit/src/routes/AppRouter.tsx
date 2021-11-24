@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { TElementProps } from '../definitions';
 import About from '../epics/About';
@@ -8,7 +8,9 @@ import Gallery from '../epics/Gallery';
 import Promo from '../epics/Promo';
 import Welcome from '../epics/Welcome';
 
-export type IProps = TElementProps;
+export type IProps = TElementProps & {
+    onClick?: MouseEventHandler,
+};
 
 export const AppRouter: React.FC<IProps> = (props): JSX.Element => {
     return (

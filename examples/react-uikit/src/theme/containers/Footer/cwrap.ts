@@ -3,7 +3,6 @@ import { TCSSObjProps } from "../../../definitions";
 export const blocks: TCSSObjProps = {
    core: {
       height: '200px',
-      width: '100vw',
       backgroundColor: 'black',
       display: 'flex',
       justifyContent: 'space-evenly',

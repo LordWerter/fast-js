@@ -10,11 +10,11 @@ export const blocks: TCSSObjProps = {
         width: '50px',
         cursor: 'pointer',
         transition: '0.3s',
-        '&:hover': {
+        ':hover': {
             transition: '0.3s',
             transform: 'scale(1.1)',
         },
-        '&:active': {
+        ':active': {
             transition: '0.1s',
             transform: 'scale(1)',
         },

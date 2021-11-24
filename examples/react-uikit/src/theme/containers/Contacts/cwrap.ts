@@ -29,7 +29,7 @@ export const blocks: TCSSObjProps = {
          minWidth: '350px',
          maxWidth: '30vw',
       },
-      '& .textContent :first-child': {
+      '& .textContent :first-of-type': {
          marginRight: '30px',
          marginBottom: '30px',
       },

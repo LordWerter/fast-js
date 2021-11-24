@@ -1,9 +1,11 @@
 import { useTheme } from '@emotion/react';
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 import { TElementProps } from '../../definitions';
 import { CWrap } from './Contacts.styles'
 
-export type IProps = TElementProps;
+export type IProps = TElementProps & {
+    onClick?: MouseEventHandler,
+};
 
 export const Contacts: React.FC<IProps> = (): JSX.Element => {
     //@ts-ignore
