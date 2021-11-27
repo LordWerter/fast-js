@@ -7,7 +7,7 @@ import NavBar from '../NavBar';
 import { CWrap, Logo, MenuWrap } from './Header.styles';
 
 export type IProps = TElementProps & {
-    onClick?: MouseEventHandler;
+    onClick?: MouseEventHandler<HTMLDivElement>;
 };
 
 export const Header: React.FC<IProps> = (props): JSX.Element => {

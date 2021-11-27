@@ -5,9 +5,8 @@ import { useActions } from '../../assets/hooks/useActions';
 import { TElementProps } from '../../definitions';
 import { CWrap, Line } from './MenuBtn.styles'
 
-export type IProps = TElementProps & React.HTMLAttributes<HTMLDivElement> & {
-    onClick?: MouseEventHandler;
-    onMouseOver?: MouseEventHandler;
+export type IProps = TElementProps & {
+    onClick?: MouseEventHandler<HTMLDivElement>;
 };
 
 export const MenuBtn: React.FC<IProps> = (props): JSX.Element => {

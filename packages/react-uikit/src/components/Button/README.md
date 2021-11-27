@@ -9,24 +9,24 @@
 |───────────────|─────────────────|─────────────────────────────────|────────────────────────|
 |     Name      |      Type       |           Description           |        Example         |
 |───────────────|─────────────────|─────────────────────────────────|────────────────────────|
-|     Name      |      Type       |           Description           |        Example         |
+|     text      |      string     |      A caption of a button      |        'Subscribe'     |
 |───────────────|─────────────────|─────────────────────────────────|────────────────────────|
-|     Name      |      Type       |           Description           |        Example         |
+|     sizeId    |      TSize      |           Device used           |        'Desktop'       |
 |───────────────|─────────────────|─────────────────────────────────|────────────────────────|
-|     Name      |      Type       |           Description           |        Example         |
+|     customize |      any        |     Customize theme object      |     `{theme.image}`    |
 |───────────────|─────────────────|─────────────────────────────────|────────────────────────|
-|     Name      |      Type       |           Description           |        Example         |
+|     iconId    |      string     |      Id of an button icon       |        Example         |
 |───────────────|─────────────────|─────────────────────────────────|────────────────────────|
-|     Name      |      Type       |           Description           |        Example         |
+|     onClick   |   EventHandler  |  The event listener of mouse    |    `onClick={()=>()}`  |          
+|               |                 |  clicks                         |                        |
 |───────────────|─────────────────|─────────────────────────────────|────────────────────────|
-|     Name      |      Type       |           Description           |        Example         |
+|     onFocus   |   EventHandler  |  The event listener of focus    |    `onFocus={()=>()}`  |
+|               |                 |  an element                     |                        |
 |───────────────|─────────────────|─────────────────────────────────|────────────────────────|
-|     Name      |      Type       |           Description           |        Example         |
+|     onBlur    |   EventHandler  |  The event listener of loss     |    `onBlur={()=>()}`   |
+|               |                 |  of focus of an element         |                        |
 |───────────────|─────────────────|─────────────────────────────────|────────────────────────|
-|     Name      |      Type       |           Description           |        Example         |
-|───────────────|─────────────────|─────────────────────────────────|────────────────────────|
-|     Name      |      Type       |           Description           |        Example         |
-|───────────────|─────────────────|─────────────────────────────────|────────────────────────|
+
 
 ```
 
