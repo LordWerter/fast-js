@@ -12,15 +12,15 @@ This component creats a button based on gotting props.
 
 ## Component Props
 
-    |   Name    |      Type      | Description                                       |      Example       |
-    | :-------: | :------------: | ------------------------------------------------- | :----------------: |
-    |   text    |    `string`    | A caption of a button                             |   `'Subscribe'`    |
-    |  sizeId   |    `TSize`     | Device used                                       |    `'Desktop'`     |
-    | customize |     `any`      | Customize theme object                            |  `{theme.image}`   |
-    |  iconId   |    `string`    | Id of an button icon                              |     `'Icon1'`      |
-    |  onClick  | `EventHandler` | The event listener of mouse clicks                | `onClick={()=>()}` |
-    |  onFocus  | `EventHandler` | The event listener of focus an element            | `onFocus={()=>()}` |
-    |  onBlur   | `EventHandler` | The event listener of loss of focus of an element | `onBlur={()=>()}`  |
+|   Name    |      Type      | Description                                       |      Example       |
+| :-------: | :------------: | ------------------------------------------------- | :----------------: |
+|   text    |    `string`    | A caption of a button                             |   `'Subscribe'`    |
+|  sizeId   |    `TSize`     | Device used                                       |    `'Desktop'`     |
+| customize |     `any`      | Customize theme object                            |  `{theme.image}`   |
+|  iconId   |    `string`    | Id of an button icon                              |     `'Icon1'`      |
+|  onClick  | `EventHandler` | The event listener of mouse clicks                | `onClick={()=>()}` |
+|  onFocus  | `EventHandler` | The event listener of focus an element            | `onFocus={()=>()}` |
+|  onBlur   | `EventHandler` | The event listener of loss of focus of an element | `onBlur={()=>()}`  |
 
 ## Usage
 
