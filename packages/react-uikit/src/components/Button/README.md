@@ -1,5 +1,11 @@
 # Button Component
 
+- [Button Component](#button-component)
+  - [Description](#description)
+  - [Component Props](#component-props)
+  - [Usage](#usage)
+    - [Basic Usage](#basic-usage)
+
 ## Description
 
 This component creats a button based on gotting props.
@@ -34,9 +40,3 @@ export const OurContainer: React.FC<TOurContainerProps> = (props): JSX.Element =
 export default OurContainer;
 
 ```
-
-- [Button Component](#button-component)
-  - [Description](#description)
-  - [Component Props](#component-props)
-  - [Usage](#usage)
-    - [Basic Usage](#basic-usage)
