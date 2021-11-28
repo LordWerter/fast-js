@@ -21,7 +21,7 @@ This component creates a custom checkbox based on got props.
 | disabled  |           `boolean`            | Flag for determining the activity of the component.              |               `false`                |
 | callback  | `(isChecked: boolean) => void` | A callback function that is called when the component is clicked |          `(isChecked)=>{}`           |
 | onChange  |         `EventHandler`         | The event listener of changing of a component                    |         `onChange={()=>{}}`          |
-| customize |             `any`              | Customize theme object                                           |           `{theme.image}`            |
+| customize |             `any`              | Custom theme object                                              |           `{theme.image}`            |
 
 ## Usage
 

@@ -16,7 +16,7 @@ This component creates a button based on got props.
 | :-------: | :------------: | ------------------------------------------------- | :----------------: |
 |   text    |    `string`    | A caption of a button                             |   `'Subscribe'`    |
 |  sizeId   |    `TSize`     | Device used                                       |    `'desktop'`     |
-| customize |     `any`      | Customize theme object                            |  `{theme.image}`   |
+| customize |     `any`      | Custom theme object                               |  `{theme.image}`   |
 |  iconId   |    `string`    | Id of an button icon                              |     `'Icon1'`      |
 |  onClick  | `EventHandler` | The event listener of mouse clicks                | `onClick={()=>{}}` |
 |  onFocus  | `EventHandler` | The event listener of focus an element            | `onFocus={()=>{}}` |
