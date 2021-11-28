@@ -1,10 +1,12 @@
 # Checkbox Component
 
+```sh
 - [Checkbox Component](#checkbox-component)
   - [Description](#description)
   - [Component Props](#component-props)
   - [Usage](#usage)
     - [Basic Usage](#basic-usage)
+```
 
 ## Description
 
