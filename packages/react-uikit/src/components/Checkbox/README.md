@@ -8,7 +8,7 @@
 
 ## Description
 
-This component creats a button based on gotting props.
+This component creates a custom checkbox based on got props.
 
 ## Component Props
 

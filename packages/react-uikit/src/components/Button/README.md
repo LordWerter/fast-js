@@ -8,7 +8,7 @@
 
 ## Description
 
-This component creats a button based on gotting props.
+This component creates a button based on got props.
 
 ## Component Props
 
