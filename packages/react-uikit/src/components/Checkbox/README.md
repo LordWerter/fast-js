@@ -12,7 +12,7 @@ This component creates a custom checkbox based on got props.
 
 ## Component Props
 
-|   Name    |              Type              | Description                                                      |               Example                |
+| **Name**  |            **Type**            | **Description**                                                  |             **Example**              |
 | :-------: | :----------------------------: | ---------------------------------------------------------------- | :----------------------------------: |
 |   hash    |            `string`            | Identifier of a component                                        | `'8743b52063cd84097a65d1633f5c74f5'` |
 |  sizeId   |            `TSize`             | Device used                                                      |              `'mobile'`              |
