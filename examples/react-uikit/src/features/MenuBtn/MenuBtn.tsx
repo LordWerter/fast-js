@@ -19,7 +19,7 @@ export const MenuBtn: React.FC<IProps> = (props): JSX.Element => {
     //@ts-ignore
     const theme = { ...useTheme().MenuBtn };
     return (
-        <CWrap sizeId={'desktop'} theme={theme.cwrap} onClick={()=>setNavbarVisibility(navbarVisibility.visibility)} >
+        <CWrap sizeId={'desktop'} theme={navbarVisibility.visibility ? theme.active : theme.nonActive} onClick={() => setNavbarVisibility(navbarVisibility.visibility)} >
             <Line sizeId={'desktop'} theme={theme.line} />
             <Line sizeId={'desktop'} theme={theme.line} />
             <Line sizeId={'desktop'} theme={theme.line} />
