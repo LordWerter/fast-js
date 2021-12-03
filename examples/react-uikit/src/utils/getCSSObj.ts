@@ -1,4 +1,4 @@
-import { TSectionName } from "../definitions/TCSSobjProps";
+import { TSectionName } from "../definitions/TCSSObjProps";
 
 type IElementTheme = {
   [key in TSectionName]: any;

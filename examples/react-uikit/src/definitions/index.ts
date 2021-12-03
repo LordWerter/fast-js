@@ -1,5 +1,5 @@
 export type { TElementProps } from "./TElementProps";
 
-export type { TCSSObjProps } from './TCSSobjProps';
+export type { TCSSObjProps } from './TCSSObjProps';
 
 export * from './TNavbarVisibilityReducer'
