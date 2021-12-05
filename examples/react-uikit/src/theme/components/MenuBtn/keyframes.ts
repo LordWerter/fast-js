@@ -10,14 +10,14 @@ export const topDown = keyframes({
       transform: 'rotate(0)',
    },
    '100%': {
-      top: '14px',
+      top: '17px',
       transform: 'rotate(135deg)',
    },
 });
 
 export const topUp = keyframes({
    '0%': {
-      top: '14px',
+      top: '17px',
       transform: 'rotate(135deg)',
    },
    '50%': {
@@ -61,14 +61,14 @@ export const bottomUp = keyframes({
       transform: 'rotate(0)',
    },
    '100%': {
-      bottom: '14px',
+      bottom: '17px',
       transform: 'rotate(45deg)',
    },
 });
 
 export const bottomDown = keyframes({
    '0%': {
-      bottom: '14px',
+      bottom: '17px',
       transform: 'rotate(45deg)',
    },
    '50%': {
