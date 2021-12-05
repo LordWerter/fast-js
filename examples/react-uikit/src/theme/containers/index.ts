@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import Section from "./Section";
 import Header from "./Header";
 import Welcome from "./Welcome";
