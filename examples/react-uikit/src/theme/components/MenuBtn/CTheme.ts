@@ -1,6 +1,6 @@
 import active from './active';
 import line from './line';
-import nonActive from './non-active';
+import nonActive from './nonactive';
 
 export interface ICTheme {
     line: typeof line;
