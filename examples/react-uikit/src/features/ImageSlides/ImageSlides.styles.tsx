@@ -1,11 +1,9 @@
 import styled from '@emotion/styled';
+import { TElementProps } from '../../definitions';
+import { getCSSObj } from '../../utils';
 
-export const CWrap = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-background-color: gray;
-height: 50vh;
-color: white;
-font-size: 3rem;
+export type ICWrapProps = TElementProps;
+
+export const CWrap = styled.div<ICWrapProps>`
+${getCSSObj}
 `;

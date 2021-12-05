@@ -1,6 +1,7 @@
 import { useTheme } from '@emotion/react';
 import React, { MouseEventHandler } from 'react'
 import { TElementProps } from '../../definitions';
+import ImageSlides from '../../features/ImageSlides';
 import { CWrap } from './Gallery.styles';
 
 export type IProps = TElementProps & {
@@ -12,7 +13,9 @@ export const Gallery: React.FC<IProps> = (props): JSX.Element => {
     const theme = {...useTheme().Gallery}
     return (
         <CWrap sizeId={'desktop'} theme={theme.cwrap}>
-            
+            <ImageSlides sizeId={'desktop'}>
+                <h1>{'Hello World!'}</h1>
+            </ImageSlides>
         </CWrap>
     )
 };
