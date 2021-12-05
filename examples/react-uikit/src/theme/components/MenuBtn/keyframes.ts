@@ -1,6 +1,6 @@
 import { keyframes } from "@emotion/react";
 
-export const top = keyframes({
+export const topDown = keyframes({
    '0%': {
       top: '0',
       transform: 'rotate(0)',
@@ -10,14 +10,14 @@ export const top = keyframes({
       transform: 'rotate(0)',
    },
    '100%': {
-      top: '17px',
+      top: '14px',
       transform: 'rotate(135deg)',
    },
 });
 
-export const top2 = keyframes({
+export const topUp = keyframes({
    '0%': {
-      top: '17px',
+      top: '14px',
       transform: 'rotate(135deg)',
    },
    '50%': {
@@ -51,7 +51,7 @@ export const zoomIn = keyframes({
    },
 });
 
-export const bottom = keyframes({
+export const bottomUp = keyframes({
    '0%': {
       bottom: '0',
       transform: 'rotate(0)',
@@ -61,14 +61,14 @@ export const bottom = keyframes({
       transform: 'rotate(0)',
    },
    '100%': {
-      bottom: '17px',
+      bottom: '14px',
       transform: 'rotate(45deg)',
    },
 });
 
-export const bottom2 = keyframes({
+export const bottomDown = keyframes({
    '0%': {
-      bottom: '17px',
+      bottom: '14px',
       transform: 'rotate(45deg)',
    },
    '50%': {
