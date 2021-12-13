@@ -11,22 +11,20 @@
 This component creates a custom Input based on got props.
 
 ## Component Props
-
-|     Name      |      Type       | Description                  |            Example            |
-| :-----------: | :-------------: | ---------------------------- | :---------------------------: |
-|    sizeId     |     `TSize`     | Device used                  |          `'mobile'`           |
-|   customize   |      `any`      | Custom theme object          |    `{customize.container}`    |
-|     label     |      `any`      | Path to image for background | `'../images/background1.png'` |
-|     value     |    `string`     | Path to image for background | `'../images/background1.png'` |
-|  placeholder  | `string | null` | Path to image for background | `'../images/background1.png'` |
-|   disabled    |    `boolean`    | Path to image for background | `'../images/background1.png'` |
-|    theme:     |       `{`       |                              |                               |
-|   - wrapper   |     `any;`      |                              |                               |
-|    - label    |     `any;`      |                              |                               |
-|    - input    |     `any;`      |                              |                               |
-| - placeholder |     `any;`      |                              |                               |
-|               |   `} \| null;`   | Path to image for background | `'../images/background1.png'` |
-|     label     |      `any`      | Path to image for background | `'../images/background1.png'` |
+<!-- markdownlint-disable MD033 -->
+|                                Name                                |                          Type                           | Description                  |            Example            |
+| :----------------------------------------------------------------: | :-----------------------------------------------------: | ---------------------------- | :---------------------------: |
+|                               sizeId                               |                         `TSize`                         | Device used                  |          `'mobile'`           |
+|                             customize                              |                          `any`                          | Custom theme object          |    `{customize.container}`    |
+|                               label                                |                          `any`                          | Path to image for background | `'../images/background1.png'` |
+|                               value                                |                        `string`                         | Path to image for background | `'../images/background1.png'` |
+|                            placeholder                             |                     `string | null`                     | Path to image for background | `'../images/background1.png'` |
+|                              disabled                              |                        `boolean`                        | Path to image for background | `'../images/background1.png'` |
+| theme: <br> - wrapper <br> - label <br> - input <br> - placeholder |  `null \|` <br> `any` <br> `any` <br> `any` <br> `any`  |                              |                               |
+|                             customize                              |                          `any`                          | Path to image for background | `'../images/background1.png'` |
+|                      withReset2EmptyValueBtn                       |                        `boolean`                        | Path to image for background | `'../images/background1.png'` |
+|                     handleReset2EmptyValueBtn                      |                       `() => any`                       | Path to image for background | `'../images/background1.png'` |
+|                              onChange                              | `(event: ChangeEvent<HTMLInputElement>) => any \| null` | Path to image for background | `'../images/background1.png'` |
 
 ## Usage
 
