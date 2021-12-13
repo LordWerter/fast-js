@@ -12,11 +12,11 @@ This component creates a custom Background Image based on got props.
 
 ## Component Props
 
-|   Name    |   Type   | Description                  |            Example            |
-| :-------: | :------: | ---------------------------- | :---------------------------: |
-|  sizeId   | `TSize`  | Device used                  |          `'mobile'`           |
-| customize |  `any`   | Custom theme object          |    `{customize.container}`    |
-|  bgImage  | `string` | Path to image for background | `'../images/background1.png'` |
+|   Name    |                      Type                       | Description                  |            Example            |
+| :-------: | :---------------------------------------------: | ---------------------------- | :---------------------------: |
+|  sizeId   | TSize = `'mobile'` \| `'laptop'` \| `'desktop'` | Device used                  |          `'mobile'`           |
+| customize |                      `any`                      | Custom theme object          |    `{customize.container}`    |
+|  bgImage  |                    `string`                     | Path to image for background | `'../images/background1.png'` |
 
 ## Usage
 
