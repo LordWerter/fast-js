@@ -12,19 +12,18 @@ This component creates a custom Input based on got props.
 
 ## Component Props
 <!-- markdownlint-disable MD033 -->
-|           Name            |                                                  Type                                                   | Description                  |            Example            |
-| :-----------------------: | :-----------------------------------------------------------------------------------------------------: | ---------------------------- | :---------------------------: |
-|          sizeId           |                             TSize = `'mobile'` \| `'laptop'` \| `'desktop'`                             | Device used                  |          `'mobile'`           |
-|         customize         |                                                  `any`                                                  | Custom theme object          |    `{customize.container}`    |
-|           label           |                                                  `any`                                                  | Path to image for background | `'../images/background1.png'` |
-|           value           |                                                `string`                                                 | Path to image for background | `'../images/background1.png'` |
-|        placeholder        |                                           `string` \| `null`                                            | Path to image for background | `'../images/background1.png'` |
-|         disabled          |                                                `boolean`                                                | Path to image for background | `'../images/background1.png'` |
-|           theme           | `null` \| { <br> wrapper: `any`; <br> label: `any`; <br> input: `any`; <br> placeholder: `any`; <br> }; |                              |                               |
-|         customize         |                                                  `any`                                                  | Path to image for background | `'../images/background1.png'` |
-|  withReset2EmptyValueBtn  |                                                `boolean`                                                | Path to image for background | `'../images/background1.png'` |
-| handleReset2EmptyValueBtn |                                               `() => any`                                               | Path to image for background | `'../images/background1.png'` |
-|         onChange          |                        `(event: ChangeEvent<HTMLInputElement>) => any` \| `null`                        | Path to image for background | `'../images/background1.png'` |
+|           Name            |                                                  Type                                                   | Description                                   |         Example         |
+| :-----------------------: | :-----------------------------------------------------------------------------------------------------: | --------------------------------------------- | :---------------------: |
+|          sizeId           |                             TSize = `'mobile'` \| `'laptop'` \| `'desktop'`                             | Device used                                   |       `'mobile'`        |
+|           label           |                                                  `any`                                                  | Object with content of a Label component      |  `{title, text, ...}`   |
+|           value           |                                                `string`                                                 | Value of InputBox component                   |     `'Some value'`      |
+|        placeholder        |                                           `string` \| `null`                                            | Value of InputBox component                   |     `'Some value'`      |
+|         disabled          |                                                `boolean`                                                | Disabled flag of InputBox component           |         `true`          |
+|           theme           | `null` \| { <br> wrapper: `any`; <br> label: `any`; <br> input: `any`; <br> placeholder: `any`; <br> }; | Themes objects                                |    `{theme.wrapper}`    |
+|         customize         |                                                  `any`                                                  | Custom theme object                           | `{customize.container}` |
+|  withReset2EmptyValueBtn  |                                                `boolean`                                                | ???                                           |         `true`          |
+| handleReset2EmptyValueBtn |                                               `() => any`                                               | ???                                           |       `() => ();`       |
+|         onChange          |                        `(event: ChangeEvent<HTMLInputElement>) => any` \| `null`                        | The event listener of changing of a component |   `onChange={()=>{}}`   |
 
 ## Usage
 
