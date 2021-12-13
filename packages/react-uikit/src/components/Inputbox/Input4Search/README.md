@@ -15,7 +15,7 @@ This component creates a custom Input4Search based on got props.
 |   Name    |                      Type                       | Description                                   |         Example         |
 | :-------: | :---------------------------------------------: | --------------------------------------------- | :---------------------: |
 |  sizeId   | TSize = `'mobile'` \| `'laptop'` \| `'desktop'` | Device used                                   |       `'mobile'`        |
-|   value   |                    `string`                     | Value of Input4SearchBox component            |     `'Some value'`      |
+|   value   |                    `string`                     | Value of Input4Search component               |     `'Some value'`      |
 |  params   |                      `any`                      | Object with parameters                        | `{params.placeholder}`  |
 |  onClick  |              `(event: any) => any`              | The event listener of clicking on a component |   `onClick={()=>{}}`    |
 | customize |                      `any`                      | Custom theme object                           | `{customize.container}` |
