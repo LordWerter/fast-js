@@ -20,7 +20,7 @@ This component creates a custom Input based on got props.
 |           value           |                                                `string`                                                 | Path to image for background | `'../images/background1.png'` |
 |        placeholder        |                                            `string \| null`                                             | Path to image for background | `'../images/background1.png'` |
 |         disabled          |                                                `boolean`                                                | Path to image for background | `'../images/background1.png'` |
-|           theme           | `null \|` { <br> wrapper: `any`; <br> label: `any`; <br> input: `any`; <br> placeholder: `any`; <br> }; |                              |                               |
+|           theme           | `null` \| { <br> wrapper: `any`; <br> label: `any`; <br> input: `any`; <br> placeholder: `any`; <br> }; |                              |                               |
 |         customize         |                                                  `any`                                                  | Path to image for background | `'../images/background1.png'` |
 |  withReset2EmptyValueBtn  |                                                `boolean`                                                | Path to image for background | `'../images/background1.png'` |
 | handleReset2EmptyValueBtn |                                               `() => any`                                               | Path to image for background | `'../images/background1.png'` |
