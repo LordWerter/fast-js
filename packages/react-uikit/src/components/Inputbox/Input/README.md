@@ -14,7 +14,7 @@ This component creates a custom Input based on got props.
 <!-- markdownlint-disable MD033 -->
 |           Name            |                                                  Type                                                   | Description                  |            Example            |
 | :-----------------------: | :-----------------------------------------------------------------------------------------------------: | ---------------------------- | :---------------------------: |
-|          sizeId           |                                                 `TSize`                                                 | Device used                  |          `'mobile'`           |
+|          sizeId           |                             TSize = `'mobile'` \| `'laptop'` \| `'desktop'`                             | Device used                  |          `'mobile'`           |
 |         customize         |                                                  `any`                                                  | Custom theme object          |    `{customize.container}`    |
 |           label           |                                                  `any`                                                  | Path to image for background | `'../images/background1.png'` |
 |           value           |                                                `string`                                                 | Path to image for background | `'../images/background1.png'` |
