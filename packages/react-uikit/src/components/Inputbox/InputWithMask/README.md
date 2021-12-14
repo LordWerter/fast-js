@@ -11,7 +11,7 @@
 This component creates a custom InputWithMask on got props.
 
 ## Component Props
-<!-- markdownlint-disable MD033 -->
+
 |   Name    |                      Type                       | Description                                   |         Example         |
 | :-------: | :---------------------------------------------: | --------------------------------------------- | :---------------------: |
 |  sizeId   | TSize = `'mobile'` \| `'laptop'` \| `'desktop'` | Device used                                   |       `'mobile'`        |
