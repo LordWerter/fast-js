@@ -19,7 +19,7 @@ This component creates a custom Input based on got props.
 |           value           |                                                `string`                                                 | Value of InputBox component                   |     `'Some value'`      |
 |        placeholder        |                                           `string` \| `null`                                            | Value of InputBox component                   |     `'Some value'`      |
 |         disabled          |                                                `boolean`                                                | Disabled flag of InputBox component           |         `true`          |
-|           theme           | `null` \| { <br> wrapper: `any`; <br> label: `any`; <br> input: `any`; <br> placeholder: `any`; <br> }; | Themes objects                                |    `{theme.wrapper}`    |
+|           theme           | {<br> wrapper: `any`, <br> label: `any`, <br> input: `any`, <br> placeholder: `any`, <br>} \| `null`; | Themes objects                                |    `{theme.wrapper}`    |
 |         customize         |                                                  `any`                                                  | Custom theme object                           | `{customize.container}` |
 |  withReset2EmptyValueBtn  |                                                `boolean`                                                | ???                                           |         `true`          |
 | handleReset2EmptyValueBtn |                                               `() => any`                                               | ???                                           |       `() => {};`       |
