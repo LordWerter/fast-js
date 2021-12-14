@@ -22,7 +22,7 @@ This component creates a custom Input based on got props.
 |           theme           | `null` \| { <br> wrapper: `any`; <br> label: `any`; <br> input: `any`; <br> placeholder: `any`; <br> }; | Themes objects                                |    `{theme.wrapper}`    |
 |         customize         |                                                  `any`                                                  | Custom theme object                           | `{customize.container}` |
 |  withReset2EmptyValueBtn  |                                                `boolean`                                                | ???                                           |         `true`          |
-| handleReset2EmptyValueBtn |                                               `() => any`                                               | ???                                           |       `() => ();`       |
+| handleReset2EmptyValueBtn |                                               `() => any`                                               | ???                                           |       `() => {};`       |
 |         onChange          |                        `(event: ChangeEvent<HTMLInputElement>) => any` \| `null`                        | The event listener of changing of a component |   `onChange={()=>{}}`   |
 
 ## Usage
