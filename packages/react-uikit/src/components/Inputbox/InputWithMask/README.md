@@ -1,6 +1,6 @@
-# InputWithMask
+# InputWithMask Component
 
-- [InputWithMask](#inputwithmask)
+- [InputWithMask Component](#inputwithmask-component)
   - [Description](#description)
   - [Component Props](#component-props)
   - [Usage](#usage)

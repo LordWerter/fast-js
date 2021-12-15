@@ -1,6 +1,6 @@
-# Label
+# Label Component
 
-- [Label](#label)
+- [Label Component](#label-component)
   - [Description](#description)
   - [Component Props](#component-props)
   - [Usage](#usage)
