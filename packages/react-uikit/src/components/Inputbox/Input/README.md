@@ -12,18 +12,18 @@ This component creates a custom Input based on got props.
 
 ## Component Props
 <!-- markdownlint-disable MD033 -->
-|           Name            |                                                  Type                                                   | Description                                   |         Example         |
-| :-----------------------: | :-----------------------------------------------------------------------------------------------------: | --------------------------------------------- | :---------------------: |
-|          sizeId           |                             TSize = `'mobile'` \| `'laptop'` \| `'desktop'`                             | Device used                                   |       `'mobile'`        |
-|           label           |                                                  `any`                                                  | Object with content of a Label component      |  `{title, text, ...}`   |
-|           value           |                                                `string`                                                 | Value of InputBox component                   |     `'Some value'`      |
-|        placeholder        |                                           `string` \| `null`                                            | Value of InputBox component                   |     `'Some value'`      |
-|         disabled          |                                                `boolean`                                                | Disabled flag of InputBox component           |         `true`          |
+|           Name            |                                                 Type                                                  | Description                                   |         Example         |
+| :-----------------------: | :---------------------------------------------------------------------------------------------------: | --------------------------------------------- | :---------------------: |
+|          sizeId           |                            TSize = `'mobile'` \| `'laptop'` \| `'desktop'`                            | Device used                                   |       `'mobile'`        |
+|           label           |                                                 `any`                                                 | Object with content of a Label component      |  `{title, text, ...}`   |
+|           value           |                                               `string`                                                | Value of InputBox component                   |     `'Some value'`      |
+|        placeholder        |                                          `string` \| `null`                                           | Value of InputBox component                   |     `'Some value'`      |
+|         disabled          |                                               `boolean`                                               | Disabled flag of InputBox component           |         `true`          |
 |           theme           | {<br> wrapper: `any`, <br> label: `any`, <br> input: `any`, <br> placeholder: `any`, <br>} \| `null`; | Themes objects                                |    `{theme.wrapper}`    |
-|         customize         |                                                  `any`                                                  | Custom theme object                           | `{customize.container}` |
-|  withReset2EmptyValueBtn  |                                                `boolean`                                                | ???                                           |         `true`          |
-| handleReset2EmptyValueBtn |                                               `() => any`                                               | ???                                           |       `() => {};`       |
-|         onChange          |                        `(event: ChangeEvent<HTMLInputElement>) => any` \| `null`                        | The event listener of changing of a component |   `onChange={()=>{}}`   |
+|         customize         |                                                 `any`                                                 | Custom theme object                           | `{customize.container}` |
+|  withReset2EmptyValueBtn  |                                               `boolean`                                               | ???                                           |         `true`          |
+| handleReset2EmptyValueBtn |                                              `() => any`                                              | ???                                           |       `() => {};`       |
+|         onChange          |                       `(event: ChangeEvent<HTMLInputElement>) => any` \| `null`                       | The event listener of changing of a component |   `onChange={()=>{}}`   |
 
 ## Usage
 
