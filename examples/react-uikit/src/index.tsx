@@ -1,13 +1,18 @@
-import React from 'react';
+import { css, Global, ThemeProvider } from '@emotion/react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+import resets from './assets';
+import App from './epics/App/index';
 import reportWebVitals from './reportWebVitals';
+import theme from './theme';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <App sizeId={'desktop'} />
+      <Global styles={resets || css``} />
+    </ThemeProvider>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

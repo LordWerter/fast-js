@@ -1,54 +1,47 @@
 {
-    "private": true,
-    "name": "fast-js",
-	"author": "Alexander Rudenko<learnitnow@yandex.ru>",
-    "license": "MIT",
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/LordWerter/fast-js.git"
-    },
-    "homepage": "",
-    "keywords": [
-        "websocket",
-        "uikit",
-        "react",
-        "js tools",
-        "linter configs",
-        "js logger",
-        "commitlint preset",
-        "eslint preset",
-        "jest preset",
-        "jshint preset",
-        "lighthouse preset",
-        "markdownlint preset",
-        "prettier preset",
-        "stylelint preset",
-        "typescript preset",
-        "webpack configs",
-        "react uikit",
-        "flexible uikit",
-        "websocket api",
-        "react auth provider"
-
-    ],
-    "scripts": {},
-    "workspaces": {
-        "packages": [
-          "packages/*"
-        ],
-        "nohoist": [
-            "@fast-js/react-uikit/**",
-            "@fast-js/rest/axios",
-            "@fast-js/logger/react"
-        ]
-    },
-    "bugs": {
-        "url": "https://github.com/LordWerter/fast-js/issues"
-    },
-    "resolutions": {
-        "**/react": "17.0.2",
-        "**/react-router-dom": "5.2.0",
-        "**/browserslist": "^3.2.8"
-    },
-    "parser": "babel-eslint"
+  "private": true,
+  "name": "fast-js",
+  "author": "Alexander Rudenko<learnitnow@yandex.ru>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LordWerter/fast-js.git"
+  },
+  "homepage": "",
+  "keywords": [
+    "websocket",
+    "uikit",
+    "react",
+    "js tools",
+    "linter configs",
+    "js logger",
+    "commitlint preset",
+    "eslint preset",
+    "jest preset",
+    "jshint preset",
+    "lighthouse preset",
+    "markdownlint preset",
+    "prettier preset",
+    "stylelint preset",
+    "typescript preset",
+    "webpack configs",
+    "react uikit",
+    "flexible uikit",
+    "websocket api",
+    "react auth provider"
+  ],
+  "scripts": {},
+  "workspaces": {
+    "packages": ["packages/*"],
+    "nohoist": ["@fast-js/react-uikit/**", "@fast-js/rest/axios", "@fast-js/logger/react"]
+  },
+  "bugs": {
+    "url": "https://github.com/LordWerter/fast-js/issues"
+  },
+  "resolutions": {
+    "**/react": "17.0.2",
+    "**/react-router-dom": "5.2.0",
+    "**/browserslist": "^3.2.8"
+  },
+  "parser": "babel-eslint"
 }

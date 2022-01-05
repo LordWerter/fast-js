@@ -6,21 +6,7 @@
   "license": "MIT",
   "main": "",
   "types": "index.d.ts",
-  "keywords": [
-    "typescript",
-    "typings",
-    "types",
-    "definitions"
-  ],
-  "files": [
-    "index.d.ts",
-    "images.d.ts",
-    "jwt.d.ts",
-    "redux-store.d.ts",
-    "request.d.ts",
-    "response.d.ts",
-    "types.d.ts"
-  ],
+  "keywords": ["typescript", "typings", "types", "definitions", "react", "react types"],
   "scripts": {},
   "peerDependencies": {
     "@types/jest": "^27.0.1",
