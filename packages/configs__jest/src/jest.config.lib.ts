@@ -2,10 +2,7 @@ import type { Config } from '@jest/types';
 
 export const getPreset4Lib = (): Config.InitialOptions => {
     return {
-        transform: {
-            '\\.(ts|tsx)$': 'ts-jest',
-        },
-        testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(ts?|tsx?)$',
+        preset: 'ts-jest',
         testPathIgnorePatterns: [
             '<rootDir>/build/',
             '<rootDir>/dist/',
@@ -19,7 +16,7 @@ export const getPreset4Lib = (): Config.InitialOptions => {
         ],
         moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
         collectCoverage: true,
-        modulePaths: ['<rootDir>/node_modules', '<rootDir>/../../node_modules'],
+        coverageDirectory: 'coverage',
     };
 };
 
