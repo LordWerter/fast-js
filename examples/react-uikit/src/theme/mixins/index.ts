@@ -13,3 +13,14 @@ export const MENU__BTN_WRAP: CSSObject = {
         transform: 'scale(1.1)',
     },
 };
+
+export const IMAGE__SLIDES_WRAP: CSSObject = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'gray',
+    height: '50vh',
+    width: '50vw',
+    color: 'white',
+    fontSize: '3rem',
+}

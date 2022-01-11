@@ -17,7 +17,8 @@ export const ImageSlides: React.FC<IProps> = (props): JSX.Element => {
 
     return (
         <CWrap sizeId={sizeId} theme={theme.cwrap}>
-            {children}
+            {/* {children} */}
+
         </CWrap>
     );
 
