@@ -1,7 +1,9 @@
 import imageSlides from "./imageSlides";
 import logos from "./logos";
 
-export type TAllImages = typeof logos & typeof imageSlides;
+export type TAllImages =
+   typeof logos
+   & typeof imageSlides;
 
 export const allImages: TAllImages = {
    ...logos,

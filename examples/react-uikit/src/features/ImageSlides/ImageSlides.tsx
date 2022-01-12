@@ -1,6 +1,7 @@
 import { useTheme } from '@emotion/react';
 import React from 'react';
 import { TSize } from '../../definitions/TElementProps';
+import allSlides from '../../theme/images/imageSlides';
 import { CWrap } from './ImageSlides.styles';
 
 export interface IProps {
@@ -9,8 +10,10 @@ export interface IProps {
     customise?: unknown;
 }
 
+const slides = Object.values(allSlides);
+
 export const ImageSlides: React.FC<IProps> = (props): JSX.Element => {
-    const { sizeId = 'mobile', langId = 'ru', customise = null, children } = props;
+    const { sizeId = 'mobile', langId = 'ru', customise = null, } = props;
     console.log(sizeId, langId, customise);
     //@ts-ignore
     const theme = { ...useTheme().ImageSlides };
@@ -18,6 +21,7 @@ export const ImageSlides: React.FC<IProps> = (props): JSX.Element => {
     return (
         <CWrap sizeId={sizeId} theme={theme.cwrap}>
             {/* {children} */}
+            {/* {slides.map((src) => { return <img src={src} alt /> },} */}
 
         </CWrap>
     );
