@@ -9,7 +9,7 @@ import About from "./About";
 import FAQ from "./FAQ";
 import Gallery from "./Gallery";
 import Promo from "./Promo";
-import ImageSlides from "./ImageSlides";
+import ImageSlider from "./ImageSlider";
 
 export default {
    Header,
@@ -22,5 +22,5 @@ export default {
    FAQ,
    Gallery,
    Promo,
-   ImageSlides,
+   ImageSlider,
 };

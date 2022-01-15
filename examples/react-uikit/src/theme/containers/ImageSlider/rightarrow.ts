@@ -5,13 +5,9 @@ import { ARROW_WRAP } from "../../mixins";
 export const blocks: TCSSObjProps = {
     core: {
         ...ARROW_WRAP,
-        right: 0,
-        '&:hover': {
-            background: 'rgba(255, 255, 255, 0.2)',
-            backgroundImage: `url('${RIGHT_ARROW}')`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-        },
+        backgroundImage: `url('${RIGHT_ARROW}')`,
+        transition: 'right ease-in-out 0.3s',
+        right: '-200px',
     },
     mobile: {},
     laptop: {},
