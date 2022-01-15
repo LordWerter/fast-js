@@ -5,6 +5,7 @@ export const blocks = {
       flex: '1 1 auto',
       alignItems: 'center',
       justifyContent: 'space-evenly',
+      width: '100%',
    },
    desktop: {},
    laptop: {},

@@ -1,7 +1,9 @@
 import MenuBtn from "./MenuBtn";
 import NavBar from "./NavBar";
 
-export default {
+export const components = {
     MenuBtn,
     NavBar,
 };
+
+export default components;

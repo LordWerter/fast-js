@@ -1,4 +1,8 @@
-import {ASettings, TAnimationFn, TSettingsOutput} from './ASettings';
+import {
+    ASettings,
+    TAnimationFn,
+    // TSettingsOutput
+} from './ASettings';
 
 export type TSettings = {
     sliderType: 'slides' | 'carousel';
@@ -35,7 +39,7 @@ export type TSettings = {
 };
 
 export class Settings extends ASettings {
-    public output: TSettingsOutput = {
+    public output: any = {
         sliderType: 'carousel',
         wrapperSelector: '',
         elementSelector: '',
@@ -64,7 +68,7 @@ export class Settings extends ASettings {
         animationFn: 'linear',
     };
 
-    constructor(settings: TSettings) {
+    constructor(settings: any) {
         super();
         for (let key in settings) {
             if (this.output.hasOwnProperty(key)) {
