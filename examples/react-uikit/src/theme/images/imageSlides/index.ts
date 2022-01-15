@@ -1,15 +1,15 @@
-import IMG_SLIDE__1 from './slides/img_slide__1.jpg';
-import IMG_SLIDE__2 from './slides/img_slide__2.jpg';
-import IMG_SLIDE__3 from './slides/img_slide__3.jpg';
-import IMG_SLIDE__4 from './slides/img_slide__4.jpg';
-import IMG_SLIDE__5 from './slides/img_slide__5.jpg';
+import SLIDE_1 from './slides/slide_1.jpg';
+import SLIDE_2 from './slides/slide_2.jpg';
+import SLIDE_3 from './slides/slide_3.jpg';
+import SLIDE_4 from './slides/slide_4.jpg';
+import SLIDE_5 from './slides/slide_5.jpg';
 
 export const allSlides = {
-    IMG_SLIDE__1,
-    IMG_SLIDE__2,
-    IMG_SLIDE__3,
-    IMG_SLIDE__4,
-    IMG_SLIDE__5,
+    SLIDE_1,
+    SLIDE_2,
+    SLIDE_3,
+    SLIDE_4,
+    SLIDE_5,
 };
 
 export default allSlides;

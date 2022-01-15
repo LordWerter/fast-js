@@ -14,13 +14,34 @@ export const MENU__BTN_WRAP: CSSObject = {
     },
 };
 
-export const IMAGE__SLIDES_WRAP: CSSObject = {
+export const IMG_WRAP: CSSObject = {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    transition: 'opacity ease-in-out 0.3s',
+};
+
+export const ARROW_WRAP: CSSObject = {
+    position: 'absolute',
+    width: '5vw',
+    height: '100%',
+    zIndex: 100,
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    cursor: 'pointer',
     display: 'flex',
-    alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'gray',
-    height: '50vh',
-    width: '50vw',
-    color: 'white',
-    fontSize: '3rem',
-}
+    alignItems: 'center',
+};
+
+export const DOTS: CSSObject = {
+    width: '20px',
+    height: '20px',
+    borderRadius: '50%',
+    border: '3px solid #f1f1f1',
+    margin: '0 1vw',
+    background: '#f1f1f1',
+    cursor: 'pointer',
+};

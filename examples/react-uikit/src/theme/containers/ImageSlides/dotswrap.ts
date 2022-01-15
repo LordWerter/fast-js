@@ -1,10 +1,12 @@
 import { TCSSObjProps } from "../../../definitions";
-import { IMAGE__SLIDES_WRAP } from "../../mixins";
 
 export const blocks: TCSSObjProps = {
     core: {
-        ...IMAGE__SLIDES_WRAP,
-
+        position: 'absolute',
+        bottom: '10px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        display: 'flex',
     },
     mobile: {},
     laptop: {},

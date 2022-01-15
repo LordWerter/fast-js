@@ -1,9 +1,10 @@
 import { TCSSObjProps } from "../../../definitions";
-import { IMAGE__SLIDES_WRAP } from "../../mixins";
+import { IMG_WRAP } from "../../mixins";
 
 export const blocks: TCSSObjProps = {
     core: {
-        ...IMAGE__SLIDES_WRAP,
+        ...IMG_WRAP,
+        opacity: '0',
     },
     mobile: {},
     laptop: {},

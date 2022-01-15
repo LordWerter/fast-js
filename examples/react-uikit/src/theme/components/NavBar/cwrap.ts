@@ -13,6 +13,7 @@ export const blocks: TCSSObjProps = {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'space-evenly',
+        zIndex: 1000,
         '& > a': {          
             fontSize: '3rem',
             textAlign: 'center',
