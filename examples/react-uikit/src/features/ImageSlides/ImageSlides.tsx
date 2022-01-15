@@ -16,6 +16,7 @@ export const ImageSlides: React.FC<IProps> = (props): JSX.Element => {
     const slides = Object.values(allSlides);
 
     const [slideIndex, setSlideIndex] = useState(1);
+    const [dotVisibility, setDotVisibility] = useState(false);
 
     const nextSlide = () => {
         if (slideIndex !== slides.length) {
@@ -41,7 +42,7 @@ export const ImageSlides: React.FC<IProps> = (props): JSX.Element => {
     const theme = { ...useTheme().ImageSlides };
 
     return (
-        <CWrap sizeId={sizeId} theme={theme.cwrap} langId={langId}>
+        <CWrap sizeId={sizeId} theme={theme.cwrap} langId={langId} onMouseOver={() => setDotVisibility(true)} onMouseLeave={() => setDotVisibility(false)}>
             {slides.map((src, index) => {
                 return (
                     <Img
@@ -63,7 +64,7 @@ export const ImageSlides: React.FC<IProps> = (props): JSX.Element => {
                 theme={theme.rightarrow}
                 onClick={nextSlide}
             />
-            <DotsWrap sizeId={sizeId} theme={theme.dotswrap}>
+            <DotsWrap sizeId={sizeId} theme={dotVisibility ? theme.dotswrapactive : theme.dotswrap}>
                 {Array.from({ length: slides.length }).map((item, index) => (
                     <Dots
                         sizeId={sizeId}

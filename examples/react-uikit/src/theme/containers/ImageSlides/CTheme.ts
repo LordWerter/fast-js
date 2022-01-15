@@ -6,6 +6,7 @@ import rightarrow from "./rightarrow";
 import dots from "./dots";
 import dotactive from "./dotactive";
 import dotswrap from "./dotswrap";
+import dotswrapactive from "./dotswrapactive";
 
 export interface ICTheme {
     cwrap: typeof cwrap;
@@ -16,6 +17,7 @@ export interface ICTheme {
     dots: typeof dots;
     dotactive: typeof dotactive;
     dotswrap: typeof dotswrap;
+    dotswrapactive: typeof dotswrapactive;
 }
 
 export const CTheme: ICTheme = {
@@ -27,6 +29,7 @@ export const CTheme: ICTheme = {
     dotactive,
     dots,
     dotswrap,
+    dotswrapactive,
 };
 
 export default CTheme;
