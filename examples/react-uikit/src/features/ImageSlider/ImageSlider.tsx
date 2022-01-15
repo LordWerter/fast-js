@@ -2,7 +2,7 @@ import { useTheme } from '@emotion/react';
 import React, { useState } from 'react';
 import { TSize } from '../../definitions/TElementProps';
 import allSlides from '../../theme/images/imageSlides';
-import { CWrap, Dots, DotsWrap, Img, LeftArrow, RightArrow } from './ImageSlides.styles';
+import { CWrap, Dots, DotsWrap, Img, LeftArrow, RightArrow } from './ImageSlider.styles';
 
 export interface IProps {
     sizeId?: TSize;
@@ -16,7 +16,7 @@ export const ImageSlides: React.FC<IProps> = (props): JSX.Element => {
     const slides = Object.values(allSlides);
 
     const [slideIndex, setSlideIndex] = useState(1);
-    const [dotVisibility, setDotVisibility] = useState(false);
+    const [navVisibility, setNavVisibility] = useState(false);
 
     const nextSlide = () => {
         if (slideIndex !== slides.length) {
@@ -42,7 +42,7 @@ export const ImageSlides: React.FC<IProps> = (props): JSX.Element => {
     const theme = { ...useTheme().ImageSlides };
 
     return (
-        <CWrap sizeId={sizeId} theme={theme.cwrap} langId={langId} onMouseOver={() => setDotVisibility(true)} onMouseLeave={() => setDotVisibility(false)}>
+        <CWrap sizeId={sizeId} theme={theme.cwrap} langId={langId} onMouseOver={() => setNavVisibility(true)} onMouseLeave={() => setNavVisibility(false)}>
             {slides.map((src, index) => {
                 return (
                     <Img
@@ -56,15 +56,15 @@ export const ImageSlides: React.FC<IProps> = (props): JSX.Element => {
             })}
             <LeftArrow
                 sizeId={sizeId}
-                theme={theme.leftarrow}
+                theme={navVisibility ? theme.leftarrowactive : theme.leftarrow}
                 onClick={prevSlide}
             />
             <RightArrow
                 sizeId={sizeId}
-                theme={theme.rightarrow}
+                theme={navVisibility ? theme.rightarrowactive : theme.rightarrow}
                 onClick={nextSlide}
             />
-            <DotsWrap sizeId={sizeId} theme={dotVisibility ? theme.dotswrapactive : theme.dotswrap}>
+            <DotsWrap sizeId={sizeId} theme={navVisibility ? theme.dotswrapactive : theme.dotswrap}>
                 {Array.from({ length: slides.length }).map((item, index) => (
                     <Dots
                         sizeId={sizeId}
