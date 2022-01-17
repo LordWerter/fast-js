@@ -6,7 +6,7 @@ export const blocks: TCSSObjProps = {
       flexDirection: 'column',
       flex: '1 1 auto',
       alignItems: 'center',
-      justifyContent: 'space-evenly',
+      justifyContent: 'center',
    },
    desktop: {},
    laptop: {},
