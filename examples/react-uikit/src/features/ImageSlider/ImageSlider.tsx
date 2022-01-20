@@ -11,8 +11,6 @@ export interface IProps {
 }
 
 const slides = Object.values(allSlides);
-console.log(slides);
-
 
 export const ImageSlider: React.FC<IProps> = (props): JSX.Element => {
     const { sizeId = 'desktop', langId = 'ru', } = props;
