@@ -8,6 +8,12 @@ export const CWrap = styled.div<TCWrapProps>`
   ${getCSSObj}
 `;
 
+export type TSliderWrapProps = TElementProps;
+
+export const SliderWrap = styled.div<TSliderWrapProps>`
+  ${getCSSObj}
+`;
+
 export type TTrackProps = TElementProps;
 
 export const Track = styled.div<TTrackProps>`

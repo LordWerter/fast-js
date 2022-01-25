@@ -1,11 +1,7 @@
 export const blocks = {
     core: {
-        width: '100%',
-        position: 'relative',
+        width: 'calc(100% - 100px)!important',
         height: '280px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
         overflow: 'hidden',
     },
     mobile: {},

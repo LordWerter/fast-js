@@ -1,48 +1,56 @@
-import {ASettings, TAnimationFn, TSettingsOutput} from './ASettings';
+import {
+    ASettings,
+    TAnimationFn,
+    TSettingsOutput
+} from './ASettings';
 
 export type TSettings = {
-    sliderType: 'slides' | 'carousel';
+    // type of slider
+    type?: 'slides' | 'carousel';
+    scrollType?: 'vertical' | 'horizontal';
 
-    wrapperSelector: string;
-    trackSelector: string;
-    elementSelector: string;
-
-    leftArrowSelector?: string;
-    rightArrowSelector?: string;
-    showArrows?: boolean;
-
+    // Base selectors to get target DOM nodes
+    sliderId: string;
+    trackId: string;
+    elementSelector?: string;
+    leftArrowId?: string | null;
+    rightArrowId?: string | null;
     dotClass?: string;
+
+    // Showing params
+    slidesToShow?: number;
+    slidesToScroll?: number;
+    firstSlide?: number;
+    // Show controls params
+    showArrows?: boolean;
     showDots?: boolean;
 
+    // Animation params
+    animationSpeed?: number;
+    animationFn?: TAnimationFn;
+    transitionTimeout?: number;
+
+    // Playing slides params
     autoplay?: boolean;
     autoplaySpeed?: number;
     infiniteTrack?: boolean;
-
-    firstSlide?: number;
-    slidesToShow?: number;
-    slidesToScroll?: number;
-    transitionTimeout?: number;
-    responsive?: boolean;
-    adaptiveHeight?: boolean;
-    devicePoints?: any;
-    centerMode?: boolean;
     pauseOnHover?: boolean;
     pauseOnDotsHover?: boolean;
+
     touchMove?: boolean;
     touchThreshold?: number;
-    animationSpeed?: number;
-    animationFn?: TAnimationFn;
 };
 
 export class Settings extends ASettings {
     public output: TSettingsOutput = {
-        sliderType: 'carousel',
-        wrapperSelector: '',
+        type: 'carousel',
+        scrollType: 'horizontal',
+        sliderId: 'native-slider',
+        trackId: 'native-slider-track', // to get & move track if it's carousel
         elementSelector: '',
-        trackSelector: 'slider-track', // to get & move track if it's carousel
-        leftArrowSelector: 'left-arrow', // to add event listener for left arrow by selector
-        rightArrowSelector: 'right-arrow', // to add event listener for right arrow by selector
-        dotClass: 'dot', // to customize dot element
+        leftArrowId: null, // to add event listener for left arrow by selector
+        rightArrowId: null, // to add event listener for right arrow by selector
+        dotClass: 'native-slider-dot', // to customize dot element
         showArrows: true,
         showDots: false,
         autoplay: false,
@@ -52,10 +60,6 @@ export class Settings extends ASettings {
         slidesToShow: 1,
         slidesToScroll: 1,
         transitionTimeout: 500,
-        responsive: true,
-        adaptiveHeight: false,
-        devicePoints: false,
-        centerMode: false,
         pauseOnHover: true,
         pauseOnDotsHover: false,
         touchMove: true,
@@ -66,12 +70,9 @@ export class Settings extends ASettings {
 
     constructor(settings: TSettings) {
         super();
-        for (let key in settings) {
-            if (this.output.hasOwnProperty(key)) {
-                this.set(key, settings[key]);
-            } else {
-                console.warn(`RUNTIME::ERROR::SETTINGS_ARG - unknown Setting Key: ${key}. Please check your Settings.`);
-            }
+        for (let key in this.output) {
+            // @ts-ignore
+            this.set(key, settings[key]);
         }
     }
 
@@ -79,8 +80,14 @@ export class Settings extends ASettings {
         return {...this.output};
     };
 
-    public set = (key: string, value: number | string) => {
-        this.output[key] = value;
+    public set = (key: string, value: any) => {
+        if (this.output.hasOwnProperty(key)) {
+            // @ts-ignore
+            this.output[key] = value ? value : this.output[key];
+        } else {
+
+        }
+        // @ts-ignore
         return !!this.output[key];
     }
 }
