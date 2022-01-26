@@ -1,13 +1,16 @@
-import cwrap from './cwrap';
+import active from './active';
 import line from './line';
+import nonActive from './nonactive';
 
 export interface ICTheme {
-    cwrap: typeof cwrap;
     line: typeof line;
+    active: typeof active;
+    nonActive: typeof nonActive;
 }
 export const CTheme: ICTheme = {
-    cwrap,
     line,
+    active,
+    nonActive,
 };
 
 export default CTheme;

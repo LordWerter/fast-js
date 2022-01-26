@@ -1,15 +1,16 @@
 import { useTheme } from '@emotion/react';
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import { TElementProps } from '../../definitions';
 import Section from '../../features/Section';
 import { CWrap } from './Welcome.styles';
 
-export type IProps = TElementProps;
+export type IProps = TElementProps & {
+    onClick?: MouseEventHandler,
+};
 
-const Welcome: React.FC<IProps> = (props): JSX.Element => {
-    const fullTheme = useTheme();
+export const Welcome: React.FC<IProps> = (props): JSX.Element => {
     //@ts-ignore
-    const theme = { ...fullTheme.Welcome };
+    const theme = { ...useTheme().Welcome };
     return (
         <CWrap sizeId={'desktop'} theme={theme.cwrap}>
             <Section sizeId={'desktop'} />

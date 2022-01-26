@@ -1,23 +1,28 @@
 import { useTheme } from '@emotion/react'
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
+import { useTypedSelector } from '../../assets/hooks';
+import { useActions } from '../../assets/hooks/useActions';
 import { TElementProps } from '../../definitions';
 import { CWrap, Line } from './MenuBtn.styles'
 
-export type IProps = TElementProps & React.HTMLAttributes<HTMLDivElement> & {
-    setNavBarVisibility: any;
-    navBarVisibility: boolean;
+export type IProps = TElementProps & {
+    onClick?: MouseEventHandler<HTMLDivElement>;
 };
 
 export const MenuBtn: React.FC<IProps> = (props): JSX.Element => {
-    const {navBarVisibility, setNavBarVisibility} = props;
-    const fullTheme = useTheme();
+    const navbarVisibility = useTypedSelector(state => state.navbarVisibility);
+    const { hideNavbar, displayNavbar } = useActions();
+
+    const setNavbarVisibility = (visibility: boolean) => {
+        visibility ? hideNavbar() : displayNavbar();
+    };
     //@ts-ignore
-    const theme = {...fullTheme.MenuBtn};
+    const theme = { ...useTheme().MenuBtn };
     return (
-        <CWrap sizeId={'desktop'} theme={theme.cwrap} onClick={()=>{setNavBarVisibility(!navBarVisibility)}}>
-            <Line sizeId={'desktop'} theme={theme.line}/>
-            <Line sizeId={'desktop'} theme={theme.line}/>
-            <Line sizeId={'desktop'} theme={theme.line}/>
+        <CWrap sizeId={'desktop'} theme={navbarVisibility.visibility ? theme.active : theme.nonActive} onClick={() => setNavbarVisibility(navbarVisibility.visibility)} >
+            <Line sizeId={'desktop'} theme={theme.line} />
+            <Line sizeId={'desktop'} theme={theme.line} />
+            <Line sizeId={'desktop'} theme={theme.line} />
         </CWrap>
     )
 }
