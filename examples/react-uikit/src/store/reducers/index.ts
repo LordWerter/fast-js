@@ -1,0 +1,1 @@
+export { rootReducer as default } from './rootReducer';
