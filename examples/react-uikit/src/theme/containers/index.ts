@@ -1,5 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 import Section from "./Section";
+import Slider from "./Slider";
 import Header from "./Header";
 import Welcome from "./Welcome";
 import App from "./App";
@@ -11,16 +12,29 @@ import Gallery from "./Gallery";
 import Promo from "./Promo";
 import ImageSlider from "./ImageSlider";
 
-export default {
-   Header,
-   Welcome,
-   Section,
+export type TAllContainers = {
+   App: typeof App;
+   Contacts: typeof Contacts;
+   Footer: typeof Footer;
+   Header: typeof Header;
+   Section: typeof Section;
+   Slider: typeof Slider;
+   Welcome: typeof Welcome;
+};
+
+export const allContainers: TAllContainers = {
+   About,
    App,
    Contacts,
-   Footer,
-   About,
    FAQ,
+   Footer,
    Gallery,
-   Promo,
+   Header,
    ImageSlider,
+   Promo,
+   Section,
+   Slider,
+   Welcome,
 };
+
+export default allContainers;
