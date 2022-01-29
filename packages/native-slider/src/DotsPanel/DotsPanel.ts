@@ -85,7 +85,7 @@ export class DotsPanel extends ADotsPanel {
     createDot = (sliderId: string, dotNumber: number, onDotClick: (dotNum: number) => any) => {
         const dotElement = document.createElement('div');
         dotElement.classList.add(`${sliderId}-dots__dot-element`);
-        dotElement.addEventListener('click', (event: MouseEvent) => {
+        dotElement.addEventListener('click', () => {
             const onDotClickFn = onDotClick;
             const curDotNum = dotNumber;
             onDotClickFn(curDotNum);
