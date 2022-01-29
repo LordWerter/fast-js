@@ -1,35 +1,30 @@
 import { useTheme } from '@emotion/react';
-import React, { useState } from 'react';
+import React, { MouseEventHandler } from 'react';
+import { Link } from 'react-router-dom';
 import { TElementProps } from '../../definitions';
 import MenuBtn from '../MenuBtn';
 import NavBar from '../NavBar';
-import { CWrap, Logo } from './Header.styles';
+import { CWrap, Logo, MenuWrap } from './Header.styles';
 
 export type IProps = TElementProps & {
-    onClick?: (event: Event) => any;
+    onClick?: MouseEventHandler<HTMLDivElement>;
 };
 
-const Header: React.FC<IProps> = (props): JSX.Element => {
-    const [navBarVisibility, setNavBarVisibility] = useState(false);
-    const fullTheme = useTheme();
+export const Header: React.FC<IProps> = (props): JSX.Element => {
     //@ts-ignore
-    const theme = { ...fullTheme.Header };
+    const theme = { ...useTheme().Header };
 
     return (
         <CWrap sizeId={'desktop'} theme={theme.cwrap} >
-            <Logo sizeId={'desktop'} theme={theme.logo} />
-            <div className="menu_wrapper" >
+            <Link to={'/'}><Logo sizeId={'desktop'} theme={theme.logo} /></Link>
+            <MenuWrap sizeId={'desktop'} theme={theme.menuwrap} >
                 <MenuBtn
                     sizeId={'desktop'}
-                    setNavBarVisibility={setNavBarVisibility}
-                    navBarVisibility={navBarVisibility}
                 />
                 <NavBar
                     sizeId={'desktop'}
-                    visibility={navBarVisibility}
-                    onClick={(e) => e.stopPropagation()}
                 />
-            </div>
+            </MenuWrap>
 
         </CWrap>
     )

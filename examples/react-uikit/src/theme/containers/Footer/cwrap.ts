@@ -1,12 +1,15 @@
-export const blocks = {
+import { TCSSObjProps } from "../../../definitions";
+
+export const blocks: TCSSObjProps = {
    core: {
       height: '200px',
-      width: '100%',
       backgroundColor: 'black',
       display: 'flex',
       justifyContent: 'space-evenly',
       alignItems: 'center',
       color: 'white',
+      flex: '0 0 auto',
+      flexWrap: 'wrap',
    },
    mobile: {},
    laptop: {},

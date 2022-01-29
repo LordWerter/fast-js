@@ -1,6 +1,7 @@
+import { TCSSObjProps } from '../../../definitions';
 import {LOGOS__HEADER} from '../../images';
 
-export const blocks = {
+export const blocks: TCSSObjProps = {
     core: {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

@@ -1,10 +1,17 @@
-export const blocks = {
-   core:{
-      position: 'relative',
-      top: '151px',
-      height: '250px',
-      width: '300px',
+import { TCSSObjProps } from "../../../definitions";
+
+export const blocks: TCSSObjProps = {
+   core: {
       visibility: 'hidden',
+      position: 'absolute',
+      top: '176px',
+      height: 'max-content',
+      width: 'max-content',
+      backgroundColor: 'black',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'space-evenly',
    },
    mobile: {},
    laptop: {},

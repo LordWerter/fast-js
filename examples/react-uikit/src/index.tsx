@@ -1,18 +1,24 @@
 import { css, Global, ThemeProvider } from '@emotion/react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import resets from './assets';
 import App from './epics/App/index';
-// import reportWebVitals from './reportWebVitals';
+
+import reportWebVitals from './reportWebVitals';
+import { store } from './store';
+
 import theme from './theme';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <ThemeProvider theme={theme}>
-      <App sizeId={'desktop'} />
-      <Global styles={resets || css``} />
-    </ThemeProvider>
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <App sizeId={'desktop'} />
+        <Global styles={resets || css``} />
+      </ThemeProvider>
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 

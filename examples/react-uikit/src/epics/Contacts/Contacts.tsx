@@ -1,14 +1,15 @@
 import { useTheme } from '@emotion/react';
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 import { TElementProps } from '../../definitions';
 import { CWrap } from './Contacts.styles'
 
-export type IProps = TElementProps;
+export type IProps = TElementProps & {
+    onClick?: MouseEventHandler,
+};
 
-const Contacts: React.FC<IProps> = (): JSX.Element => {
-    const fullTheme = useTheme();
+export const Contacts: React.FC<IProps> = (): JSX.Element => {
     //@ts-ignore
-    const theme = { ...fullTheme.Contacts };
+    const theme = { ...useTheme().Contacts };
     return (
         <CWrap sizeId={'desktop'} theme={theme.cwrap}>
             <h1>Contact us!</h1>
