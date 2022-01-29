@@ -29,11 +29,17 @@ export default {
     }),
   ],
 
-  output: [{
-    dir: "dist",
-    sourcemap: true,
-    format: "esm",
-    preserveModules: true
-  }],
+  output: [
+    {
+      file: 'dist/index.js',
+      sourcemap: false,
+      format: "es",
+    },
+    {
+      file: 'dist/index.es.js',
+      sourcemap: false,
+      format: "cjs",
+    }
+  ],
   external: EXTERNAL
 };

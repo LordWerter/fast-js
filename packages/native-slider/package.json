@@ -5,6 +5,7 @@
   "repository": "https://github.com/LordWerter/fast-js/tree/main/packages/native-slider",
   "license": "MIT",
   "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
