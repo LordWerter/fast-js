@@ -22,8 +22,7 @@
     "noErrorTruncation": false,
     "lib": ["es5", "es6", "dom", "esnext"],
     "module": "esnext",
-    "allowJs": true,
-    "jsx": "react",
+    "allowJs": true
   },
   "include": [
     "src"
