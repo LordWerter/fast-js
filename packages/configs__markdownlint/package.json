@@ -8,13 +8,13 @@
 	"scripts": {
 	},
 	"peerDependencies": {
-		"markdownlint": ">=0.24.0"
+		"markdownlint": ">=0.25.1"
 	},
 	"dependencies": {
-		"markdownlint": "^0.24.0"
+		"markdownlint": "^0.25.1"
 	},
 	"devDependencies": {
-		"husky": "^7.0.2"
+		"husky": "^7.0.4"
 	},
 	"husky": {}
 }

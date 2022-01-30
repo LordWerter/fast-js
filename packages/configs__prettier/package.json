@@ -9,13 +9,13 @@
   "scripts": {
   },
   "peerDependencies": {
-    "prettier": ">=2.3.2"
+    "prettier": ">=2.5.1"
   },
   "dependencies": {
-    "prettier": "2.3.2"
+    "prettier": "2.5.1"
   },
   "devDependencies": {
-    "husky": "^7.0.2"
+    "husky": "^7.0.4"
   },
 	"husky": {}
 }

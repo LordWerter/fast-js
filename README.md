@@ -1,3 +1,3 @@
-# Fast JS
+# FastJS
 
-This monorepo is my collection of different practicies and tools for better and faster coding.
+ FastJS is a package library which contains a mixture of configs, components, containers and utilities.

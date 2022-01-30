@@ -11,7 +11,7 @@
   "peerDependencies": {},
   "dependencies": {},
   "devDependencies": {
-	"husky": "^7.0.2"
+	"husky": "^7.0.4"
   },
   "husky": {}
 }
