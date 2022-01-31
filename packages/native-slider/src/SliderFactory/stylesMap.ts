@@ -1,5 +1,5 @@
 export const coreStylesMap = {
-    wrapper: {
+    slider: {
         display: 'flex',
         width: '100%',
         position: 'relative',

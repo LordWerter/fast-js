@@ -1,5 +1,5 @@
-import { useTheme } from '@emotion/react'
-import React, { MouseEventHandler } from 'react'
+import { useTheme } from '@emotion/react';
+import React, { MouseEventHandler } from 'react';
 import { useTypedSelector } from '../../assets/hooks';
 import { useActions } from '../../assets/hooks/useActions';
 import { TElementProps } from '../../definitions';

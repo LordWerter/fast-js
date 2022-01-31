@@ -25,20 +25,10 @@ export class SliderFactory extends ASliderFactory {
         this.curSettings = new Settings(settings).getComputed();
 
         const sliderSelector = `#${this.curSettings.sliderId}`;
-        this.slider = this.getElementBySelector(sliderSelector);
-        if (this.slider) {
-            this.setCoreStyles(this.slider, 'wrapper');
-        } else {
-            throw new Error(`RUNTIME:STATUS:EXEPTION - Slider Wrapper was not found by selector '${sliderSelector}'`);
-        }
+        this.setInitialCSSBySelector(sliderSelector, 'slider');
 
         const trackSelector = `#${this.curSettings.trackId}`;
-        this.track = this.getElementBySelector(trackSelector);
-        if (this.track) {
-            this.setCoreStyles(this.track, 'track');
-        } else {
-            throw new Error(`RUNTIME:STATUS:EXEPTION - Slides Track was not found by selector '${trackSelector}'`);
-        }
+        this.setInitialCSSBySelector(trackSelector, 'track');
 
         // блок кода ниже - заготовка под фичу с бесконечным скроллом трека карусели
         if (this.slider && this.curSettings.type === 'slides') {
@@ -48,8 +38,11 @@ export class SliderFactory extends ASliderFactory {
             });
         }
 
-        const slideElement = this.track.children.item(0);
+        const slideElement = this?.track?.children?.item(0) || null;
 
+        if (!this.slider || !this.track || !slideElement) {
+            throw new Error('Не найдены элементы слайдера, которые являются для него обязательными');
+        }
 
         this.eventCallbacks = new EventCallbacks({
             type: this.curSettings.type,
@@ -75,6 +68,15 @@ export class SliderFactory extends ASliderFactory {
             showArrows: this.curSettings.showArrows,
         });
     }
+
+    public setInitialCSSBySelector = (selector: string, elemName: string) => {
+        this[elemName] = this.getElementBySelector(selector);
+        if (this[elemName]) {
+            this.setCoreStyles(this[elemName], elemName);
+        } else {
+            throw new Error(`RUNTIME:STATUS:EXEPTION - Composition Element was not found by selector '${selector}'`);
+        }
+    };
 
     public getElementBySelector = (selector: string): HTMLElement | null => {
         const element: HTMLElement | null = document.querySelector(selector);
