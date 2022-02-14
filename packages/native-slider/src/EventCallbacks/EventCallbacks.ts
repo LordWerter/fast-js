@@ -104,12 +104,14 @@ export class EventCallbacks extends AEventCallbacks {
         if (this.viewedItemsCount === this.totalElemsValue) {
             this.viewedItemsCount = Math.floor(this.totalElemsValue / visibleElemsValue) * visibleElemsValue;
             this.params.track.style.left = `-${(this.viewedItemsCount - visibleElemsValue) * this.params.slideElementWidth}px`;
+            if (this.params.handle2Slide) this.params.handle2Slide();
             return;
         }
         const nextFirstVisibleElem = this.viewedItemsCount - visibleElemsValue;
         if (nextFirstVisibleElem > 0) {
             this.viewedItemsCount = nextFirstVisibleElem;
             this.params.track.style.left = `-${this.viewedItemsCount * this.params.slideElementWidth}px`;
+            if (this.params.handle2Slide) this.params.handle2Slide();
         } else {
             this.viewedItemsCount = visibleElemsValue;
             this.params.track.style.left = `0px`;
