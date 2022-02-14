@@ -35,6 +35,10 @@ export type TSettingsOutput = {
 
     touchMove: boolean;
     touchThreshold: number;
+
+    handle2FirstSlide: () => void;
+    handle2LastSlide: () => void;
+    handle2Slide: () => void;
 };
 
 export abstract class ASettings {

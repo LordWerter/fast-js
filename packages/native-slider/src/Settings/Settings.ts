@@ -39,6 +39,10 @@ export type TSettings = {
 
     touchMove?: boolean;
     touchThreshold?: number;
+
+    handle2FirstSlide?: () => void;
+    handle2LastSlide?: () => void;
+    handle2Slide?: () => void;
 };
 
 export class Settings extends ASettings {
@@ -66,6 +70,16 @@ export class Settings extends ASettings {
         touchThreshold: 5,
         animationSpeed: 500,
         animationFn: 'linear',
+
+        handle2FirstSlide: () => {
+            return;
+        },
+        handle2LastSlide: () => {
+            return;
+        },
+        handle2Slide: () => {
+            return;
+        },
     };
 
     constructor(settings: TSettings) {

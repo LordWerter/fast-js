@@ -5,6 +5,9 @@ export type EventCallbacksParams = {
     view: HTMLElement;
     track: HTMLElement;
     slideElementWidth: number;
+    handle2FirstSlide?: () => void;
+    handle2LastSlide?: () => void;
+    handle2Slide?: () => void;
 }
 
 export class EventCallbacks extends AEventCallbacks {
@@ -88,10 +91,11 @@ export class EventCallbacks extends AEventCallbacks {
         if (nextLastVisibleElem < this.totalElemsValue) {
             this.params.track.style.left = `-${this.viewedItemsCount * this.params.slideElementWidth}px`;
             this.viewedItemsCount = this.viewedItemsCount + visibleElemsValue;
+            if (this.params.handle2Slide) this.params.handle2Slide();
         } else {
             this.params.track.style.left = `-${this.params.track.clientWidth - this.params.view.clientWidth}px`;
-            console.log(this.totalElemsValue);
             this.viewedItemsCount = this.totalElemsValue - visibleElemsValue;
+            if (this.params.handle2LastSlide) this.params.handle2LastSlide();
         }
     };
 
@@ -109,6 +113,7 @@ export class EventCallbacks extends AEventCallbacks {
         } else {
             this.viewedItemsCount = visibleElemsValue;
             this.params.track.style.left = `0px`;
+            if (this.params.handle2FirstSlide) this.params.handle2FirstSlide();
         }
     };
 }

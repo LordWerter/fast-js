@@ -49,6 +49,8 @@ export class SliderFactory extends ASliderFactory {
             view: this.slider,
             track: this.track,
             slideElementWidth: slideElement ? slideElement.clientWidth : 0,
+            handle2FirstSlide: this.curSettings.handle2FirstSlide,
+            handle2LastSlide: this.curSettings.handle2LastSlide,
         });
 
         const onArrowClick = this.curSettings.type === 'carousel' ? this.eventCallbacks.onCarouselArrowClick : this.eventCallbacks.onSliderArrowClick;
