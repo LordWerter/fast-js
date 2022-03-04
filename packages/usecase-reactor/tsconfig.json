@@ -1,0 +1,38 @@
+{
+  "types": [
+    "node"
+  ],
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "es5",
+    "sourceMap": false,
+    "declaration": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "experimentalDecorators": true,
+    "noErrorTruncation": false,
+    "lib": ["es5", "es6", "dom", "esnext"],
+    "module": "esnext",
+    "allowJs": true
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/**/*.test.tsx",
+    "src/**/*.test.ts",
+    "src/**/*.spec.tsx",
+    "src/**/*.spec.ts"
+  ]
+}

@@ -24,11 +24,7 @@ export class SliderFactory extends ASliderFactory {
         super();
         this.curSettings = new Settings(settings).getComputed();
 
-        const sliderSelector = `#${this.curSettings.sliderId}`;
-        this.setInitialCSSBySelector(sliderSelector, 'slider');
-
-        const trackSelector = `#${this.curSettings.trackId}`;
-        this.setInitialCSSBySelector(trackSelector, 'track');
+        this.setInitialCSS();
 
         // блок кода ниже - заготовка под фичу с бесконечным скроллом трека карусели
         if (this.slider && this.curSettings.type === 'slides') {
@@ -70,6 +66,16 @@ export class SliderFactory extends ASliderFactory {
             showArrows: this.curSettings.showArrows,
         });
     }
+
+    public setInitialCSS = () => {
+        const sliderSelector = `#${this.curSettings.sliderId}`;
+        this.setInitialCSSBySelector(sliderSelector, 'slider');
+
+        const trackSelector = `#${this.curSettings.trackId}`;
+        this.setInitialCSSBySelector(trackSelector, 'track');
+
+        return;
+    };
 
     public setInitialCSSBySelector = (selector: string, elemName: string) => {
         this[elemName] = this.getElementBySelector(selector);
