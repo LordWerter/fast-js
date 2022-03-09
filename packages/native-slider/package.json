@@ -15,6 +15,7 @@
   },
   "scripts": {
     "type-check": "tsc --noEmit",
+    "test:unit": "jest --colors --coverage test --passWithNoTests --config jest.config.ts",
     "test:jest": "cross-env CI=TRUE jest --colors --coverage test --passWithNoTests --config jest.config.ts",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "rollup -c",
